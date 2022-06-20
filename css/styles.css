@@ -71,13 +71,15 @@ input {
   padding: 0;
 }
 
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -96,5 +98,81 @@ input {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+body {
+  font-family: "Kreon", serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 1600px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 0.75rem 1fr 100px 1fr 0.75rem;
+  grid-template-areas: ". siteNav logo socials .";
+  max-width: 1600px;
+  margin: auto;
+  padding: 2rem 0;
+  align-items: center;
+}
+header nav {
+  grid-area: siteNav;
+}
+header nav .main-nav {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+header a {
+  grid-area: logo;
+  justify-self: center;
+}
+header a svg {
+  width: 100px;
+}
+header ul {
+  grid-area: socials;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-end;
+}
+header ul svg {
+  width: 1rem;
+}
+
+.introduction {
+  background: #999999;
+  background: linear-gradient(5deg, #999999 0%, #3d4c41 75%);
+  padding: 4rem 0.75rem;
+}
+@media screen and (min-width: 600px) {
+  .introduction {
+    padding: 4rem 2rem;
+  }
+}
+.introduction h2 {
+  font-size: 2rem;
+}
+.introduction h3 {
+  font-size: 4rem;
+  line-height: 3.75rem;
+  padding: 2.25rem 0;
+}
+.introduction p {
+  font-size: 1.5rem;
+}
+
+.projects {
+  padding: 4rem 0.75rem;
+}
+@media screen and (min-width: 600px) {
+  .projects {
+    padding: 4rem 2rem;
+  }
+}
+.projects h2 {
+  font-size: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -2,7 +2,7 @@
 
 @mixin break($point) {
     @if $point == sm {
-        @media screen and (min-width: 768px) { @content; }
+        @media screen and (min-width: 600px) { @content; }
     }
     @else if $point == md {
         @media screen and (min-width: 1000px) { @content; } 
