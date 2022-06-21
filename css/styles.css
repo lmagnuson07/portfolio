@@ -108,49 +108,64 @@ body {
   max-width: 1600px;
 }
 
-header {
+.heading-span {
+  font-size: 3rem;
+  display: block;
+}
+
+.cta {
+  text-align: center;
+  padding: 4rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+header .container {
   display: grid;
   grid-template-columns: 0.75rem 1fr 100px 1fr 0.75rem;
   grid-template-areas: ". siteNav logo socials .";
-  max-width: 1600px;
-  margin: auto;
   padding: 2rem 0;
   align-items: center;
 }
-header nav {
+header .container nav {
   grid-area: siteNav;
 }
-header nav .main-nav {
+header .container nav .main-nav {
   display: flex;
   flex-flow: wrap;
   justify-content: flex-start;
 }
-header a {
+header .container a {
   grid-area: logo;
   justify-self: center;
 }
-header a svg {
+header .container a svg {
   width: 100px;
 }
-header ul {
+header .container ul {
   grid-area: socials;
   display: flex;
   flex-flow: wrap;
   justify-content: flex-end;
 }
-header ul svg {
+header .container ul svg {
   width: 1rem;
 }
 
 .introduction {
   background: #999999;
-  background: linear-gradient(5deg, #999999 0%, #3d4c41 75%);
+  background: linear-gradient(8deg, #999999 0%, #3d4c41 75%);
   padding: 4rem 0.75rem;
-}
-@media screen and (min-width: 600px) {
-  .introduction {
-    padding: 4rem 2rem;
-  }
 }
 .introduction h2 {
   font-size: 2rem;
@@ -160,8 +175,10 @@ header ul svg {
   line-height: 3.75rem;
   padding: 2.25rem 0;
 }
-.introduction p {
-  font-size: 1.5rem;
+@media screen and (min-width: 600px) {
+  .introduction {
+    padding: 4rem 2rem;
+  }
 }
 
 .projects {
@@ -172,7 +189,67 @@ header ul svg {
     padding: 4rem 2rem;
   }
 }
-.projects h2 {
-  font-size: 4rem;
+
+.form-section .cta {
+  background: #999999;
+  background: linear-gradient(8deg, #999999 0%, #3d4c41 75%);
+}
+.form-section form {
+  padding: 0.75rem;
+  font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 700px) 1fr;
+  grid-template-rows: 100px 100px 370px 3.25rem;
+  grid-template-areas: ". n ." ". e ." ". m ." ". b .";
+}
+.form-section form div label {
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+  padding-bottom: 0.625rem;
+}
+.form-section form div input {
+  display: block;
+  width: 100%;
+  line-height: 2.375rem;
+  padding: 0 0.5rem;
+}
+.form-section form div textarea {
+  resize: none;
+  width: 100%;
+  height: 300px;
+  padding: 0.5rem;
+}
+.form-section form div:nth-of-type(1) {
+  grid-area: n;
+}
+.form-section form div:nth-of-type(2) {
+  grid-area: e;
+}
+.form-section form div:nth-of-type(3) {
+  grid-area: m;
+}
+.form-section form button {
+  grid-area: b;
+  max-width: 17.5rem;
+}
+
+.extra-contact {
+  text-align: center;
+}
+.extra-contact .cta {
+  background: #3d4c41;
+  background: linear-gradient(8deg, #3d4c41 26%, #999999 75%);
+}
+.extra-contact .contact-content {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+.extra-contact .contact-content section:first-of-type {
+  flex: 0 1 600px;
+}
+.extra-contact .contact-content section:last-of-type {
+  flex: 0 1 600px;
 }
 /*# sourceMappingURL=styles.css.map */

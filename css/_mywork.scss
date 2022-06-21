@@ -4,11 +4,8 @@
 
     
 .introduction {
-    @include mixins.break(sm){
-        padding: 4rem 2rem;
-    }
     background: rgb(153,153,153);
-    background: linear-gradient(5deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
     padding: 4rem 0.75rem;
     h2 {
         font-size: 2rem;
@@ -19,17 +16,20 @@
         padding: 2.25rem 0;
     }
     p {
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
+    }
+    @include mixins.break(sm){
+        padding: 4rem 2rem;
     }
 }
 
 .projects {
-    @include mixins.break(sm){
-        padding: 4rem 2rem;
-    }
     padding: 4rem 0.75rem;
     h2 { 
-        font-size: 4rem;
+        // font-size: 4rem;
+    }
+    @include mixins.break(sm){
+        padding: 4rem 2rem;
     }
 }
 

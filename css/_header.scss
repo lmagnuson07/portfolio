@@ -1,12 +1,12 @@
 @use 'colors';
 @use 'mixins';
 
-header {
+header .container {
     display: grid;
     grid-template-columns: 0.75rem 1fr 100px 1fr 0.75rem;
     grid-template-areas: ". siteNav logo socials .";
-    max-width: 1600px;
-    margin: auto;
+    // max-width: 1600px;
+    // margin: auto;
     padding: 2rem 0;
     align-items: center;
     nav {
