@@ -64,11 +64,15 @@ input#navToggle ~ label > span::after {
     justify-content: flex-start;
     font-size: 1.5rem;
     li {
-        height: calc(20vh - 22px);
+        display: flex;
+        align-items: center;
+        height: calc(33vh - 82px);
         padding: 1rem;
+        width: 100%;
         a {
+            width: 100%;
             display: block;
-            height: 100%;
+            height: fit-content;
             text-decoration: none;
             color: black;
         }
@@ -89,8 +93,11 @@ input#navToggle ~ label > span::after {
     text-align: center;
 }
 
+.header-tag {
+    padding: 2rem;
+}
+
 .header-container {
-    padding: 2rem .75rem;
     display: grid;
     grid-template-areas:
     "logo toggle"
@@ -123,17 +130,28 @@ input#navToggle ~ label > span::after {
     }
     @include mixins.break(md){
         grid-template-rows: unset;
-        grid-template-columns: 0.75rem 1fr 100px 1fr 0.75rem;
-        grid-template-areas: ". siteNav logo socials .";
+        grid-template-columns: 1fr 100px 1fr;
+        grid-template-areas: "siteNav logo socials";
         align-items: center;
-        padding: 2rem 0;
+        
         nav {
-            grid-column: 2 / 3;
+            grid-column: 1 / 2;
             .main-nav {
                 display: flex; // overrides display none
                 flex-flow: row;
+                align-items: center;
+                justify-content: flex-start;
                 li {
                     height: fit-content;
+                }
+                li:first-of-type {
+                    padding-left: 0;
+                }
+                li:nth-of-type(2) {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
                 }
             }
         }

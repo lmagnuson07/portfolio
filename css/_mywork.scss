@@ -11,12 +11,12 @@
         font-size: 2rem;
     }
     h3 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: 3.75rem;
         padding: 2.25rem 0;
     }
     p {
-        // font-size: 1.5rem;
+        max-width: 32rem;
     }
     @include mixins.break(sm){
         padding: 4rem 2rem;
@@ -25,9 +25,6 @@
 
 .projects {
     padding: 4rem 0.75rem;
-    h2 { 
-        // font-size: 4rem;
-    }
     @include mixins.break(sm){
         padding: 4rem 2rem;
     }
