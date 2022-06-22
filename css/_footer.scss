@@ -1,2 +1,19 @@
 @use 'colors';
 @use 'mixins';
+
+footer {
+    text-align: center;
+    padding: 4rem;
+    .socials {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        li {
+            padding: 1rem;
+            svg {
+                width: 2rem;
+            }
+        }
+    }
+}
+

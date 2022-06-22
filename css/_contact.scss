@@ -73,11 +73,12 @@
         display: flex;
         flex-flow: wrap;
         justify-content: center;
+        padding: 4rem .75rem 2rem .75rem;
         section:first-of-type {
-            flex: 0 1 600px;
+            flex: 0 1 450px;
         }
         section:last-of-type {
-            flex: 0 1 600px;
+            flex: 0 1 450px;
         }
     }
 }

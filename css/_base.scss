@@ -20,3 +20,16 @@ body {
     text-align: center;
     padding: 4rem;
 }
+
+.body-height-max {
+    height: 100vh;
+}
+
+.display-none {
+    display: none;
+    height: 0;
+}
+
+.grid-template {
+    grid-template-rows: 20vh calc(60vh - 64px) 20vh;
+}
