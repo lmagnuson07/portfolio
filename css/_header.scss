@@ -143,6 +143,7 @@ input#navToggle ~ label > span::after {
                 justify-content: flex-start;
                 li {
                     height: fit-content;
+                    width: unset;
                 }
                 li:first-of-type {
                     padding-left: 0;

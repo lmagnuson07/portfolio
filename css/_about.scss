@@ -1,0 +1,50 @@
+@use 'colors';
+@use 'mixins';
+
+.about-me-section {
+    .container {
+        max-width: 1200px;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 336px 1fr;
+        grid-template-rows: 300px repeat(4, 240px);
+        padding: 2rem;
+        img {
+            justify-self: center;
+            border-radius: 50%;
+            width: 300px;
+        }
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        div:first-of-type {
+            grid-column: 2 / 3;
+            grid-row: 1 / -1;
+        }
+        .skills-list {
+            text-align: center;
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            ul {
+                display: flex;
+                flex-flow: wrap;
+                padding: 0 2rem;
+            }
+            li {
+                width: 50%;
+            }
+        }
+    }
+}
+
+.heading-wrapper {
+    background: rgb(153,153,153);
+    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+@include mixins.break(md) {
+
+}
