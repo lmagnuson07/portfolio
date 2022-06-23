@@ -148,6 +148,7 @@ header {
   position: sticky;
   z-index: 1;
   top: 0;
+  padding: 2rem 1rem;
   background-color: #fff;
 }
 
@@ -238,10 +239,6 @@ input#navToggle ~ label > span::after {
   text-align: center;
 }
 
-.header-tag {
-  padding: 2rem;
-}
-
 .header-container {
   display: grid;
   grid-template-areas: "logo toggle" "siteNav ." "socials .";
@@ -270,6 +267,12 @@ input#navToggle ~ label > span::after {
 }
 .header-container .socials svg {
   width: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    padding: 2rem;
+  }
 }
 @media screen and (min-width: 860px) {
   .header-container {
@@ -319,9 +322,7 @@ input#navToggle ~ label > span::after {
   .header-container input#navToggle ~ label {
     display: none;
   }
-}
 
-@media screen and (min-width: 860px) {
   .main-tag,
 .footer-tag,
 .header-tag {
@@ -366,35 +367,65 @@ input#navToggle ~ label > span::after {
   max-width: 1200px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: 336px 1fr;
-  grid-template-rows: 300px repeat(4, 240px);
-  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 1rem 0 1rem;
 }
 .about-me-section .container img {
   justify-self: center;
   border-radius: 50%;
   width: 300px;
+  grid-column: span 2;
 }
 .about-me-section .container p {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 .about-me-section .container div:first-of-type {
-  grid-column: 2/3;
-  grid-row: 1/-1;
+  grid-column: 1/-1;
 }
-.about-me-section .container .skills-list {
+.about-me-section .container .skills-list,
+.about-me-section .container .interests-list {
   text-align: center;
-  grid-column: 1/2;
-  grid-row: 2/3;
+  max-width: 380px;
+  justify-self: center;
+  align-self: flex-end;
+  grid-column: span 2;
 }
-.about-me-section .container .skills-list ul {
+.about-me-section .container .skills-list ul,
+.about-me-section .container .interests-list ul {
   display: flex;
   flex-flow: wrap;
   padding: 0 2rem;
 }
-.about-me-section .container .skills-list li {
+.about-me-section .container .skills-list h3,
+.about-me-section .container .interests-list h3 {
+  line-height: 3.75rem;
+  margin-bottom: 0.75rem;
+  max-width: 25rem;
+}
+.about-me-section .container .skills-list h3 span,
+.about-me-section .container .interests-list h3 span {
+  display: block;
+}
+.about-me-section .container .skills-list li,
+.about-me-section .container .interests-list li {
   width: 50%;
+}
+
+.band-section {
+  background-image: url("../img/band-picture.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h2 {
+  text-align: center;
+  padding: 2rem 4rem;
+}
+h2 span {
+  display: block;
 }
 
 .heading-wrapper {
@@ -404,12 +435,53 @@ input#navToggle ~ label > span::after {
   text-align: center;
 }
 
+@media screen and (min-width: 600px) {
+  .about-me-section .container {
+    padding: 2rem 2rem 0 2rem;
+  }
+  .about-me-section .container .skills-list,
+.about-me-section .container .interests-list {
+    grid-column: 1/2;
+  }
+  .about-me-section .container .skills-list ul,
+.about-me-section .container .interests-list ul {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 250px;
+  }
+  .about-me-section .container .interests-list {
+    grid-column: 2/3;
+  }
+}
+@media screen and (min-width: 860px) {
+  .about-me-section .container {
+    grid-template-columns: 336px 1fr;
+    grid-template-rows: 300px 200px 230px 1%;
+  }
+  .about-me-section .container img {
+    grid-column: 1/2;
+  }
+  .about-me-section .container div:first-of-type {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+  .about-me-section .container .skills-list {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-start;
+  }
+  .about-me-section .container .interests-list {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: flex-start;
+  }
+}
 .form-section .cta {
   background: #999999;
   background: linear-gradient(8deg, #999999 0%, #3d4c41 75%);
 }
 .form-section form {
-  padding: 0.75rem;
+  padding: 2rem 1rem;
   font-size: 1.25rem;
   display: grid;
   grid-template-columns: 1fr minmax(auto, 700px) 1fr;
@@ -468,6 +540,11 @@ input#navToggle ~ label > span::after {
   flex: 0 1 450px;
 }
 
+@media screen and (min-width: 600px) {
+  .form-section form {
+    padding: 2rem;
+  }
+}
 footer {
   text-align: center;
   padding: 4rem;

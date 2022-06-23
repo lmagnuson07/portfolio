@@ -6,30 +6,40 @@
         max-width: 1200px;
         display: grid;
         gap: 1rem;
-        grid-template-columns: 336px 1fr;
-        grid-template-rows: 300px repeat(4, 240px);
-        padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 1rem 0 1rem;
         img {
             justify-self: center;
             border-radius: 50%;
             width: 300px;
+            grid-column: span 2;
         }
         p {
             font-size: 1rem;
             margin-bottom: 1rem;
         }
         div:first-of-type {
-            grid-column: 2 / 3;
-            grid-row: 1 / -1;
+            grid-column: 1 / -1;
         }
-        .skills-list {
+        .skills-list,
+        .interests-list {
             text-align: center;
-            grid-column: 1 / 2;
-            grid-row: 2 / 3;
+            max-width: 380px;
+            justify-self: center;
+            align-self: flex-end;
+            grid-column: span 2;
             ul {
                 display: flex;
                 flex-flow: wrap;
                 padding: 0 2rem;
+            }
+            h3 {
+                line-height: 3.75rem;
+                margin-bottom: .75rem;
+                max-width: 25rem;
+                span {
+                    display: block;
+                }
             }
             li {
                 width: 50%;
@@ -38,6 +48,21 @@
     }
 }
 
+    .band-section {
+        background-image: url("../img/band-picture.jpg");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    h2 {
+        text-align: center;
+        padding: 2rem 4rem;
+        span {
+            display: block;
+        }
+    }
+
 .heading-wrapper {
     background: rgb(153,153,153);
     background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
@@ -45,6 +70,52 @@
     text-align: center;
 }
 
-@include mixins.break(md) {
+@include mixins.break(sm) {
+    .about-me-section {
+        .container {
+            padding: 2rem 2rem 0 2rem;
+            .skills-list,
+            .interests-list {
+                grid-column: 1 / 2;
+                ul {
+                    padding-left: 0;
+                    padding-right: 0;
+                    max-width: 250px;
+                }
+                h3 {
+                }
+                li {
+                }
+            }
+            .interests-list {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+}
 
+@include mixins.break(md) {
+    .about-me-section {
+        .container {
+            grid-template-columns: 336px 1fr;
+            grid-template-rows: 300px 200px 230px 1%;
+            img {
+                grid-column: 1 / 2;
+            }
+            div:first-of-type {
+                grid-column: 2 / 3;
+                grid-row: 1 / -1;
+            }
+            .skills-list {
+                grid-column: 1 / 2;
+                grid-row: 2 / 3;
+                align-self: flex-start
+            }
+            .interests-list {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                align-self: flex-start
+            }
+        } 
+    }
 }

@@ -5,6 +5,7 @@ header {
     position: sticky;
     z-index: 1;
     top: 0;
+    padding: 2rem 1rem;
     background-color: #fff;
 }
 
@@ -93,10 +94,6 @@ input#navToggle ~ label > span::after {
     text-align: center;
 }
 
-.header-tag {
-    padding: 2rem;
-}
-
 .header-container {
     display: grid;
     grid-template-areas:
@@ -128,12 +125,21 @@ input#navToggle ~ label > span::after {
             width: 2rem;
         }
     }
-    @include mixins.break(md){
+
+}
+
+@include mixins.break(sm){
+    header {
+        padding: 2rem;
+    }
+}
+
+@include mixins.break(md){
+    .header-container {
         grid-template-rows: unset;
         grid-template-columns: 1fr 100px 1fr;
         grid-template-areas: "siteNav logo socials";
         align-items: center;
-        
         nav {
             grid-column: 1 / 2;
             .main-nav {
@@ -174,9 +180,6 @@ input#navToggle ~ label > span::after {
             display: none;
         }
     }
-}
-
-@include mixins.break(md) {
     .main-tag,
     .footer-tag,
     .header-tag {
