@@ -1,6 +1,13 @@
 @use 'colors';
 @use 'mixins';
 
+.heading-wrapper {
+    background: rgb(153,153,153);
+    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
 .about-me-section {
     .container {
         max-width: 1200px;
@@ -48,26 +55,78 @@
     }
 }
 
-    .band-section {
-        background-image: url("../img/band-picture.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-    }
+.band-section {
+    background-image: url("../img/band-picture.jpg");
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 4rem;
     h2 {
         text-align: center;
-        padding: 2rem 4rem;
+        padding: 4rem;
         span {
             display: block;
         }
     }
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+    li {
+        padding: 0 1rem 4rem 1rem;
+    }
+    svg {
+        width: 2rem;
+        fill: #fff;
+    }
+}
 
-.heading-wrapper {
-    background: rgb(153,153,153);
-    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
-    padding: 4rem 2rem;
-    text-align: center;
+.my-dog-section {
+    .container {
+        padding: 2rem 1rem;
+        max-width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        gap: 1rem;
+    }
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        grid-column: 1 / -1;
+    }
+    img {
+        justify-self: center;
+        width: 300px;
+        border-radius: 2%;
+    }
+    p {
+        text-align: center;
+        font-size: 2rem;
+        align-self: center;
+    }
+    p:first-of-type {
+        grid-row: 2 / 3;
+    }
+    p:last-of-type {
+        grid-row: 6 / 7;
+    }
+    @include mixins.break(sm){
+        p:first-of-type {
+            grid-row: unset;
+        }
+        p:last-of-type {
+            grid-row: unset;
+        }
+    }
+    @include mixins.break(md){
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        }
+        img {
+            width: 380px;
+        }
+    }
 }
 
 @include mixins.break(sm) {
@@ -81,10 +140,6 @@
                     padding-left: 0;
                     padding-right: 0;
                     max-width: 250px;
-                }
-                h3 {
-                }
-                li {
                 }
             }
             .interests-list {

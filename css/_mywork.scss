@@ -25,6 +25,9 @@
 
 .projects {
     padding: 4rem 0.75rem;
+    h2 {
+        text-align: center;
+    }
     @include mixins.break(sm){
         padding: 4rem 2rem;
     }

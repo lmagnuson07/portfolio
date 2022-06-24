@@ -357,10 +357,20 @@ input#navToggle ~ label > span::after {
 .projects {
   padding: 4rem 0.75rem;
 }
+.projects h2 {
+  text-align: center;
+}
 @media screen and (min-width: 600px) {
   .projects {
     padding: 4rem 2rem;
   }
+}
+
+.heading-wrapper {
+  background: #999999;
+  background: linear-gradient(8deg, #999999 0%, #3d4c41 75%);
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
 .about-me-section .container {
@@ -414,25 +424,74 @@ input#navToggle ~ label > span::after {
 
 .band-section {
   background-image: url("../img/band-picture.jpg");
-  background-position: center center;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  margin-top: 4rem;
 }
-
-h2 {
+.band-section h2 {
   text-align: center;
-  padding: 2rem 4rem;
+  padding: 4rem;
 }
-h2 span {
+.band-section h2 span {
   display: block;
 }
+.band-section ul {
+  display: flex;
+  justify-content: center;
+}
+.band-section li {
+  padding: 0 1rem 4rem 1rem;
+}
+.band-section svg {
+  width: 2rem;
+  fill: #fff;
+}
 
-.heading-wrapper {
-  background: #999999;
-  background: linear-gradient(8deg, #999999 0%, #3d4c41 75%);
-  padding: 4rem 2rem;
+.my-dog-section .container {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  gap: 1rem;
+}
+.my-dog-section h2 {
   text-align: center;
+  font-size: 3rem;
+  grid-column: 1/-1;
+}
+.my-dog-section img {
+  justify-self: center;
+  width: 300px;
+  border-radius: 2%;
+}
+.my-dog-section p {
+  text-align: center;
+  font-size: 2rem;
+  align-self: center;
+}
+.my-dog-section p:first-of-type {
+  grid-row: 2/3;
+}
+.my-dog-section p:last-of-type {
+  grid-row: 6/7;
+}
+@media screen and (min-width: 600px) {
+  .my-dog-section p:first-of-type {
+    grid-row: unset;
+  }
+  .my-dog-section p:last-of-type {
+    grid-row: unset;
+  }
+}
+@media screen and (min-width: 860px) {
+  .my-dog-section .container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .my-dog-section img {
+    width: 380px;
+  }
 }
 
 @media screen and (min-width: 600px) {
