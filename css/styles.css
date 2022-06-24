@@ -355,14 +355,61 @@ input#navToggle ~ label > span::after {
 }
 
 .projects {
-  padding: 4rem 0.75rem;
+  padding: 0 0.75rem;
 }
 .projects h2 {
   text-align: center;
+  padding: 5rem 1rem;
+}
+@media screen and (min-width: 600px) {
+  .projects .container > a:nth-of-type(odd) div:first-of-type {
+    order: 1;
+  }
+}
+.projects .container > a {
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  background-color: antiquewhite;
+  text-decoration: none;
+}
+.projects .container > a h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.projects .container > a p {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.projects .container > a img {
+  width: 100%;
+}
+.projects .container > a div:first-of-type {
+  flex: 1 1 388px;
+}
+.projects .container > a div:last-of-type {
+  padding: 1rem 1rem 1rem 2rem;
+  flex: 1 1 188px;
+}
+@media screen and (min-width: 1100px) {
+  .projects .container > a h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .projects .container > a p {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .projects .container > a div:last-of-type {
+    padding: 1rem 1rem 1rem 4rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .projects {
-    padding: 4rem 2rem;
+    padding: 0;
   }
 }
 

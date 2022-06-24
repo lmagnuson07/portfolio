@@ -24,12 +24,61 @@
 }
 
 .projects {
-    padding: 4rem 0.75rem;
+    padding: 0 0.75rem;
     h2 {
         text-align: center;
+        padding: 5rem 1rem;
     }
     @include mixins.break(sm){
-        padding: 4rem 2rem;
+        .container > a:nth-of-type(odd) {
+            div:first-of-type {
+                order: 1;
+            }
+        }
+    }
+    .container > a {
+        display: flex;
+        flex-flow: wrap;
+        align-items: center;
+        background-color: antiquewhite;
+        text-decoration: none;
+        h3 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            margin-bottom: .5rem;
+        }
+        p {
+            font-size: 1.25rem;
+            margin-bottom: .5rem;
+        }
+        img {
+            width: 100%;
+        }
+        div:first-of-type {
+            flex: 1 1 388px;
+        }
+        div:last-of-type {
+            padding: 1rem 1rem 1rem 2rem;
+            flex: 1 1 188px;
+        }
+        @include mixins.break(lg){
+            h3 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.75rem;
+                margin-bottom: 1rem;
+            }
+        }
+        @include mixins.break(xlg){
+            div:last-of-type {
+                padding: 1rem 1rem 1rem 4rem;
+            }
+        }
+    }
+    @include mixins.break(sm){
+        padding: 0;
     }
 }
 
