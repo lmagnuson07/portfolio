@@ -589,7 +589,7 @@ input#navToggle ~ label > span::after {
 }
 .good-food-content p {
   font-size: 1.25rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .good-food-content h3 {
@@ -703,6 +703,9 @@ input#navToggle ~ label > span::after {
   text-align: center;
   padding: 3rem 1rem;
 }
+.opendesk-content .lighthouse-heading {
+  padding: 3rem 1rem 1rem 1rem;
+}
 .opendesk-content h4 {
   font-size: 2rem;
   text-align: center;
@@ -727,13 +730,73 @@ input#navToggle ~ label > span::after {
   text-decoration: none;
   font-size: 1.5rem;
   width: 50%;
-  vertical-align: -6px;
 }
 .opendesk-content .opendesk-links a:nth-of-type(2) {
   width: 15%;
 }
 .opendesk-content .opendesk-links svg {
   width: 2.5rem;
+}
+
+.grade-tracker-content h2 {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+}
+.grade-tracker-content h3 {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.grade-tracker-content p,
+.grade-tracker-content .grade-tracker-code {
+  font-size: 1.25rem;
+  margin: 0 auto 1rem auto;
+  max-width: 1000px;
+}
+.grade-tracker-content .grade-tracker-code {
+  display: flex;
+  text-align: center;
+}
+.grade-tracker-content .grade-tracker-code a {
+  flex: 1 1 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.grade-tracker-content .video-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.grade-tracker-content .video-wrapper video {
+  width: 100%;
+  height: 100%;
+}
+.grade-tracker-content .screenshots-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  gap: 1.25rem;
+  padding: 0 1rem;
+}
+.grade-tracker-content .screenshots-wrapper figcaption {
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: antiquewhite;
+}
+@media screen and (min-width: 600px) {
+  .grade-tracker-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .grade-tracker-content .video-wrapper {
+    padding: 0 2rem;
+  }
+  .grade-tracker-content .screenshots-wrapper {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .grade-tracker-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  }
 }
 
 .form-section .cta {
