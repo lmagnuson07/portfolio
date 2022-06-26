@@ -583,9 +583,6 @@ input#navToggle ~ label > span::after {
     align-self: flex-start;
   }
 }
-.good-food-content {
-  padding: 0 1rem;
-}
 .good-food-content h2 {
   text-align: center;
   padding: 4rem 1rem;
@@ -602,69 +599,141 @@ input#navToggle ~ label > span::after {
 .good-food-content h3:last-of-type {
   padding: 4rem 1rem;
 }
-.good-food-content .img-grid {
+
+.good-food-content,
+.opendesk-content {
+  padding: 0 1rem;
+}
+.good-food-content .img-grid,
+.opendesk-content .img-grid {
   display: grid;
   grid-template-columns: 1.15fr repeat(2, 0.5fr) 1.15fr;
   grid-template-rows: repeat(4, minmax(-webkit-fit-content, 1fr));
   grid-template-rows: repeat(4, minmax(fit-content, 1fr));
   gap: 1rem;
 }
-.good-food-content img {
+.good-food-content img,
+.opendesk-content img {
   width: 100%;
   height: 100%;
 }
-.good-food-content img:nth-of-type(1) {
+.good-food-content img:nth-of-type(1),
+.opendesk-content img:nth-of-type(1) {
   grid-column: 1/3;
 }
-.good-food-content img:nth-of-type(2) {
+.good-food-content img:nth-of-type(2),
+.opendesk-content img:nth-of-type(2) {
   grid-column: 1/-1;
   grid-row: 2/3;
 }
-.good-food-content img:nth-of-type(3) {
+.good-food-content img:nth-of-type(3),
+.opendesk-content img:nth-of-type(3) {
   grid-column: 3/-1;
   grid-row: 1/2;
 }
-.good-food-content img:nth-of-type(4) {
+.good-food-content img:nth-of-type(4),
+.opendesk-content img:nth-of-type(4) {
   grid-column: 1/-1;
   grid-row: 3/4;
 }
-.good-food-content .container > img:nth-of-type(1) {
+.good-food-content .container > img:nth-of-type(1),
+.opendesk-content .container > img:nth-of-type(1) {
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 600px) {
-  .good-food-content {
+  .good-food-content,
+.opendesk-content {
     padding: 0 2rem;
   }
-  .good-food-content .img-grid {
+  .good-food-content .img-grid,
+.opendesk-content .img-grid {
     display: grid;
     grid-template-columns: 1.15fr repeat(2, 0.5fr) 1.15fr;
     grid-template-rows: repeat(2, minmax(-webkit-fit-content, 1fr));
     grid-template-rows: repeat(2, minmax(fit-content, 1fr));
     gap: 1rem;
   }
-  .good-food-content img:nth-of-type(1) {
+  .good-food-content img:nth-of-type(1),
+.opendesk-content img:nth-of-type(1) {
     grid-column: unset;
   }
-  .good-food-content img:nth-of-type(2) {
+  .good-food-content img:nth-of-type(2),
+.opendesk-content img:nth-of-type(2) {
     grid-column: 2/-1;
     grid-row: 1/2;
   }
-  .good-food-content img:nth-of-type(3) {
+  .good-food-content img:nth-of-type(3),
+.opendesk-content img:nth-of-type(3) {
     grid-column: 4/5;
     grid-row: 2/3;
   }
-  .good-food-content img:nth-of-type(4) {
+  .good-food-content img:nth-of-type(4),
+.opendesk-content img:nth-of-type(4) {
     grid-column: 1/4;
     grid-row: 2/3;
   }
-  .good-food-content .container > img:nth-of-type(1) {
+  .good-food-content .container > img:nth-of-type(1),
+.opendesk-content .container > img:nth-of-type(1) {
     margin-bottom: 1.5rem;
   }
 }
 @media screen and (min-width: 860px) {
-  .good-food-content .img-grid {
+  .good-food-content .img-grid,
+.opendesk-content .img-grid {
     gap: 1.5rem;
   }
+}
+
+.opendesk-content h2 {
+  text-align: center;
+  padding: 4rem 1rem 2rem 1rem;
+}
+.opendesk-content p {
+  font-size: 1.25rem;
+  margin: 0 auto 1rem auto;
+  max-width: 1000px;
+}
+.opendesk-content p:first-of-type {
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+  max-width: 800px;
+}
+.opendesk-content h3 {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+.opendesk-content h4 {
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.opendesk-content .lighthouse-audit {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+  padding: 0 6rem;
+}
+.opendesk-content .lighthouse-audit img {
+  min-width: 340px;
+  flex: 1 1 340px;
+}
+.opendesk-content .opendesk-links {
+  display: flex;
+  text-align: center;
+  margin: 2rem 6rem;
+}
+.opendesk-content .opendesk-links a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  width: 50%;
+  vertical-align: -6px;
+}
+.opendesk-content .opendesk-links a:nth-of-type(2) {
+  width: 15%;
+}
+.opendesk-content .opendesk-links svg {
+  width: 2.5rem;
 }
 
 .form-section .cta {

@@ -1,9 +1,7 @@
 @use 'colors';
 @use 'mixins';
 
-
 .good-food-content {
-    padding: 0 1rem;
     h2 {
         text-align: center;
         padding: 4rem 1rem;
@@ -20,6 +18,11 @@
     h3:last-of-type {
         padding: 4rem 1rem;
     }
+}
+
+.good-food-content,
+.opendesk-content {
+    padding: 0 1rem;
     .img-grid {
         display: grid;
         grid-template-columns: 1.15fr repeat(2, 0.5fr) 1.15fr;
@@ -92,3 +95,4 @@
         }
     }
 }
+

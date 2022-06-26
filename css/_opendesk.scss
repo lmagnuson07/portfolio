@@ -1,0 +1,55 @@
+@use 'colors';
+@use 'mixins';
+
+.opendesk-content {
+    h2 {
+        text-align: center;
+        padding: 4rem 1rem 2rem 1rem;
+    }
+    p {
+        font-size: 1.25rem;
+        margin: 0 auto 1rem auto;
+        max-width: 1000px;
+    }
+    p:first-of-type {
+        font-size: 1rem;
+        text-align: center;
+        font-style: italic;
+        max-width: 800px;
+    }
+    h3 {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+    h4 {
+        font-size: 2rem;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .lighthouse-audit {
+        display: flex;
+        flex-flow: wrap;
+        gap: 1rem;
+        padding: 0 6rem;
+        img {
+            min-width: 340px;
+            flex: 1 1 340px;
+        }
+    }
+    .opendesk-links {
+        display: flex;
+        text-align: center;
+        margin: 2rem 6rem;
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            width: 50%;
+        }
+        a:nth-of-type(2) {
+            width: 15%;
+        }
+        svg {
+            width: 2.5rem;
+        }
+    }
+}
