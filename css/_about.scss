@@ -2,13 +2,19 @@
 @use 'mixins';
 
 .heading-wrapper {
-    background: rgb(153,153,153);
-    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
-    padding: 4rem 2rem;
+    background-color: colors.$logo-green;
+    padding: 6rem 1rem;
+    color: #c2c0c0;
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     text-align: center;
 }
 
 .about-me-section {
+    background-color: colors.$logo-offwhite;
+    padding-bottom: 4rem;
+    h2 {
+        font-family: 'Monda', sans-serif;
+    }
     .container {
         max-width: 1200px;
         display: grid;
@@ -61,10 +67,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin-top: 4rem;
+    background-color: colors.$logo-offwhite;
+    text-shadow: 2px 2px 15px black;
     h2 {
         text-align: center;
         padding: 4rem;
+        color: #bebebe;
+
         span {
             display: block;
         }
@@ -78,11 +87,12 @@
     }
     svg {
         width: 2rem;
-        fill: #fff;
+        fill: #bebebe;
     }
 }
 
 .my-dog-section {
+    background-color: colors.$logo-offwhite;
     .container {
         padding: 2rem 1rem;
         max-width: 1000px;
@@ -112,6 +122,9 @@
         grid-row: 6 / 7;
     }
     @include mixins.break(sm){
+        .container {
+            gap: 3rem 1rem;
+        }
         p:first-of-type {
             grid-row: unset;
         }

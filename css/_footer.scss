@@ -2,7 +2,11 @@
 @use 'mixins';
 
 footer {
+    background: rgb(230,230,230);
+    background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-top: 1px solid #e6e6e6;
     padding: 4rem;
     .socials {
         display: flex;

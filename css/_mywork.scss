@@ -4,30 +4,66 @@
 
     
 .introduction {
-    background: rgb(153,153,153);
-    background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+    // background: rgb(153,153,153);
+    // background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+    background-color: colors.$logo-green;
     padding: 4rem 0.75rem;
     h2 {
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        color: #c2c0c0;
         font-size: 2rem;
     }
     h3 {
         font-size: 3.5rem;
+        color: #446d27;
         line-height: 3.75rem;
         padding: 2.25rem 0;
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    }
+    span {
+        color: #446d27;
+        font-size: 2.75rem;
     }
     p {
+        color: #c2c0c0;
         max-width: 32rem;
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     }
     @include mixins.break(sm){
         padding: 4rem 2rem;
     }
 }
 
+.source-code-link {
+    background-color: colors.$logo-offwhite;
+    padding: 0 1rem;
+    a {
+        color: #010501;
+        padding: 1rem 0;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: .75rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+    }
+    svg {
+        width: 2rem;
+    }
+    @include mixins.break(sm){
+        padding: 0 2rem;
+    }
+}
+
 .projects {
-    padding: 0 0.75rem;
+    padding: 0 0.75rem 4rem 0.075rem;
+    background-color: colors.$logo-offwhite;
     h2 {
+        font-family: 'Volkhov', serif;
         text-align: center;
         padding: 5rem 1rem;
+        color: #010501;
+        font-weight: 400;
     }
     @include mixins.break(sm){
         .container > a:nth-of-type(odd) {
@@ -40,19 +76,29 @@
         display: flex;
         flex-flow: wrap;
         align-items: center;
-        background-color: antiquewhite;
+        color: colors.$logo-offwhite;
+        background: rgb(61,76,65);
+        background: linear-gradient(153deg, rgba(61,76,65,1) 5%, rgba(71,85,75,1) 33%, rgba(159,159,159,1) 100%);
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
         text-decoration: none;
+        border-radius: 6px;
         margin-bottom: 4rem;
+        > a:last-of-type {
+            margin-bottom: 0;
+        }
         h3 {
             font-size: 2rem;
             line-height: 2.5rem;
             margin-bottom: .5rem;
+            text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         }
         p {
             font-size: 1.25rem;
             margin-bottom: .5rem;
+            text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         }
         img {
+            border-radius: 0 6px 6px 0;
             width: 100%;
         }
         div:first-of-type {
@@ -78,8 +124,18 @@
             }
         }
     }
-    @include mixins.break(sm){
-        padding: 0;
+    .container > a:last-of-type {
+        margin-bottom: 0;
+    }
+    .container > a:nth-of-type(even) {
+        background: rgb(61,76,65);
+        background: linear-gradient(326deg, rgba(61,76,65,1) 5%, rgba(71,85,75,1) 42%, rgba(159,159,159,1) 100%); 
+        img {
+            border-radius: 6px 0 0 6px;
+        }
+    }
+    .container > a:hover {
+
     }
 }
 
