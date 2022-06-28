@@ -4,10 +4,8 @@
 
 .form-section {
     background: colors.$logo-offwhite;
-    .cta {
-        background-color: colors.$logo-green;color: #c2c0c0;
-        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
-        font-family: 'Monda', sans-serif;
+    .heading-wrapper {
+        padding: 4rem 1rem;
     }
     form {
         padding: 2rem 1rem;
@@ -58,17 +56,15 @@
 
 .extra-contact {
     background: colors.$logo-offwhite;
-    text-align: center;
-    .cta {
-        background-color: colors.$logo-green;color: #c2c0c0;
-        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
-        font-family: 'Monda', sans-serif;
+    .heading-wrapper {
+        padding: 4rem 1rem;
     }
     .contact-content {
         display: flex;
         flex-flow: wrap;
         justify-content: center;
         padding: 6rem 0;
+        text-align: center;
         section:first-of-type {
             flex: 0 1 450px;
         }

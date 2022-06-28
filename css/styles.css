@@ -228,6 +228,13 @@ input#navToggle ~ label > span::after {
   color: black;
 }
 
+.my-work .main-nav li:first-child a,
+.about .main-nav li:nth-of-type(2) a,
+.contact .main-nav li:last-child a {
+  color: #1d4e08;
+  text-decoration: underline;
+}
+
 .socials {
   display: none;
   justify-content: center;
@@ -346,13 +353,13 @@ input#navToggle ~ label > span::after {
 }
 .introduction h3 {
   font-size: 3.5rem;
-  color: #446d27;
+  color: #3f7c11;
   line-height: 3.75rem;
   padding: 2.25rem 0;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 }
 .introduction span {
-  color: #446d27;
+  color: #3f7c11;
   font-size: 2.75rem;
 }
 .introduction p {
@@ -371,33 +378,17 @@ input#navToggle ~ label > span::after {
   padding: 0 1rem;
 }
 .source-code-link .wrapper {
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
 }
 .source-code-link a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #010501;
-  padding: 0.5rem 1rem;
-  width: fit-content;
   display: flex;
   align-items: center;
-  transition: all 0.3s ease-in-out;
-  border-radius: 8px;
   gap: 0.75rem;
   font-size: 1.5rem;
   text-decoration: none;
 }
 .source-code-link svg {
   width: 1.25rem;
-}
-.source-code-link a:hover {
-  color: #e6e6e6;
-  background: #3d4c41;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.source-code-link a:hover svg {
-  fill: #e6e6e6;
 }
 @media screen and (min-width: 600px) {
   .source-code-link {
@@ -410,7 +401,7 @@ input#navToggle ~ label > span::after {
   background-color: #e6e6e6;
 }
 .projects h2 {
-  font-family: "Volkhov", serif;
+  font-family: "Battambang", cursive;
   text-align: center;
   padding: 5rem 1rem;
   color: #010501;
@@ -442,6 +433,9 @@ input#navToggle ~ label > span::after {
   margin-bottom: 0;
 }
 .projects .container > a h3 {
+  font-family: "Battambang", cursive;
+  color: #3f7c11;
+  letter-spacing: 0.05rem;
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 0.5rem;
@@ -451,6 +445,14 @@ input#navToggle ~ label > span::after {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+.projects .container > a p svg {
+  position: relative;
+  top: 2px;
+  margin-left: 0.625rem;
+  width: 1.125rem;
+  fill: #e6e6e6;
+  filter: drop-shadow(3px 4px 1px rgba(0, 0, 0, 0.6));
 }
 .projects .container > a img {
   border-radius: 0 6px 6px 0;
@@ -496,6 +498,16 @@ input#navToggle ~ label > span::after {
 .projects .container > a:nth-of-type(even) img {
   border-radius: 6px 0 0 6px;
 }
+.projects .container > a:hover {
+  background: #3d4c41;
+}
+.projects .container > a:hover p {
+  font-style: italic;
+}
+.projects .container > a:hover svg {
+  left: 5px;
+}
+
 .button {
   color: #000000;
   background: #dad8d8;
@@ -530,7 +542,7 @@ input#navToggle ~ label > span::after {
   padding: 6rem 1rem;
   color: #c2c0c0;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
-  font-family: "Monda", sans-serif;
+  font-family: "Battambang", cursive;
   text-align: center;
 }
 
@@ -653,6 +665,7 @@ input#navToggle ~ label > span::after {
   text-align: center;
   padding: 4rem;
   color: #bebebe;
+  font-family: "Battambang", cursive;
 }
 .band-section h2 span {
   display: block;
@@ -682,8 +695,7 @@ input#navToggle ~ label > span::after {
 .my-dog-section h2 {
   text-align: center;
   font-size: 4rem;
-  font-family: "Volkhov", serif;
-  font-weight: 400;
+  font-family: "Battambang", cursive;
   grid-column: 1/-1;
 }
 .my-dog-section img {
@@ -729,21 +741,14 @@ input#navToggle ~ label > span::after {
 .good-food-content .container {
   padding: 2rem 0 5rem 0;
 }
-.good-food-content h2 {
-  text-align: center;
-}
 .good-food-content p {
   font-size: 1.25rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 .good-food-content h3 {
-  font-family: "Volkhov", serif;
-  font-weight: 400;
+  font-family: "Battambang", cursive;
   text-align: center;
-  padding: 2rem 1rem;
-}
-.good-food-content h3:last-of-type {
   padding: 4rem 1rem;
 }
 
@@ -831,7 +836,6 @@ input#navToggle ~ label > span::after {
   padding: 5rem 1rem;
 }
 .opendesk-content h2 {
-  text-align: center;
   max-width: 600px;
   margin: 0 auto;
   line-height: 86px;
@@ -851,6 +855,7 @@ input#navToggle ~ label > span::after {
 }
 .opendesk-content h3 {
   text-align: center;
+  font-family: "Battambang", cursive;
   padding: 3rem 1rem;
 }
 .opendesk-content .lighthouse-audit-section {
@@ -956,24 +961,21 @@ input#navToggle ~ label > span::after {
   text-align: center;
   margin-top: 2rem;
 }
-.grade-tracker-content .grade-tracker-code .wrapper {
-  flex: 1 1 50%;
+.grade-tracker-content .grade-tracker-code .button-wrapper:first-of-type {
+  flex: 1 1 45%;
+}
+.grade-tracker-content .grade-tracker-code .button-wrapper:last-of-type {
+  flex: 1 1 55%;
 }
 .grade-tracker-content .grade-tracker-code a {
-  padding: 0.5rem 1rem;
   margin: 0 auto;
-  color: black;
   text-decoration: none;
   display: flex;
   align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 .grade-tracker-content .grade-tracker-code a svg {
   width: 1rem;
   margin-left: 8px;
-  transition: all 0.3s ease-in-out;
 }
 .grade-tracker-content .video-wrapper {
   max-width: 1100px;
@@ -998,7 +1000,7 @@ input#navToggle ~ label > span::after {
 .grade-tracker-content .screenshots-wrapper figcaption {
   padding: 1rem;
   font-size: 1.5rem;
-  background: #495a50;
+  background: #3d4c41;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #e6e6e6;
   border-radius: 5px 5px 0 0;
@@ -1026,11 +1028,8 @@ input#navToggle ~ label > span::after {
 .form-section {
   background: #e6e6e6;
 }
-.form-section .cta {
-  background-color: #3d4c41;
-  color: #c2c0c0;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
-  font-family: "Monda", sans-serif;
+.form-section .heading-wrapper {
+  padding: 4rem 1rem;
 }
 .form-section form {
   padding: 2rem 1rem;
@@ -1074,19 +1073,16 @@ input#navToggle ~ label > span::after {
 
 .extra-contact {
   background: #e6e6e6;
-  text-align: center;
 }
-.extra-contact .cta {
-  background-color: #3d4c41;
-  color: #c2c0c0;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
-  font-family: "Monda", sans-serif;
+.extra-contact .heading-wrapper {
+  padding: 4rem 1rem;
 }
 .extra-contact .contact-content {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
   padding: 6rem 0;
+  text-align: center;
 }
 .extra-contact .contact-content section:first-of-type {
   flex: 0 1 450px;

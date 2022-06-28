@@ -1,29 +1,27 @@
 @use 'colors';
 @use 'mixins';
-
-
     
 .introduction {
     background-color: colors.$logo-green;
     padding: 4rem 0.75rem;
     h2 {
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
-        color: #c2c0c0;
+        color: colors.$offwhite;
         font-size: 2rem;
     }
     h3 {
         font-size: 3.5rem;
-        color: #446d27;
+        color: colors.$emerald-green;
         line-height: 3.75rem;
         padding: 2.25rem 0;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     }
     span {
-        color: #446d27;
+        color: colors.$emerald-green;
         font-size: 2.75rem;
     }
     p {
-        color: #c2c0c0;
+        color: colors.$offwhite;
         max-width: 32rem;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     }
@@ -36,17 +34,17 @@
     background-color: colors.$logo-offwhite;
     padding: 0 1rem;
     .wrapper {
-        padding: 2rem 0;
+        padding: 3rem 0 2rem 0;
     }
     a {
-        width: fit-content;
-        color: #010501;
-        padding: .5rem 1rem;
-        width: fit-content;
+        // width: fit-content;
+        // color: colors.$offblack;
+        // padding: .5rem 1rem;
+        // width: fit-content;
         display: flex;
         align-items: center;
-        transition: all 0.3s ease-in-out;
-        border-radius: 8px;
+        // transition: all 0.3s ease-in-out;
+        // border-radius: 8px;
         gap: .75rem;
         font-size: 1.5rem;
         text-decoration: none;
@@ -54,14 +52,14 @@
     svg {
         width: 1.25rem;
     }
-    a:hover {
-        color: colors.$logo-offwhite;
-        background: colors.$logo-green;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        svg {
-            fill: colors.$logo-offwhite;
-        }
-    }
+    // a:hover {
+    //     color: colors.$logo-offwhite;
+    //     background: colors.$logo-green;
+    //     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    //     svg {
+    //         fill: colors.$logo-offwhite;
+    //     }
+    // }
     @include mixins.break(sm){
         padding: 0 2rem;
     }
@@ -71,10 +69,10 @@
     padding: 0 1rem 4rem 1rem;
     background-color: colors.$logo-offwhite;
     h2 {
-        font-family: 'Volkhov', serif;
+        font-family: 'Battambang', cursive;
         text-align: center;
         padding: 5rem 1rem;
-        color: #010501;
+        color: colors.$offblack;
         font-weight: 400;
     }
     @include mixins.break(sm){
@@ -102,6 +100,9 @@
             margin-bottom: 0;
         }
         h3 {
+            font-family: 'Battambang', cursive;
+            color: colors.$emerald-green;
+            letter-spacing: .05rem;
             font-size: 2rem;
             line-height: 2.5rem;
             margin-bottom: .5rem;
@@ -111,6 +112,17 @@
             font-size: 1.25rem;
             margin-bottom: .5rem;
             text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+            svg {
+                position: relative;
+                top: 2px;
+                margin-left: .625rem;
+                width: 1.125rem;
+                fill: colors.$logo-offwhite;
+                filter: drop-shadow(3px 4px 1px rgb(0 0 0 / 0.6));
+            }
+        }
+        p:last-of-type {
+
         }
         img {
             border-radius: 0 6px 6px 0;
@@ -158,7 +170,14 @@
         }
     }
     .container > a:hover {
-
+        background: colors.$logo-green;
+        
+        p {
+            font-style: italic;
+        }
+        svg {
+            left: 5px;
+        }
     }
 }
 
