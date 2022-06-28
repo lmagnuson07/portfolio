@@ -370,20 +370,34 @@ input#navToggle ~ label > span::after {
   background-color: #e6e6e6;
   padding: 0 1rem;
 }
+.source-code-link .wrapper {
+  padding: 2rem 0;
+}
 .source-code-link a {
-  color: #010501;
-  padding: 1rem 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  color: #010501;
+  padding: 0.5rem 1rem;
+  width: fit-content;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
   gap: 0.75rem;
   font-size: 1.5rem;
   text-decoration: none;
 }
 .source-code-link svg {
-  width: 2rem;
+  width: 1.25rem;
+}
+.source-code-link a:hover {
+  color: #e6e6e6;
+  background: #3d4c41;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.source-code-link a:hover svg {
+  fill: #e6e6e6;
 }
 @media screen and (min-width: 600px) {
   .source-code-link {
@@ -404,7 +418,7 @@ input#navToggle ~ label > span::after {
 }
 @media screen and (min-width: 600px) {
   .projects {
-    padding: 5rem 2rem;
+    padding: 0 2rem 5rem 2rem;
   }
 }
 @media screen and (min-width: 860px) {
@@ -419,7 +433,7 @@ input#navToggle ~ label > span::after {
   color: #e6e6e6;
   background: #3d4c41;
   background: linear-gradient(153deg, #3d4c41 5%, #47554b 33%, #9f9f9f 100%);
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-decoration: none;
   border-radius: 6px;
   margin-bottom: 4rem;
@@ -482,6 +496,35 @@ input#navToggle ~ label > span::after {
 .projects .container > a:nth-of-type(even) img {
   border-radius: 6px 0 0 6px;
 }
+.button {
+  color: #000000;
+  background: #dad8d8;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #c5c3c3;
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+.button svg {
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  border: 1px solid #3d4c41;
+  color: #e6e6e6;
+  background: #3d4c41;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.button:hover svg {
+  fill: #e6e6e6;
+}
+
 .heading-wrapper {
   background-color: #3d4c41;
   padding: 6rem 1rem;
@@ -514,7 +557,6 @@ input#navToggle ~ label > span::after {
 }
 .about-me-section .container a {
   text-decoration: none;
-  color: black;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -848,43 +890,56 @@ input#navToggle ~ label > span::after {
   display: flex;
   flex-flow: wrap;
   text-align: center;
-  margin: 2rem 2rem;
+  margin: 2rem 1rem;
+}
+.opendesk-content .opendesk-links .button-wrapper {
+  width: 50%;
+}
+.opendesk-content .opendesk-links .button-wrapper:nth-of-type(2) {
+  order: 1;
+  width: 100%;
+  margin-top: 3rem;
 }
 .opendesk-content .opendesk-links a {
   text-decoration: none;
-  font-size: 1.5rem;
-  width: 50%;
-  color: black;
+  font-size: 1rem;
+  margin: 0 auto;
 }
 .opendesk-content .opendesk-links a:nth-of-type(2) {
-  width: 100%;
-  order: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   margin: 2rem 0;
 }
 .opendesk-content .opendesk-links svg {
   width: 1rem;
+  margin-left: 8px;
 }
 @media screen and (min-width: 600px) {
   .opendesk-content .opendesk-links {
-    margin: 2rem 6rem;
+    margin: 4rem;
   }
-  .opendesk-content .opendesk-links a {
-    width: calc(50% - 72.5px);
+  .opendesk-content .opendesk-links .button-wrapper {
+    width: calc(50% - 89.5px);
   }
-  .opendesk-content .opendesk-links a:nth-of-type(2) {
+  .opendesk-content .opendesk-links .button-wrapper:nth-of-type(2) {
     order: unset;
-    width: 145px;
+    width: 179px;
     margin: 0;
   }
 }
+@media screen and (min-width: 860px) {
+  .opendesk-content .opendesk-links {
+    margin: 4rem 6rem;
+  }
+  .opendesk-content .opendesk-links a {
+    font-size: 1.25rem;
+  }
+}
 
-.grade-tracker-content h2 {
-  text-align: center;
-  padding: 4rem 1rem 2rem 1rem;
+.grade-tracker-content {
+  background: #e6e6e6;
+}
+.grade-tracker-content .heading-wrapper {
+  margin-bottom: 2rem;
 }
 .grade-tracker-content h3 {
   text-align: center;
@@ -899,12 +954,26 @@ input#navToggle ~ label > span::after {
 .grade-tracker-content .grade-tracker-code {
   display: flex;
   text-align: center;
+  margin-top: 2rem;
+}
+.grade-tracker-content .grade-tracker-code .wrapper {
+  flex: 1 1 50%;
 }
 .grade-tracker-content .grade-tracker-code a {
-  flex: 1 1 50%;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+.grade-tracker-content .grade-tracker-code a svg {
+  width: 1rem;
+  margin-left: 8px;
+  transition: all 0.3s ease-in-out;
 }
 .grade-tracker-content .video-wrapper {
   max-width: 1100px;
@@ -913,18 +982,29 @@ input#navToggle ~ label > span::after {
 }
 .grade-tracker-content .video-wrapper video {
   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   height: 100%;
 }
 .grade-tracker-content .screenshots-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
   gap: 1.25rem;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem 1rem;
+}
+.grade-tracker-content .screenshots-wrapper figure {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 5px;
 }
 .grade-tracker-content .screenshots-wrapper figcaption {
   padding: 1rem;
   font-size: 1.5rem;
-  background-color: antiquewhite;
+  background: #495a50;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  color: #e6e6e6;
+  border-radius: 5px 5px 0 0;
+}
+.grade-tracker-content .screenshots-wrapper img {
+  border-radius: 0 0 5px 5px;
 }
 @media screen and (min-width: 600px) {
   .grade-tracker-content .screenshots-wrapper {
@@ -934,7 +1014,7 @@ input#navToggle ~ label > span::after {
     padding: 0 2rem;
   }
   .grade-tracker-content .screenshots-wrapper {
-    padding: 0 2rem;
+    padding: 0 2rem 4rem 2rem;
   }
 }
 @media screen and (min-width: 1100px) {

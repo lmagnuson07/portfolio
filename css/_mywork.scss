@@ -35,18 +35,32 @@
 .source-code-link {
     background-color: colors.$logo-offwhite;
     padding: 0 1rem;
+    .wrapper {
+        padding: 2rem 0;
+    }
     a {
+        width: fit-content;
         color: #010501;
-        padding: 1rem 0;
+        padding: .5rem 1rem;
         width: fit-content;
         display: flex;
         align-items: center;
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
         gap: .75rem;
         font-size: 1.5rem;
         text-decoration: none;
     }
     svg {
-        width: 2rem;
+        width: 1.25rem;
+    }
+    a:hover {
+        color: colors.$logo-offwhite;
+        background: colors.$logo-green;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        svg {
+            fill: colors.$logo-offwhite;
+        }
     }
     @include mixins.break(sm){
         padding: 0 2rem;
@@ -64,7 +78,7 @@
         font-weight: 400;
     }
     @include mixins.break(sm){
-        padding: 5rem 2rem;
+        padding: 0 2rem 5rem 2rem;
     }
     @include mixins.break(md){
         .container > a:nth-of-type(odd) {
@@ -80,7 +94,7 @@
         color: colors.$logo-offwhite;
         background: rgb(61,76,65);
         background: linear-gradient(153deg, rgba(61,76,65,1) 5%, rgba(71,85,75,1) 33%, rgba(159,159,159,1) 100%);
-        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         text-decoration: none;
         border-radius: 6px;
         margin-bottom: 4rem;

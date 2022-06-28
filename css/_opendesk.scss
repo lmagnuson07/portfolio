@@ -66,34 +66,43 @@
         display: flex;
         flex-flow: wrap;
         text-align: center;
-        margin: 2rem 2rem;
+        margin: 2rem 1rem;
+        .button-wrapper {
+            width: 50%;
+        }
+        .button-wrapper:nth-of-type(2) {
+            order: 1;
+            width: 100%;
+            margin-top: 3rem;
+        }
         a {
             text-decoration: none;
-            font-size: 1.5rem;
-            width: 50%;
-            color: black;
+            font-size: 1rem;
+            margin: 0 auto;
         }
         a:nth-of-type(2) {
-            width: 100%;
-            order: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             gap: .5rem;
             margin: 2rem 0;
         }
         svg {
             width: 1rem;
+            margin-left: 8px;
         }
         @include mixins.break(sm){
-            margin: 2rem 6rem;
-            a {
-                width: calc(50% - 72.5px);
+            margin: 4rem;
+            .button-wrapper {
+                width: calc(50% - 89.5px);
             }
-            a:nth-of-type(2) {
+            .button-wrapper:nth-of-type(2) {
                 order: unset;
-                width: 145px;
+                width: 179px;
                 margin: 0;
+            }
+        }
+        @include mixins.break(md){
+            margin: 4rem 6rem;
+            a {
+                font-size: 1.25rem;
             }
         }
     }
