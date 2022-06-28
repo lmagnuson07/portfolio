@@ -9,6 +9,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kreon:wght@400;700&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Volkhov&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap" rel="stylesheet"> 
 	<script src="js/main.js" defer></script>
 </head>
 <body>
@@ -158,8 +164,10 @@
     </header>
 
     <main class="main-tag opendesk-content">
+		<div class="heading-wrapper">
+			<h2>Opendesk Static Home Page Replica</h2>
+		</div>
 		<div class="container">
-			<h2>Opendesk Static Replica</h2>
 			<p>I do not claim ownership or rights to any of the content in this project. My intention was to replicate the website's home page for demonstrational purposes to showcase my bootstrap skills. No copyright infringement is intended.</p>
 			<p>I stumbled upon the Opendesk website when I was looking for web pages built with bootstrap so that I could put my CSS framework skills to the test. The website appeared quite close to bootstraps default settings and looked like it wouldn't require too much custom CSS. Aside from overwriting CSS Sass variables, I only needed to add a few extra classes to deal with the background images and a small amount of inline CSS to fix an FCP performance issue.</p>
 			<p>The build went smooth up until I needed to host the website. When I uploaded it to Netlify, I noticed that my JavaScript wasn't loading, even though it was loading locally. I attempted to rebuild the solution, add the JavaScript via bootstraps CDN, reinstall bootstrap, and add npm build commands to Netlify's build settings, all to no avail. I finally got it to work after rebuilding my solution using the build tool Parcel alongside NPM. Although this was frustrating at times to deal with, it gave me a lot of practice using Git bash commands such as creating and merging branches, creating an empty branch, pushing a local branch to the remote repository, reverting commits, and even a risky hard reset to undo a mistake.</p>
@@ -175,7 +183,7 @@
 				</div>
 			</section>
 
-			<section>
+			<section class="lighthouse-audit-section">
 				<h3 class="lighthouse-heading">Google Lighthouse Score Comparison</h3>
 				<section>
 					<h4>Mobile Audits</h4>
@@ -193,7 +201,7 @@
 				</section>
 				<div class="opendesk-links">
 					<a href="https://opendesk-mock-build.netlify.app/">My Version</a>
-					<a href="https://github.com/lmagnuson07/opendesk-build"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+					<a href="https://github.com/lmagnuson07/opendesk-build">Source Code<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.952 44.952" xml:space="preserve"><path d="M44.952,22.108c0-1.25-0.478-2.424-1.362-3.308L30.627,5.831c-0.977-0.977-2.561-0.977-3.536,0 c-0.978,0.977-0.976,2.568,0,3.546l10.574,10.57H2.484C1.102,19.948,0,21.081,0,22.464c0,0.003,0,0.025,0,0.028 c0,1.382,1.102,2.523,2.484,2.523h35.182L27.094,35.579c-0.978,0.978-0.978,2.564,0,3.541c0.977,0.979,2.561,0.978,3.538-0.001 l12.958-12.97c0.885-0.882,1.362-2.059,1.362-3.309C44.952,22.717,44.952,22.231,44.952,22.108z"/></svg></a>
 					<a href="https://www.opendesk.cc/">Opendesk</a>
 				</div>
 			</section>

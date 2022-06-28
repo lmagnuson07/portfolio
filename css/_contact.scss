@@ -3,9 +3,11 @@
 
 
 .form-section {
+    background: colors.$logo-offwhite;
     .cta {
-        background: rgb(153,153,153);
-        background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
+        background-color: colors.$logo-green;color: #c2c0c0;
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        font-family: 'Monda', sans-serif;
     }
     form {
         padding: 2rem 1rem;
@@ -55,16 +57,18 @@
 }
 
 .extra-contact {
+    background: colors.$logo-offwhite;
     text-align: center;
     .cta {
-        background: rgb(61,76,65);
-        background: linear-gradient(8deg, rgba(61,76,65,1) 26%, rgba(153,153,153,1) 75%);
+        background-color: colors.$logo-green;color: #c2c0c0;
+        text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        font-family: 'Monda', sans-serif;
     }
     .contact-content {
         display: flex;
         flex-flow: wrap;
         justify-content: center;
-        padding: 4rem .75rem 2rem .75rem;
+        padding: 6rem 0;
         section:first-of-type {
             flex: 0 1 450px;
         }

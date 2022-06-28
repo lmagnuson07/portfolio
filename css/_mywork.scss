@@ -4,8 +4,6 @@
 
     
 .introduction {
-    // background: rgb(153,153,153);
-    // background: linear-gradient(8deg, rgba(153,153,153,1) 0%, rgba(61,76,65,1) 75%);
     background-color: colors.$logo-green;
     padding: 4rem 0.75rem;
     h2 {
@@ -56,7 +54,7 @@
 }
 
 .projects {
-    padding: 0 0.75rem 4rem 0.075rem;
+    padding: 0 1rem 4rem 1rem;
     background-color: colors.$logo-offwhite;
     h2 {
         font-family: 'Volkhov', serif;
@@ -66,6 +64,9 @@
         font-weight: 400;
     }
     @include mixins.break(sm){
+        padding: 5rem 2rem;
+    }
+    @include mixins.break(md){
         .container > a:nth-of-type(odd) {
             div:first-of-type {
                 order: 1;
@@ -102,11 +103,19 @@
             width: 100%;
         }
         div:first-of-type {
-            flex: 1 1 388px;
+            flex: 1 1 498px;
         }
         div:last-of-type {
             padding: 1rem 1rem 1rem 2rem;
-            flex: 1 1 188px;
+            flex: 1 1 298px;
+        }
+        @include mixins.break(md) {
+            div:first-of-type {
+                flex: 1 1 498px;
+            }
+            div:last-of-type {
+                flex: 1 1 298px;
+            }
         }
         @include mixins.break(lg){
             h3 {
