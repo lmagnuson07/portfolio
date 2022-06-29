@@ -149,7 +149,7 @@ header {
   z-index: 1;
   top: 0;
   padding: 2rem 1rem;
-  background: #e6e6e6;
+  background: #201313;
   background: linear-gradient(0deg, #e6e6e6 0%, #999999 88%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-bottom: 2px solid #e6e6e6;
@@ -205,20 +205,46 @@ input#navToggle ~ label > span::after {
   top: 0;
 }
 
+.dropdown {
+  position: absolute;
+  background: #e6e6e6;
+  background: linear-gradient(180deg, #e6e6e6 0%, #999999 88%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+  width: calc(100vw + 2rem);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: none;
+  left: -2rem;
+}
+.dropdown li {
+  max-width: 360px;
+}
+.dropdown li a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 1rem 0.875rem;
+}
+.dropdown li:hover a {
+  color: #1d4e08;
+}
+
 .main-nav {
   display: none;
   flex-flow: column;
   justify-content: flex-start;
   font-size: 1.5rem;
 }
-.main-nav li {
+.main-nav > li {
   display: flex;
   align-items: center;
   height: calc(33vh - 82px);
   padding: 1rem;
   width: 100%;
 }
-.main-nav li a {
+.main-nav > li a {
   width: 100%;
   display: block;
   height: -webkit-fit-content;
@@ -227,10 +253,19 @@ input#navToggle ~ label > span::after {
   text-decoration: none;
   color: black;
 }
+.main-nav > li a:hover {
+  color: #1d4e08;
+}
 
 .my-work .main-nav li:first-child a,
 .about .main-nav li:nth-of-type(2) a,
-.contact .main-nav li:last-child a {
+.contact .main-nav li:last-child a,
+.good-food .main-nav li:first-child a,
+.good-food .dropdown li:first-child a,
+.opendesk .main-nav li:first-child a,
+.opendesk .dropdown li:nth-of-type(2) a,
+.grade-tracker .main-nav li:first-child a,
+.grade-tracker .dropdown li:last-child a {
   color: #1d4e08;
   text-decoration: underline;
 }
@@ -247,6 +282,10 @@ input#navToggle ~ label > span::after {
 .show-nav {
   display: flex;
   text-align: center;
+}
+
+.display-block {
+  display: block;
 }
 
 .header-container {
@@ -285,6 +324,10 @@ input#navToggle ~ label > span::after {
   }
 }
 @media screen and (min-width: 860px) {
+  header {
+    padding: 0 2rem 0 2rem;
+  }
+
   .header-container {
     grid-template-rows: unset;
     grid-template-columns: 1fr 100px 1fr;
@@ -300,16 +343,16 @@ input#navToggle ~ label > span::after {
     align-items: center;
     justify-content: flex-start;
   }
-  .header-container nav .main-nav li {
+  .header-container nav .main-nav > li {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     width: unset;
   }
-  .header-container nav .main-nav li:first-of-type {
-    padding-left: 0;
+  .header-container nav .main-nav > li:first-of-type {
+    padding: 55.12px 1rem 55.12px 0;
   }
-  .header-container nav .main-nav li:nth-of-type(2) {
+  .header-container nav .main-nav .middle-nav-item {
     padding-top: 0;
     padding-bottom: 0;
     border-left: 1px solid black;

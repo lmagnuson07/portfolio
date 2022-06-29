@@ -6,7 +6,7 @@ header {
     z-index: 1;
     top: 0;
     padding: 2rem 1rem;
-    background: rgb(230,230,230);
+    background: rgb(32, 19, 19);
     background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom: 2px solid #e6e6e6;
@@ -62,12 +62,35 @@ input#navToggle ~ label > span::after {
     top: 0;
 }
 
+.dropdown {
+    position: absolute;
+    background: rgb(230,230,230);
+    background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+    width: calc(100vw + 2rem);
+    height: fit-content;
+    display: none;
+    left: -2rem;
+    li {
+        a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 1rem 0.875rem;
+        }
+        max-width: 360px;
+    } li:hover a {
+        color: #1d4e08;
+
+    }
+}
 .main-nav {
     display: none; // display none
     flex-flow: column;
     justify-content: flex-start;
     font-size: 1.5rem;
-    li {
+    > li {
         display: flex;
         align-items: center;
         height: calc(33vh - 82px);
@@ -81,11 +104,21 @@ input#navToggle ~ label > span::after {
             color: black;
         }
     }
+    > li a:hover {
+        color: #1d4e08;
+    }
 }
 
 .my-work .main-nav li:first-child a,
 .about .main-nav li:nth-of-type(2) a,
-.contact .main-nav li:last-child a {
+.contact .main-nav li:last-child a,
+.good-food .main-nav li:first-child a,
+.good-food .dropdown li:first-child a,
+.opendesk .main-nav li:first-child a,
+.opendesk .dropdown li:nth-of-type(2) a,
+.grade-tracker .main-nav li:first-child a,
+.grade-tracker .dropdown li:last-child a
+ {
     // color: #2d6431;
     // color: #0e4e12;
     color: #1d4e08;
@@ -105,6 +138,10 @@ input#navToggle ~ label > span::after {
 .show-nav {
     display: flex;
     text-align: center;
+}
+
+.display-block {
+    display: block;
 }
 
 .header-container {
@@ -138,7 +175,7 @@ input#navToggle ~ label > span::after {
             width: 2rem;
         }
     }
-
+    
 }
 
 @include mixins.break(sm){
@@ -148,6 +185,9 @@ input#navToggle ~ label > span::after {
 }
 
 @include mixins.break(md){
+    header {
+        padding: 0 2rem 0 2rem;
+    }
     .header-container {
         grid-template-rows: unset;
         grid-template-columns: 1fr 100px 1fr;
@@ -160,14 +200,14 @@ input#navToggle ~ label > span::after {
                 flex-flow: row;
                 align-items: center;
                 justify-content: flex-start;
-                li {
+                > li {
                     height: fit-content;
                     width: unset;
                 }
-                li:first-of-type {
-                    padding-left: 0;
+                > li:first-of-type {
+                    padding: 55.12px 1rem 55.12px 0;
                 }
-                li:nth-of-type(2) {
+                .middle-nav-item {
                     padding-top: 0;
                     padding-bottom: 0;
                     border-left: 1px solid black;
