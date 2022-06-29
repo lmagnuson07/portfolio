@@ -5,12 +5,15 @@
         @media screen and (min-width: 600px) { @content; }
     }
     @else if $point == md {
-        @media screen and (min-width: 860px) { @content; } 
+        @media screen and (min-width: 900px) { @content; } 
     }
     @else if $point == lg {
         @media screen and (min-width: 1100px) { @content; }
     }
     @else if $point == xlg {
         @media screen and (min-width: 1400px) { @content; }
+    }
+    @else if $point == xxlg {
+        @media screen and (min-width: 1540px) { @content; }
     }
 }

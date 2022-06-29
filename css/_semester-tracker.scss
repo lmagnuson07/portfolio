@@ -9,12 +9,14 @@
     h3 {
         text-align: center;
         padding: 4rem 1rem;
+        color: colors.$offblack;
     }
     p, 
     .grade-tracker-code {
         font-size: 1.25rem;
         margin: 0 auto 1rem auto;
         max-width: 1000px;
+        color: colors.$offblack;
     }
     .grade-tracker-code {
         display: flex;

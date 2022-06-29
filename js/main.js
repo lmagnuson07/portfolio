@@ -1,5 +1,4 @@
 
-
 document.querySelector(".toggle label").addEventListener("click", () => {
     document.querySelector("ul.main-nav").classList.toggle("show-nav");
     document.querySelector("ul.socials").classList.toggle("show-nav");
@@ -31,5 +30,3 @@ navItem.addEventListener("mouseleave", () => {
         }
     });
 });
-
-

@@ -178,7 +178,7 @@ input#navToggle ~ label > span::after {
   height: 0.125rem;
   width: 1.75rem;
   opacity: 1;
-  background: black;
+  background: #050905;
   transition: 0.14s ease-in-out;
 }
 
@@ -214,21 +214,28 @@ input#navToggle ~ label > span::after {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding-bottom: 2rem;
   display: none;
   left: -2rem;
 }
 .dropdown li {
+  margin-left: 3rem;
   max-width: 360px;
 }
 .dropdown li a {
   display: block;
-  color: black;
+  color: #050905;
   text-decoration: none;
   font-size: 1.5rem;
   padding: 1rem 0.875rem;
 }
 .dropdown li:hover a {
   color: #1d4e08;
+}
+@media screen and (min-width: 1540px) {
+  .dropdown li {
+    margin-left: unset;
+  }
 }
 
 .main-nav {
@@ -251,23 +258,34 @@ input#navToggle ~ label > span::after {
   height: -moz-fit-content;
   height: fit-content;
   text-decoration: none;
-  color: black;
+  color: #050905;
+}
+.main-nav > li:first-of-type svg {
+  display: none;
 }
 .main-nav > li a:hover {
   color: #1d4e08;
 }
 
-.my-work .main-nav li:first-child a,
 .about .main-nav li:nth-of-type(2) a,
 .contact .main-nav li:last-child a,
-.good-food .main-nav li:first-child a,
-.good-food .dropdown li:first-child a,
-.opendesk .main-nav li:first-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.grade-tracker .main-nav li:first-child a,
-.grade-tracker .dropdown li:last-child a {
+.good-food .dropdown li:first-child a .grade-tracker .dropdown li:last-child a {
   color: #1d4e08;
   text-decoration: underline;
+}
+
+.my-work .main-nav li:first-child a,
+.good-food .main-nav li:first-child a,
+.opendesk .main-nav li:first-child a,
+.grade-tracker .main-nav li:first-child a {
+  color: #1d4e08;
+}
+.my-work .main-nav li:first-child svg,
+.good-food .main-nav li:first-child svg,
+.opendesk .main-nav li:first-child svg,
+.grade-tracker .main-nav li:first-child svg {
+  fill: #1d4e08;
 }
 
 .socials {
@@ -314,8 +332,18 @@ input#navToggle ~ label > span::after {
   grid-area: socials;
   grid-column: span 2;
 }
+.header-container .socials li {
+  transition: transform 0.7s ease;
+}
+.header-container .socials li:hover {
+  transform: translate(-1px, -2px);
+}
+.header-container .socials li:hover svg {
+  fill: #1d4e08;
+}
 .header-container .socials svg {
   width: 2rem;
+  fill: #050905;
 }
 
 @media screen and (min-width: 600px) {
@@ -323,7 +351,7 @@ input#navToggle ~ label > span::after {
     padding: 2rem;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   header {
     padding: 0 2rem 0 2rem;
   }
@@ -352,11 +380,17 @@ input#navToggle ~ label > span::after {
   .header-container nav .main-nav > li:first-of-type {
     padding: 55.12px 1rem 55.12px 0;
   }
+  .header-container nav .main-nav > li:first-of-type svg {
+    display: unset;
+    width: 0.875rem;
+    position: relative;
+    left: 6px;
+  }
   .header-container nav .main-nav .middle-nav-item {
     padding-top: 0;
     padding-bottom: 0;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid #050905;
+    border-right: 1px solid #050905;
   }
   .header-container a {
     justify-self: center;
@@ -384,6 +418,10 @@ input#navToggle ~ label > span::after {
     height: -moz-fit-content;
     height: fit-content;
   }
+
+  #firstNavItem {
+    fill: #050905;
+  }
 }
 .introduction {
   background-color: #3d4c41;
@@ -407,7 +445,8 @@ input#navToggle ~ label > span::after {
 }
 .introduction p {
   color: #c2c0c0;
-  max-width: 32rem;
+  font-size: 1.25rem;
+  max-width: 760px;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 600px) {
@@ -447,15 +486,14 @@ input#navToggle ~ label > span::after {
   font-family: "Battambang", cursive;
   text-align: center;
   padding: 5rem 1rem;
-  color: #010501;
-  font-weight: 400;
+  color: #050905;
 }
 @media screen and (min-width: 600px) {
   .projects {
     padding: 0 2rem 5rem 2rem;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .projects .container > a:nth-of-type(odd) div:first-of-type {
     order: 1;
   }
@@ -471,6 +509,10 @@ input#navToggle ~ label > span::after {
   text-decoration: none;
   border-radius: 6px;
   margin-bottom: 4rem;
+  transition: transform 0.7s ease;
+}
+.projects .container > a:hover {
+  transform: translate(4px, 8px);
 }
 .projects .container > a > a:last-of-type {
   margin-bottom: 0;
@@ -493,9 +535,12 @@ input#navToggle ~ label > span::after {
   position: relative;
   top: 2px;
   margin-left: 0.625rem;
-  width: 1.125rem;
+  width: 1.25rem;
   fill: #e6e6e6;
   filter: drop-shadow(3px 4px 1px rgba(0, 0, 0, 0.6));
+}
+.projects .container > a p:last-of-type {
+  font-weight: 700;
 }
 .projects .container > a img {
   border-radius: 0 6px 6px 0;
@@ -508,7 +553,7 @@ input#navToggle ~ label > span::after {
   padding: 1rem 1rem 1rem 2rem;
   flex: 1 1 298px;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .projects .container > a div:first-of-type {
     flex: 1 1 498px;
   }
@@ -552,7 +597,7 @@ input#navToggle ~ label > span::after {
 }
 
 .button {
-  color: #000000;
+  color: #050905;
   background: #dad8d8;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   padding: 0.5rem 1rem;
@@ -566,7 +611,7 @@ input#navToggle ~ label > span::after {
   transition: all 0.3s ease-in-out;
 }
 .button svg {
-  fill: black;
+  color: #050905;
   transition: all 0.3s ease-in-out;
 }
 
@@ -609,6 +654,7 @@ input#navToggle ~ label > span::after {
 .about-me-section .container p {
   font-size: 1rem;
   margin-bottom: 1rem;
+  color: #050905;
 }
 .about-me-section .container a {
   text-decoration: none;
@@ -644,6 +690,7 @@ input#navToggle ~ label > span::after {
   line-height: 3.75rem;
   margin-bottom: 0.75rem;
   max-width: 25rem;
+  color: #050905;
 }
 .about-me-section .container .skills-list h3 span,
 .about-me-section .container .interests-list h3 span {
@@ -651,6 +698,7 @@ input#navToggle ~ label > span::after {
 }
 .about-me-section .container .skills-list li,
 .about-me-section .container .interests-list li {
+  color: #050905;
   width: 50%;
 }
 @media screen and (min-width: 600px) {
@@ -671,7 +719,7 @@ input#navToggle ~ label > span::after {
     grid-column: 2/3;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .about-me-section .container {
     grid-template-columns: 350px 1fr;
     grid-template-rows: 300px 200px 230px 1%;
@@ -719,6 +767,13 @@ input#navToggle ~ label > span::after {
 }
 .band-section li {
   padding: 0 1rem 4rem 1rem;
+  transition: transform 0.7s ease;
+}
+.band-section li:hover {
+  transform: translate(-1px, -2px);
+}
+.band-section li:hover svg {
+  fill: #1d4e08;
 }
 .band-section svg {
   width: 2rem;
@@ -740,16 +795,19 @@ input#navToggle ~ label > span::after {
   font-size: 4rem;
   font-family: "Battambang", cursive;
   grid-column: 1/-1;
+  color: #050905;
 }
 .my-dog-section img {
   justify-self: center;
   width: 300px;
   border-radius: 2%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .my-dog-section p {
   text-align: center;
   font-size: 2rem;
   align-self: center;
+  color: #050905;
 }
 .my-dog-section p:first-of-type {
   grid-row: 2/3;
@@ -769,7 +827,7 @@ input#navToggle ~ label > span::after {
     grid-row: unset;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .my-dog-section .container {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
@@ -787,10 +845,12 @@ input#navToggle ~ label > span::after {
 .good-food-content p {
   font-size: 1.25rem;
   max-width: 1000px;
+  color: #050905;
   margin: 0 auto;
 }
 .good-food-content h3 {
   font-family: "Battambang", cursive;
+  color: #050905;
   text-align: center;
   padding: 4rem 1rem;
 }
@@ -865,7 +925,7 @@ input#navToggle ~ label > span::after {
     margin-bottom: 1.5rem;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .good-food-content .img-grid,
 .opendesk-content .img-grid {
     gap: 1.5rem;
@@ -884,6 +944,7 @@ input#navToggle ~ label > span::after {
   line-height: 86px;
 }
 .opendesk-content p {
+  color: #050905;
   font-size: 1.25rem;
   margin: 0 auto 1rem auto;
   max-width: 1000px;
@@ -900,6 +961,7 @@ input#navToggle ~ label > span::after {
   text-align: center;
   font-family: "Battambang", cursive;
   padding: 3rem 1rem;
+  color: #050905;
 }
 .opendesk-content .lighthouse-audit-section {
   padding-bottom: 4rem;
@@ -911,6 +973,7 @@ input#navToggle ~ label > span::after {
   font-size: 2rem;
   text-align: center;
   padding: 2rem 1rem;
+  color: #050905;
 }
 .opendesk-content .lighthouse-audit {
   display: flex;
@@ -929,7 +992,7 @@ input#navToggle ~ label > span::after {
     min-width: 358px;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .opendesk-content .lighthouse-audit {
     padding: 0 6rem;
   }
@@ -974,7 +1037,7 @@ input#navToggle ~ label > span::after {
     margin: 0;
   }
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 900px) {
   .opendesk-content .opendesk-links {
     margin: 4rem 6rem;
   }
@@ -992,12 +1055,14 @@ input#navToggle ~ label > span::after {
 .grade-tracker-content h3 {
   text-align: center;
   padding: 4rem 1rem;
+  color: #050905;
 }
 .grade-tracker-content p,
 .grade-tracker-content .grade-tracker-code {
   font-size: 1.25rem;
   margin: 0 auto 1rem auto;
   max-width: 1000px;
+  color: #050905;
 }
 .grade-tracker-content .grade-tracker-code {
   display: flex;
@@ -1087,18 +1152,23 @@ input#navToggle ~ label > span::after {
   width: 100%;
   font-size: 1.5rem;
   padding-bottom: 0.625rem;
+  color: #050905;
 }
 .form-section form div input {
   display: block;
   width: 100%;
   line-height: 2.375rem;
-  padding: 0 0.5rem;
+  padding: 0 0.75rem;
+  border: 1px solid #050905;
+  border-radius: 5px;
 }
 .form-section form div textarea {
   resize: none;
   width: 100%;
   height: 300px;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 .form-section form div:nth-of-type(1) {
   grid-area: n;
@@ -1111,6 +1181,8 @@ input#navToggle ~ label > span::after {
 }
 .form-section form button {
   grid-area: b;
+  display: block;
+  width: unset;
   max-width: 17.5rem;
 }
 
@@ -1127,6 +1199,12 @@ input#navToggle ~ label > span::after {
   padding: 6rem 0;
   text-align: center;
 }
+.extra-contact .contact-content h3 {
+  color: #050905;
+}
+.extra-contact .contact-content p {
+  color: #050905;
+}
 .extra-contact .contact-content section:first-of-type {
   flex: 0 1 450px;
 }
@@ -1136,7 +1214,7 @@ input#navToggle ~ label > span::after {
 
 @media screen and (min-width: 600px) {
   .form-section form {
-    padding: 2rem;
+    padding: 2rem 2rem 4rem 2rem;
   }
 }
 footer {
@@ -1154,8 +1232,19 @@ footer .socials {
 }
 footer .socials li {
   padding: 1rem;
+  transition: transform 0.7s ease;
 }
 footer .socials li svg {
   width: 2rem;
+  fill: #050905;
+}
+footer .socials li:hover {
+  transform: translate(-1px, -2px);
+}
+footer .socials li:hover svg {
+  fill: #1d4e08;
+}
+footer p {
+  color: #050905;
 }
 /*# sourceMappingURL=styles.css.map */

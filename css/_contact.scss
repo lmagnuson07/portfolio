@@ -24,18 +24,23 @@
                 width: 100%;
                 font-size: 1.5rem;
                 padding-bottom: .625rem;
+                color: colors.$offblack;
             }
             input {
                 display: block;
                 width: 100%;
                 line-height: 2.375rem;
-                padding: 0 .5rem;
+                padding: 0 .75rem;
+                border: 1px solid colors.$offblack;
+                border-radius: 5px;
             }
             textarea {
                 resize: none;
                 width: 100%;
                 height: 300px;
-                padding: .5rem;
+                padding: .5rem .75rem;
+                border: 1px solid black;
+                border-radius: 5px;
             }
         }
         div:nth-of-type(1) {
@@ -49,6 +54,8 @@
         }
         button {
             grid-area: b;
+            display: block;
+            width: unset;
             max-width: 17.5rem;
         }
     }   
@@ -65,6 +72,12 @@
         justify-content: center;
         padding: 6rem 0;
         text-align: center;
+        h3 {
+            color: colors.$offblack;
+        }
+        p {
+            color: colors.$offblack;
+        }
         section:first-of-type {
             flex: 0 1 450px;
         }
@@ -77,7 +90,7 @@
 @include mixins.break(sm) {
     .form-section {
         form {
-            padding: 2rem;
+            padding: 2rem 2rem 4rem 2rem;
         }
     }
 }

@@ -35,7 +35,7 @@ input#navToggle ~ label > span::after {
     height: 0.125rem;
     width: 1.75rem;
     opacity: 1;
-    background: black;
+    background: colors.$offblack;
     transition: 0.14s ease-in-out;
 }
 
@@ -69,12 +69,15 @@ input#navToggle ~ label > span::after {
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
     width: calc(100vw + 2rem);
     height: fit-content;
+    padding-bottom: 2rem;
+    // transition: all 2s ease-in-out;
     display: none;
     left: -2rem;
     li {
+        margin-left: 3rem;
         a {
             display: block;
-            color: black;
+            color: colors.$offblack;
             text-decoration: none;
             font-size: 1.5rem;
             padding: 1rem 0.875rem;
@@ -82,7 +85,11 @@ input#navToggle ~ label > span::after {
         max-width: 360px;
     } li:hover a {
         color: #1d4e08;
-
+    }
+    @include mixins.break(xxlg){
+        li {
+            margin-left: unset;
+        }
     }
 }
 .main-nav {
@@ -101,29 +108,38 @@ input#navToggle ~ label > span::after {
             display: block;
             height: fit-content;
             text-decoration: none;
-            color: black;
+            color: colors.$offblack;
         }
     }
+    > li:first-of-type svg {
+        display: none;
+    }
     > li a:hover {
-        color: #1d4e08;
+        color: colors.$shamrock-green;
     }
 }
 
-.my-work .main-nav li:first-child a,
 .about .main-nav li:nth-of-type(2) a,
 .contact .main-nav li:last-child a,
-.good-food .main-nav li:first-child a,
-.good-food .dropdown li:first-child a,
-.opendesk .main-nav li:first-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.grade-tracker .main-nav li:first-child a,
-.grade-tracker .dropdown li:last-child a
- {
+.good-food .dropdown li:first-child a 
+.grade-tracker .dropdown li:last-child a {
     // color: #2d6431;
     // color: #0e4e12;
-    color: #1d4e08;
+    color: colors.$shamrock-green;
     // font-weight: 700;
     text-decoration: underline;
+}
+.my-work .main-nav li:first-child,
+.good-food .main-nav li:first-child, 
+.opendesk .main-nav li:first-child,
+.grade-tracker .main-nav li:first-child {
+    a {
+        color: colors.$shamrock-green;
+    }
+    svg {
+        fill: colors.$shamrock-green;
+    }
 }
 
 .socials {
@@ -171,11 +187,20 @@ input#navToggle ~ label > span::after {
     .socials {
         grid-area: socials;
         grid-column: span 2;
+        li {
+            transition: transform 0.7s ease;
+        }
+        li:hover {
+            transform: translate(-1px, -2px);
+        }
+        li:hover svg {
+            fill: colors.$shamrock-green;
+        }
         svg {
             width: 2rem;
+            fill: colors.$offblack;
         }
     }
-    
 }
 
 @include mixins.break(sm){
@@ -206,12 +231,18 @@ input#navToggle ~ label > span::after {
                 }
                 > li:first-of-type {
                     padding: 55.12px 1rem 55.12px 0;
+                    svg {
+                        display: unset;
+                        width: .875rem;
+                        position: relative;
+                        left: 6px;
+                    }
                 }
                 .middle-nav-item {
                     padding-top: 0;
                     padding-bottom: 0;
-                    border-left: 1px solid black;
-                    border-right: 1px solid black;
+                    border-left: 1px solid colors.$offblack;
+                    border-right: 1px solid colors.$offblack;
                 }
             }
         }
@@ -238,5 +269,8 @@ input#navToggle ~ label > span::after {
     .header-tag {
         display: block;
         height: fit-content;
+    }
+    #firstNavItem {
+        fill: colors.$offblack;
     }
 }
