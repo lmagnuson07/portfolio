@@ -336,6 +336,20 @@ input#navToggle ~ label > span::after {
   top: 0;
 }
 
+.main-nav {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .main-tag,
+.footer-tag,
+.header-tag {
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -357,7 +371,6 @@ header .header-container nav {
   grid-column: span 2;
 }
 header .header-container nav .main-nav {
-  display: none;
   flex-flow: column;
   justify-content: flex-start;
   font-size: 1.5rem;
@@ -460,14 +473,6 @@ header .header-container .socials {
   header .header-container input#navToggle ~ label {
     display: none;
   }
-  header .main-tag,
-header .footer-tag,
-header .header-tag {
-    display: block;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
   header #firstNavItem {
     fill: #050905;
   }
@@ -522,32 +527,47 @@ header .header-tag {
 .introduction h2 {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #c2c0c0;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
   font-family: "Kreon", Arial, serif;
   text-align: unset;
 }
 .introduction h3 {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #3f7c11;
-  font-size: 3.5rem;
-  line-height: 3.75rem;
-  padding: 2.25rem 0;
+  font-size: 2.5rem;
+  line-height: 3.25rem;
+  padding: 1.25rem 0 1.875rem 0;
   font-family: "Kreon", Arial, serif;
   text-align: unset;
 }
 .introduction span {
   color: #3f7c11;
-  font-size: 2.75rem;
+  font-size: 2rem;
 }
 .introduction p {
   color: #c2c0c0;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   max-width: 760px;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 }
 @media screen and (min-width: 600px) {
   .introduction {
     padding: 4rem 2rem;
+  }
+  .introduction h2 {
+    font-size: 2rem;
+  }
+  .introduction h3 {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+    padding: 2.25rem 0 2.625rem 0;
+  }
+  .introduction span {
+    font-size: 2.75rem;
+  }
+  .introduction p {
+    font-size: 1.25rem;
   }
 }
 
@@ -562,15 +582,21 @@ header .header-tag {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 .source-code-link svg {
-  width: 1.25rem;
+  width: 1rem;
 }
 @media screen and (min-width: 600px) {
   .source-code-link {
     padding: 0 2rem;
+  }
+  .source-code-link a {
+    font-size: 1.5rem;
+  }
+  .source-code-link svg {
+    width: 1.25rem;
   }
 }
 
@@ -579,17 +605,7 @@ header .header-tag {
   background-color: #e6e6e6;
 }
 .projects h2 {
-  padding: 5rem 1rem;
-}
-@media screen and (min-width: 600px) {
-  .projects {
-    padding: 0 2rem 5rem 2rem;
-  }
-}
-@media screen and (min-width: 900px) {
-  .projects .container > a:nth-of-type(odd) div:first-of-type {
-    order: 1;
-  }
+  padding: 3rem 0;
 }
 .projects .container > a {
   display: flex;
@@ -685,7 +701,18 @@ header .header-tag {
 .projects .container > a:hover svg {
   left: 5px;
 }
+@media screen and (min-width: 600px) {
+  .projects {
+    padding: 0 2rem 5rem 2rem;
+  }
+  .projects h2 {
+    padding: 5rem 0;
+  }
+}
 @media screen and (min-width: 900px) {
+  .projects .container > a:nth-of-type(odd) div:first-of-type {
+    order: 1;
+  }
   .projects .container > a:nth-of-type(even) {
     background: #3d4c41;
     background: linear-gradient(326deg, #3d4c41 5%, #47554b 42%, #9f9f9f 100%);
@@ -833,6 +860,7 @@ header .header-tag {
 }
 .band-section h2 {
   font-size: 2rem;
+  line-height: 2.625rem;
   padding: 4rem 2rem;
   color: #bebebe;
 }
@@ -1305,12 +1333,6 @@ header .header-tag {
   justify-content: center;
   padding: 4rem 0;
   text-align: center;
-}
-.extra-contact .contact-content h3 {
-  color: #050905;
-}
-.extra-contact .contact-content p {
-  color: #050905;
 }
 .extra-contact .contact-content section:first-of-type {
   flex: 0 1 450px;

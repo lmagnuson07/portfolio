@@ -81,6 +81,19 @@ input#navToggle ~ label > span::after {
     top: 0;
 }
 
+.main-nav {
+    display: none;
+}
+
+@include mixins.break(md) {
+    .main-tag,
+    .footer-tag,
+    .header-tag {
+        display: block;
+        height: fit-content;
+    }
+}
+
 header {
     position: sticky;
     z-index: 1;
@@ -101,7 +114,6 @@ header {
             grid-area: siteNav;
             grid-column: span 2;
             .main-nav {
-                display: none; // display none
                 flex-flow: column;
                 justify-content: flex-start;
                 font-size: 1.5rem;
@@ -197,12 +209,6 @@ header {
             input#navToggle ~ label {
                 display: none;
             }
-        }
-        .main-tag,
-        .footer-tag,
-        .header-tag {
-            display: block;
-            height: fit-content;
         }
         #firstNavItem {
             fill: colors.$offblack;

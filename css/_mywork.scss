@@ -7,31 +7,47 @@
     h2 {
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         color: colors.$offwhite;
-        font-size: 2rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
         font-family: 'Kreon', Arial, serif;
         text-align: unset;
     }
     h3 {
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         color: colors.$emerald-green;
-        font-size: 3.5rem;
-        line-height: 3.75rem;
-        padding: 2.25rem 0;
+        font-size: 2.5rem;
+        line-height: 3.25rem;
+        padding: 1.25rem 0 1.875rem 0;
         font-family: 'Kreon', Arial, serif;
         text-align: unset;
     }
     span {
         color: colors.$emerald-green;
-        font-size: 2.75rem;
+        font-size: 2rem;
     }
     p {
         color: colors.$offwhite;
-        font-size: 1.25rem;
+        font-size: 1.125rem;
         max-width: 760px;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
     }
     @include mixins.break(sm){
         padding: 4rem 2rem;
+        h2 {
+            font-size: 2rem;
+
+        }
+        h3 {
+            font-size: 3.5rem;
+            line-height: 4.5rem;
+            padding: 2.25rem 0 2.625rem 0;
+        }
+        span {
+            font-size: 2.75rem;
+        }
+        p {
+            font-size: 1.25rem;
+        }
     }
 }
 
@@ -45,14 +61,20 @@
         display: flex;
         align-items: center;
         gap: .75rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-decoration: none;
     }
     svg {
-        width: 1.25rem;
+        width: 1rem;
     }
     @include mixins.break(sm){
         padding: 0 2rem;
+        a {
+            font-size: 1.5rem;
+        }
+        svg {
+            width: 1.25rem;
+        }
     }
 }
 
@@ -60,17 +82,7 @@
     padding: 0 1rem 4rem 1rem;
     background-color: colors.$logo-offwhite;
     h2 {
-        padding: 5rem 1rem;
-    }
-    @include mixins.break(sm){
-        padding: 0 2rem 5rem 2rem;
-    }
-    @include mixins.break(md){
-        .container > a:nth-of-type(odd) {
-            div:first-of-type {
-                order: 1;
-            }
-        }
+        padding: 3rem 0;
     }
     .container > a {
         display: flex;
@@ -166,7 +178,18 @@
             left: 5px;
         }
     }
+    @include mixins.break(sm){
+        padding: 0 2rem 5rem 2rem;
+        h2 {
+            padding: 5rem 0;
+        }
+    }
     @include mixins.break(md) {
+        .container > a:nth-of-type(odd) {
+            div:first-of-type {
+                order: 1;
+            }
+        }
         .container > a:nth-of-type(even) {
             background: rgb(61,76,65);
             background: linear-gradient(326deg, rgba(61,76,65,1) 5%, rgba(71,85,75,1) 42%, rgba(159,159,159,1) 100%); 
