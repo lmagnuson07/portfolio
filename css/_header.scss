@@ -1,15 +1,34 @@
 @use 'colors';
 @use 'mixins';
 
-header {
-    position: sticky;
-    z-index: 1;
-    top: 0;
-    padding: 2rem 1rem;
-    background: rgb(32, 19, 19);
-    background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-bottom: 2px solid #e6e6e6;
+.my-work .main-nav li:first-child {
+    a {
+        color: colors.$shamrock-green;
+        text-decoration: underline;
+    }
+    svg {
+        fill: colors.$shamrock-green;
+    }
+}
+
+.about .main-nav li:nth-of-type(2) a,
+.contact .main-nav li:last-child a,
+.opendesk .dropdown li:nth-of-type(2) a,
+.good-food .dropdown li:first-child a, 
+.grade-tracker .dropdown li:last-child a {
+    color: colors.$shamrock-green;
+    text-decoration: underline;
+}
+
+.good-food .main-nav li:first-child, 
+.opendesk .main-nav li:first-child,
+.grade-tracker .main-nav li:first-child {
+    a {
+        color: colors.$shamrock-green;
+    }
+    svg {
+        fill: colors.$shamrock-green;
+    }
 }
 
 input#navToggle {
@@ -62,6 +81,135 @@ input#navToggle ~ label > span::after {
     top: 0;
 }
 
+header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    padding: 2rem 1rem;
+    background: rgb(32, 19, 19);
+    background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-bottom: 2px solid #e6e6e6;
+    .header-container {
+        display: grid;
+        grid-template-areas:
+        "logo toggle"
+        "siteNav ."
+        "socials .";
+        grid-template-columns: repeat(2, 50%);
+        nav {
+            grid-area: siteNav;
+            grid-column: span 2;
+            .main-nav {
+                display: none; // display none
+                flex-flow: column;
+                justify-content: flex-start;
+                font-size: 1.5rem;
+                > li {
+                    display: flex;
+                    align-items: center;
+                    height: calc(33vh - 82px);
+                    padding: 1rem;
+                    width: 100%;
+                    a {
+                        width: 100%;
+                        display: block;
+                        height: fit-content;
+                        text-decoration: none;
+                        color: colors.$offblack;
+                    }
+                }
+                > li:first-of-type svg {
+                    display: none;
+                }
+                > li a:hover {
+                    color: colors.$shamrock-green;
+                }
+            }
+        }
+        .logo-anchor {
+            grid-area: logo;
+            justify-self: left;
+            align-self: center;
+        }
+        .toggle {
+            grid-area: toggle;
+            justify-self: right;
+            align-self: center;
+        }
+        .socials {
+            grid-area: socials;
+            grid-column: span 2;
+        }
+    }
+    @include mixins.break(sm){
+        padding: 2rem;
+    }
+    @include mixins.break(md){
+        padding: 0 2rem 0 2rem;
+        .header-container {
+            grid-template-rows: unset;
+            grid-template-columns: 1fr 100px 1fr;
+            grid-template-areas: "siteNav logo socials";
+            align-items: center;
+            nav {
+                grid-column: 1 / 2;
+                .main-nav {
+                    display: flex; // overrides display none
+                    flex-flow: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    > li {
+                        height: fit-content;
+                        width: unset;
+                    }
+                    > li:first-of-type {
+                        padding: 55.12px 1rem 55.12px 0;
+                        svg {
+                            display: unset;
+                            width: .875rem;
+                            position: relative;
+                            left: 6px;
+                        }
+                    }
+                    > li:first-of-type a:hover svg {
+                        fill: colors.$shamrock-green;
+                    }
+                    .middle-nav-item {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        border-left: 1px solid colors.$offblack;
+                        border-right: 1px solid colors.$offblack;
+                    }
+                }
+            }
+            a {
+                justify-self: center;
+            }
+            .socials {
+                grid-area: socials;
+                display: flex; // overrides display none
+                justify-content: flex-end;
+                li {
+                    padding: .5rem;
+                }
+            }
+            input#navToggle ~ label {
+                display: none;
+            }
+        }
+        .main-tag,
+        .footer-tag,
+        .header-tag {
+            display: block;
+            height: fit-content;
+        }
+        #firstNavItem {
+            fill: colors.$offblack;
+        }
+    }
+}
+
 .dropdown {
     position: absolute;
     background: rgb(230,230,230);
@@ -93,64 +241,6 @@ input#navToggle ~ label > span::after {
         }
     }
 }
-.main-nav {
-    display: none; // display none
-    flex-flow: column;
-    justify-content: flex-start;
-    font-size: 1.5rem;
-    > li {
-        display: flex;
-        align-items: center;
-        height: calc(33vh - 82px);
-        padding: 1rem;
-        width: 100%;
-        a {
-            width: 100%;
-            display: block;
-            height: fit-content;
-            text-decoration: none;
-            color: colors.$offblack;
-        }
-    }
-    > li:first-of-type svg {
-        display: none;
-    }
-    > li a:hover {
-        color: colors.$shamrock-green;
-    }
-}
-
-.about .main-nav li:nth-of-type(2) a,
-.contact .main-nav li:last-child a,
-.opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown li:first-child a, 
-.grade-tracker .dropdown li:last-child a {
-    // color: #2d6431;
-    // color: #0e4e12;
-    color: colors.$shamrock-green;
-    // font-weight: 700;
-    text-decoration: underline;
-}
-.my-work .main-nav li:first-child,
-.good-food .main-nav li:first-child, 
-.opendesk .main-nav li:first-child,
-.grade-tracker .main-nav li:first-child {
-    a {
-        color: colors.$shamrock-green;
-    }
-    svg {
-        fill: colors.$shamrock-green;
-    }
-}
-
-.socials {
-    display: none;
-    justify-content: center;
-    align-items: flex-end;
-    li {
-        padding: 1rem;
-    }   
-}
 
 .show-nav {
     display: flex;
@@ -159,122 +249,4 @@ input#navToggle ~ label > span::after {
 
 .display-block {
     display: block;
-}
-
-.header-container {
-    display: grid;
-    grid-template-areas:
-    "logo toggle"
-    "siteNav ."
-    "socials .";
-    grid-template-columns: repeat(2, 50%);
-    nav {
-        grid-area: siteNav;
-        grid-column: span 2;
-    }
-    a {
-        svg {
-            width: 100px;
-        }
-        grid-area: logo;
-        justify-self: left;
-        align-self: center;
-    }
-    .toggle {
-        grid-area: toggle;
-        justify-self: right;
-        align-self: center;
-    }
-    .socials {
-        grid-area: socials;
-        grid-column: span 2;
-        li {
-            transition: transform 0.7s ease;
-        }
-        li:hover {
-            transform: translate(-1px, -2px);
-        }
-        li:hover svg {
-            fill: colors.$shamrock-green;
-        }
-        svg {
-            width: 2rem;
-            fill: colors.$offblack;
-        }
-    }
-}
-
-@include mixins.break(sm){
-    header {
-        padding: 2rem;
-    }
-}
-
-@include mixins.break(md){
-    header {
-        padding: 0 2rem 0 2rem;
-    }
-    .header-container {
-        grid-template-rows: unset;
-        grid-template-columns: 1fr 100px 1fr;
-        grid-template-areas: "siteNav logo socials";
-        align-items: center;
-        nav {
-            grid-column: 1 / 2;
-            .main-nav {
-                display: flex; // overrides display none
-                flex-flow: row;
-                align-items: center;
-                justify-content: flex-start;
-                > li {
-                    height: fit-content;
-                    width: unset;
-                }
-                > li:first-of-type {
-                    padding: 55.12px 1rem 55.12px 0;
-                    svg {
-                        display: unset;
-                        width: .875rem;
-                        position: relative;
-                        left: 6px;
-                    }
-                }
-                > li:first-of-type a:hover svg {
-                    fill: colors.$shamrock-green;
-                }
-                .middle-nav-item {
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    border-left: 1px solid colors.$offblack;
-                    border-right: 1px solid colors.$offblack;
-                }
-            }
-        }
-        a {
-            justify-self: center;
-        }
-        .socials {
-            grid-area: socials;
-            display: flex; // overrides display none
-            justify-content: flex-end;
-            li {
-                padding: .5rem;
-                svg {
-                    width: 2rem;
-                }
-            }
-        }
-        input#navToggle ~ label {
-            display: none;
-        }
-    }
-    .main-tag,
-    .footer-tag,
-    .header-tag {
-        display: block;
-        height: fit-content;
-    }
-    #firstNavItem {
-        fill: colors.$offblack;
-    }
 }

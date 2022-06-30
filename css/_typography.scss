@@ -2,17 +2,27 @@
 @use 'mixins';
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem; // 72
+    line-height: 3.75rem;
+    padding: .375rem 0;
     font-family: 'Battambang', cursive;
     text-align: center;
     color: colors.$offblack;
+    @include mixins.break(sm) {
+        font-size: 4rem; // 96
+        line-height: 5rem;
+        padding: .5rem 0;
+    }
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: 'Battambang', cursive;
     text-align: center;
     color: colors.$offblack;
+    @include mixins.break(sm) {
+        font-size: 3rem;
+    }
 }
 
 h4 {
@@ -24,5 +34,29 @@ h4 {
 
 p {
     color: colors.$offblack;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    @include mixins.break(sm) {
+        font-size: 1.5rem;
+    }
+}
+
+.heading-span {
+    font-size: 2.25rem; // 60
+    line-height: 3rem;
+    padding: .625rem 0 .375rem 0;
+    display: block;
+    @include mixins.break(sm) {
+        font-size: 3rem;
+        padding: .75rem 0 .375rem 0;
+    }
+}
+
+.small-span {
+    font-size: 1.875rem;
+    line-height: 2.625rem;
+    @include mixins.break(sm) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding: 1.25rem 0 .3125rem 0;
+    }
 }

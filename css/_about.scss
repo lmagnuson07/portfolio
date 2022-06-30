@@ -188,7 +188,6 @@
         gap: 1rem;
     }
     h2 {
-        font-size: 3rem;
         grid-column: 1 / -1;
     }
     img {
@@ -213,9 +212,6 @@
             grid-template-columns: repeat(2, minmax(260px, 1fr));
             padding: 2rem 2rem 4rem 2rem;
             gap: 3rem 1rem;
-            h2 {
-                font-size: 4rem;
-            }
             p {
                 font-size: 2rem;
             }

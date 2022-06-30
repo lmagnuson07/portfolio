@@ -8,7 +8,7 @@
         padding: 4rem 1rem;
     }
     form {
-        padding: 2rem 1rem;
+        padding: 2rem 1rem 4rem 1rem;
         font-size: 1.25rem;
         display: grid;
         grid-template-columns: 1fr minmax(auto, 700px) 1fr;
@@ -59,6 +59,11 @@
             max-width: 17.5rem;
         }
     }   
+    @include mixins.break(sm) {
+        form {
+            padding: 2rem 2rem 4rem 2rem;
+        }
+    }
 }
 
 .extra-contact {
@@ -70,7 +75,7 @@
         display: flex;
         flex-flow: wrap;
         justify-content: center;
-        padding: 6rem 0;
+        padding: 4rem 0;
         text-align: center;
         h3 {
             color: colors.$offblack;
@@ -80,17 +85,16 @@
         }
         section:first-of-type {
             flex: 0 1 450px;
+            margin-bottom: 2.5rem;
         }
         section:last-of-type {
             flex: 0 1 450px;
         }
-    }
-}
-
-@include mixins.break(sm) {
-    .form-section {
-        form {
-            padding: 2rem 2rem 4rem 2rem;
+        @include mixins.break(md) {
+            padding: 6rem 0;
+            section:first-of-type {
+                margin-bottom: 0rem;
+            }
         }
     }
 }
