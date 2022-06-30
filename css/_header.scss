@@ -83,7 +83,8 @@ input#navToggle ~ label > span::after {
             padding: 1rem 0.875rem;
         }
         max-width: 360px;
-    } li:hover a {
+    } 
+    li:hover a {
         color: #1d4e08;
     }
     @include mixins.break(xxlg){
@@ -122,7 +123,7 @@ input#navToggle ~ label > span::after {
 .about .main-nav li:nth-of-type(2) a,
 .contact .main-nav li:last-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown li:first-child a 
+.good-food .dropdown li:first-child a, 
 .grade-tracker .dropdown li:last-child a {
     // color: #2d6431;
     // color: #0e4e12;
@@ -237,6 +238,9 @@ input#navToggle ~ label > span::after {
                         position: relative;
                         left: 6px;
                     }
+                }
+                > li:first-of-type a:hover svg {
+                    fill: colors.$shamrock-green;
                 }
                 .middle-nav-item {
                     padding-top: 0;

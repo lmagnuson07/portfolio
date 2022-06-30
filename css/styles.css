@@ -131,15 +131,73 @@ body {
   grid-template-rows: 82.23px calc(100vh - 246.23px) 100px;
 }
 
+.button {
+  color: #050905;
+  background: #dad8d8;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #c5c3c3;
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+.button svg {
+  color: #050905;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  border: 1px solid #3d4c41;
+  color: #e6e6e6;
+  background: #3d4c41;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.button:hover svg {
+  fill: #e6e6e6;
+}
+
+.heading-wrapper {
+  background-color: #3d4c41;
+  padding: 6rem 1rem;
+}
+.heading-wrapper h2 {
+  font-size: 3rem;
+  color: #c2c0c0;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 600px) {
+  .heading-wrapper h2 {
+    font-size: 4rem;
+  }
+}
+
 h2 {
   font-size: 4rem;
+  font-family: "Battambang", cursive;
+  text-align: center;
+  color: #050905;
 }
 
 h3 {
   font-size: 3rem;
+  font-family: "Battambang", cursive;
+  text-align: center;
+  color: #050905;
+}
+
+h4 {
+  font-size: 2rem;
+  font-family: "Battambang", cursive;
+  text-align: center;
+  color: #050905;
 }
 
 p {
+  color: #050905;
   font-size: 1.5rem;
 }
 
@@ -270,7 +328,8 @@ input#navToggle ~ label > span::after {
 .about .main-nav li:nth-of-type(2) a,
 .contact .main-nav li:last-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown li:first-child a .grade-tracker .dropdown li:last-child a {
+.good-food .dropdown li:first-child a,
+.grade-tracker .dropdown li:last-child a {
   color: #1d4e08;
   text-decoration: underline;
 }
@@ -386,6 +445,9 @@ input#navToggle ~ label > span::after {
     position: relative;
     left: 6px;
   }
+  .header-container nav .main-nav > li:first-of-type a:hover svg {
+    fill: #1d4e08;
+  }
   .header-container nav .main-nav .middle-nav-item {
     padding-top: 0;
     padding-bottom: 0;
@@ -431,13 +493,17 @@ input#navToggle ~ label > span::after {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #c2c0c0;
   font-size: 2rem;
+  font-family: "Kreon", Arial, serif;
+  text-align: unset;
 }
 .introduction h3 {
-  font-size: 3.5rem;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #3f7c11;
+  font-size: 3.5rem;
   line-height: 3.75rem;
   padding: 2.25rem 0;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  font-family: "Kreon", Arial, serif;
+  text-align: unset;
 }
 .introduction span {
   color: #3f7c11;
@@ -483,10 +549,7 @@ input#navToggle ~ label > span::after {
   background-color: #e6e6e6;
 }
 .projects h2 {
-  font-family: "Battambang", cursive;
-  text-align: center;
   padding: 5rem 1rem;
-  color: #050905;
 }
 @media screen and (min-width: 600px) {
   .projects {
@@ -504,7 +567,6 @@ input#navToggle ~ label > span::after {
   align-items: center;
   color: #e6e6e6;
   background: #3d4c41;
-  background: linear-gradient(153deg, #3d4c41 5%, #47554b 33%, #9f9f9f 100%);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   text-decoration: none;
   border-radius: 6px;
@@ -518,15 +580,16 @@ input#navToggle ~ label > span::after {
   margin-bottom: 0;
 }
 .projects .container > a h3 {
-  font-family: "Battambang", cursive;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #3f7c11;
   letter-spacing: 0.05rem;
   font-size: 2rem;
   line-height: 2.5rem;
   margin-bottom: 0.5rem;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  text-align: unset;
 }
 .projects .container > a p {
+  color: #e6e6e6;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
@@ -543,22 +606,23 @@ input#navToggle ~ label > span::after {
   font-weight: 700;
 }
 .projects .container > a img {
-  border-radius: 0 6px 6px 0;
+  border-radius: 6px 6px 0 0;
   width: 100%;
 }
 .projects .container > a div:first-of-type {
-  flex: 1 1 498px;
+  flex: 1 1 518px;
 }
 .projects .container > a div:last-of-type {
   padding: 1rem 1rem 1rem 2rem;
-  flex: 1 1 298px;
+  flex: 1 1 318px;
 }
 @media screen and (min-width: 900px) {
-  .projects .container > a div:first-of-type {
-    flex: 1 1 498px;
+  .projects .container > a {
+    background: #3d4c41;
+    background: linear-gradient(153deg, #3d4c41 5%, #47554b 33%, #9f9f9f 100%);
   }
-  .projects .container > a div:last-of-type {
-    flex: 1 1 298px;
+  .projects .container > a img {
+    border-radius: 0 6px 6px 0;
   }
 }
 @media screen and (min-width: 1100px) {
@@ -579,12 +643,8 @@ input#navToggle ~ label > span::after {
 .projects .container > a:last-of-type {
   margin-bottom: 0;
 }
-.projects .container > a:nth-of-type(even) {
-  background: #3d4c41;
-  background: linear-gradient(326deg, #3d4c41 5%, #47554b 42%, #9f9f9f 100%);
-}
 .projects .container > a:nth-of-type(even) img {
-  border-radius: 6px 0 0 6px;
+  border-radius: 6px 6px 0 0;
 }
 .projects .container > a:hover {
   background: #3d4c41;
@@ -595,43 +655,14 @@ input#navToggle ~ label > span::after {
 .projects .container > a:hover svg {
   left: 5px;
 }
-
-.button {
-  color: #050905;
-  background: #dad8d8;
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #c5c3c3;
-  display: flex;
-  align-items: center;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  transition: all 0.3s ease-in-out;
-}
-.button svg {
-  color: #050905;
-  transition: all 0.3s ease-in-out;
-}
-
-.button:hover {
-  border: 1px solid #3d4c41;
-  color: #e6e6e6;
-  background: #3d4c41;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.button:hover svg {
-  fill: #e6e6e6;
-}
-
-.heading-wrapper {
-  background-color: #3d4c41;
-  padding: 6rem 1rem;
-  color: #c2c0c0;
-  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
-  font-family: "Battambang", cursive;
-  text-align: center;
+@media screen and (min-width: 900px) {
+  .projects .container > a:nth-of-type(even) {
+    background: #3d4c41;
+    background: linear-gradient(326deg, #3d4c41 5%, #47554b 42%, #9f9f9f 100%);
+  }
+  .projects .container > a:nth-of-type(even) img {
+    border-radius: 6px 0 0 6px;
+  }
 }
 
 .about-me-section {
@@ -654,7 +685,6 @@ input#navToggle ~ label > span::after {
 .about-me-section .container p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  color: #050905;
 }
 .about-me-section .container a {
   text-decoration: none;
@@ -683,14 +713,15 @@ input#navToggle ~ label > span::after {
 .about-me-section .container .interests-list ul {
   display: flex;
   flex-flow: wrap;
-  padding: 0 2rem;
+  gap: 0 6px;
 }
 .about-me-section .container .skills-list h3,
 .about-me-section .container .interests-list h3 {
+  font-family: "Kreon", Arial, serif;
   line-height: 3.75rem;
   margin-bottom: 0.75rem;
+  margin-top: 2rem;
   max-width: 25rem;
-  color: #050905;
 }
 .about-me-section .container .skills-list h3 span,
 .about-me-section .container .interests-list h3 span {
@@ -699,11 +730,19 @@ input#navToggle ~ label > span::after {
 .about-me-section .container .skills-list li,
 .about-me-section .container .interests-list li {
   color: #050905;
-  width: 50%;
+  width: calc(50% - 3px);
+  padding: 0.3125rem 0;
+  line-height: 1.125rem;
 }
 @media screen and (min-width: 600px) {
   .about-me-section .container {
     padding: 2rem 2rem 0 2rem;
+  }
+  .about-me-section .container .skills-list {
+    align-self: flex-end;
+  }
+  .about-me-section .container .skills-list h3 {
+    margin-bottom: 3rem;
   }
   .about-me-section .container .skills-list,
 .about-me-section .container .interests-list {
@@ -711,8 +750,6 @@ input#navToggle ~ label > span::after {
   }
   .about-me-section .container .skills-list ul,
 .about-me-section .container .interests-list ul {
-    padding-left: 0;
-    padding-right: 0;
     max-width: 350px;
   }
   .about-me-section .container .interests-list {
@@ -723,6 +760,13 @@ input#navToggle ~ label > span::after {
   .about-me-section .container {
     grid-template-columns: 350px 1fr;
     grid-template-rows: 300px 200px 230px 1%;
+  }
+  .about-me-section .container .skills-list {
+    align-self: unset;
+  }
+  .about-me-section .container .skills-list h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
   .about-me-section .container img {
     grid-column: 1/2;
@@ -742,6 +786,11 @@ input#navToggle ~ label > span::after {
     align-self: flex-start;
   }
 }
+@media screen and (min-width: 1100px) {
+  .about-me-section {
+    padding-bottom: 6rem;
+  }
+}
 
 .band-section {
   background-image: url("../img/band-picture.jpg");
@@ -753,17 +802,22 @@ input#navToggle ~ label > span::after {
   text-shadow: 2px 2px 15px black;
 }
 .band-section h2 {
-  text-align: center;
-  padding: 4rem;
+  font-size: 2rem;
+  padding: 4rem 2rem;
   color: #bebebe;
-  font-family: "Battambang", cursive;
 }
 .band-section h2 span {
   display: block;
+  margin-top: 1.125rem;
 }
 .band-section ul {
   display: flex;
+  flex-flow: wrap;
   justify-content: center;
+}
+.band-section ul div {
+  display: flex;
+  flex-flow: wrap;
 }
 .band-section li {
   padding: 0 1rem 4rem 1rem;
@@ -776,8 +830,27 @@ input#navToggle ~ label > span::after {
   fill: #1d4e08;
 }
 .band-section svg {
-  width: 2rem;
+  width: 1.5rem;
   fill: #bebebe;
+}
+@media screen and (min-width: 600px) {
+  .band-section h2 {
+    line-height: 3.75rem;
+    font-size: 3rem;
+  }
+  .band-section svg {
+    width: 2rem;
+    fill: #bebebe;
+  }
+}
+@media screen and (min-width: 900px) {
+  .band-section h2 {
+    line-height: 4.5rem;
+    font-size: 4rem;
+  }
+  .band-section h2 span {
+    margin-top: 2rem;
+  }
 }
 
 .my-dog-section {
@@ -787,15 +860,12 @@ input#navToggle ~ label > span::after {
   padding: 2rem 1rem 4rem 1rem;
   max-width: 1032px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-template-columns: minmax(1fr, 1fr);
   gap: 1rem;
 }
 .my-dog-section h2 {
-  text-align: center;
-  font-size: 4rem;
-  font-family: "Battambang", cursive;
+  font-size: 3rem;
   grid-column: 1/-1;
-  color: #050905;
 }
 .my-dog-section img {
   justify-self: center;
@@ -805,9 +875,8 @@ input#navToggle ~ label > span::after {
 }
 .my-dog-section p {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   align-self: center;
-  color: #050905;
 }
 .my-dog-section p:first-of-type {
   grid-row: 2/3;
@@ -817,8 +886,15 @@ input#navToggle ~ label > span::after {
 }
 @media screen and (min-width: 600px) {
   .my-dog-section .container {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
     padding: 2rem 2rem 4rem 2rem;
     gap: 3rem 1rem;
+  }
+  .my-dog-section .container h2 {
+    font-size: 4rem;
+  }
+  .my-dog-section .container p {
+    font-size: 2rem;
   }
   .my-dog-section p:first-of-type {
     grid-row: unset;
@@ -1223,7 +1299,7 @@ footer {
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-top: 1px solid #e6e6e6;
-  padding: 4rem;
+  padding: 4rem 1rem;
 }
 footer .socials {
   display: flex;
