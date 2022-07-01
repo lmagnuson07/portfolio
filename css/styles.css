@@ -217,10 +217,22 @@ h3 {
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: "Battambang", cursive;
   text-align: center;
   color: #050905;
+  padding: 2rem 1rem;
+}
+@media screen and (min-width: 600px) {
+  h4 {
+    font-size: 2rem;
+    padding: 3rem 1rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  h4 {
+    padding: 4rem 1rem;
+  }
 }
 
 p {
@@ -966,25 +978,29 @@ header .header-container .socials {
   }
 }
 
-.good-food-content {
+.good-food-content,
+.opendesk-content {
   background: #e6e6e6;
 }
-.good-food-content .container {
-  padding: 2rem 0 5rem 0;
+.good-food-content .container,
+.opendesk-content .container {
+  padding: 2rem 1rem 5rem 1rem;
 }
-.good-food-content p {
-  font-size: 1.25rem;
+.good-food-content p,
+.opendesk-content p {
+  font-size: 1rem;
   max-width: 1000px;
   color: #050905;
   margin: 0 auto;
 }
-.good-food-content h3 {
+.good-food-content h3,
+.opendesk-content h3 {
   font-family: "Battambang", cursive;
   color: #050905;
   text-align: center;
-  padding: 4rem 1rem;
+  font-size: 2.25rem;
+  padding: 3rem 0;
 }
-
 .good-food-content .img-grid,
 .opendesk-content .img-grid {
   display: grid;
@@ -1023,6 +1039,19 @@ header .header-container .socials {
   margin-bottom: 1.5rem;
 }
 @media screen and (min-width: 600px) {
+  .good-food-content p,
+.opendesk-content p {
+    font-size: 1.25rem;
+  }
+  .good-food-content h3,
+.opendesk-content h3 {
+    font-size: 2.5rem;
+    padding: 4rem 0;
+  }
+  .good-food-content .container,
+.opendesk-content .container {
+    padding: 2rem 2rem 5rem 2rem;
+  }
   .good-food-content .img-grid,
 .opendesk-content .img-grid {
     display: grid;
@@ -1062,67 +1091,62 @@ header .header-container .socials {
   }
 }
 
-.opendesk-content {
-  background: #e6e6e6;
-}
 .opendesk-content .heading-wrapper {
   padding: 5rem 1rem;
 }
 .opendesk-content h2 {
   max-width: 600px;
   margin: 0 auto;
-  line-height: 86px;
+  line-height: 5.375rem;
 }
 .opendesk-content p {
   color: #050905;
-  font-size: 1.25rem;
   margin: 0 auto 1rem auto;
   max-width: 1000px;
 }
 .opendesk-content p:first-of-type {
-  font-size: 1rem;
+  font-size: 0.875rem;
   text-align: center;
   font-style: italic;
   max-width: 800px;
-  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.opendesk-content h3 {
-  text-align: center;
-  font-family: "Battambang", cursive;
-  padding: 3rem 1rem;
-  color: #050905;
-}
-.opendesk-content .lighthouse-audit-section {
-  padding-bottom: 4rem;
-}
 .opendesk-content .lighthouse-heading {
-  padding: 3rem 1rem 1rem 1rem;
-}
-.opendesk-content h4 {
-  font-size: 2rem;
-  text-align: center;
-  padding: 2rem 1rem;
-  color: #050905;
+  padding: 3rem 0 1rem 0;
+  line-height: 2.875rem;
 }
 .opendesk-content .lighthouse-audit {
   display: flex;
   flex-flow: wrap;
   gap: 1rem;
-  padding: 0 2rem;
 }
 .opendesk-content .lighthouse-audit img {
   flex: 1 1 358px;
 }
 @media screen and (min-width: 600px) {
+  .opendesk-content p:first-of-type {
+    font-size: 1rem;
+  }
   .opendesk-content .lighthouse-audit {
-    padding: 0 4rem;
+    padding: 0 2rem;
   }
   .opendesk-content .lighthouse-audit img {
-    min-width: 358px;
+    min-width: 378px;
+  }
+  .opendesk-content .lighthouse-heading {
+    line-height: unset;
   }
 }
 @media screen and (min-width: 900px) {
+  .opendesk-content .lighthouse-audit {
+    padding: 0 2rem;
+  }
+  .opendesk-content .lighthouse-audit img {
+    flex: 1 1 310px;
+    min-width: 310px;
+  }
+}
+@media screen and (min-width: 1400px) {
   .opendesk-content .lighthouse-audit {
     padding: 0 6rem;
   }
@@ -1131,15 +1155,21 @@ header .header-container .socials {
   display: flex;
   flex-flow: wrap;
   text-align: center;
-  margin: 2rem 1rem;
+  margin: 0rem 1rem 2rem 1rem;
 }
 .opendesk-content .opendesk-links .button-wrapper {
   width: 50%;
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+}
+.opendesk-content .opendesk-links .button-wrapper:nth-of-type(1),
+.opendesk-content .opendesk-links .button-wrapper:nth-of-type(3) {
+  flex: 1 1 134px;
 }
 .opendesk-content .opendesk-links .button-wrapper:nth-of-type(2) {
   order: 1;
   width: 100%;
-  margin-top: 3rem;
 }
 .opendesk-content .opendesk-links a {
   text-decoration: none;
@@ -1156,7 +1186,7 @@ header .header-container .socials {
 }
 @media screen and (min-width: 600px) {
   .opendesk-content .opendesk-links {
-    margin: 4rem;
+    margin: 4rem 2.75rem 4rem 2.75rem;
   }
   .opendesk-content .opendesk-links .button-wrapper {
     width: calc(50% - 89.5px);
@@ -1173,6 +1203,15 @@ header .header-container .socials {
   }
   .opendesk-content .opendesk-links a {
     font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .opendesk-content .opendesk-links {
+    margin: 2rem 1rem;
+    align-items: flex-end;
+  }
+  .opendesk-content .opendesk-links .button-wrapper {
+    margin-top: 1rem;
   }
 }
 
@@ -1334,12 +1373,20 @@ header .header-container .socials {
   padding: 4rem 0;
   text-align: center;
 }
+.extra-contact .contact-content p {
+  font-size: 1.25rem;
+}
 .extra-contact .contact-content section:first-of-type {
   flex: 0 1 450px;
   margin-bottom: 2.5rem;
 }
 .extra-contact .contact-content section:last-of-type {
   flex: 0 1 450px;
+}
+@media screen and (min-width: 600px) {
+  .extra-contact .contact-content p {
+    font-size: 1.5rem;
+  }
 }
 @media screen and (min-width: 900px) {
   .extra-contact .contact-content {

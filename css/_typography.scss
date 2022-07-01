@@ -26,10 +26,18 @@ h3 {
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-family: 'Battambang', cursive;
     text-align: center;
     color: colors.$offblack;
+    padding: 2rem 1rem;
+    @include mixins.break(sm) {
+        font-size: 2rem;
+        padding: 3rem 1rem;
+    }
+    @include mixins.break(xlg) {
+        padding: 4rem 1rem;
+    }
 }
 
 p {
