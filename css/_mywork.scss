@@ -120,12 +120,15 @@
                 top: 2px;
                 margin-left: .625rem;
                 width: 1.25rem;
-                fill: colors.$logo-offwhite;
+                fill: #8a8a8a;
+                transition: all 0.7s ease;
                 filter: drop-shadow(3px 4px 1px rgb(0 0 0 / 0.6));
             }
         }
         p:last-of-type {
             font-weight: 700;
+            transition: all 0.7s ease;
+            color: #8a8a8a;
         }
         img {
             border-radius: 6px 6px 0 0;
@@ -173,6 +176,12 @@
         background: colors.$logo-green;
         p {
             font-style: italic;
+        }
+        p:last-of-type {
+            color: colors.$emerald-green;
+            svg {
+                fill: colors.$emerald-green;
+            }
         }
         svg {
             left: 5px;

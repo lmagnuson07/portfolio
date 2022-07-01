@@ -390,6 +390,7 @@ header .header-container nav .main-nav {
 header .header-container nav .main-nav > li {
   display: flex;
   align-items: center;
+  justify-content: center;
   height: calc(33vh - 82px);
   padding: 1rem;
   width: 100%;
@@ -403,8 +404,30 @@ header .header-container nav .main-nav > li a {
   text-decoration: none;
   color: #050905;
 }
+header .header-container nav .main-nav > li:first-of-type {
+  position: relative;
+}
+header .header-container nav .main-nav > li:first-of-type span {
+  display: flex;
+  right: 0;
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  z-index: 1;
+}
+@media screen and (min-width: 600px) {
+  header .header-container nav .main-nav > li:first-of-type span {
+    right: 4rem;
+  }
+}
+header .header-container nav .main-nav > li:first-of-type a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 header .header-container nav .main-nav > li:first-of-type svg {
-  display: none;
+  width: 1.5rem;
+  margin: auto;
 }
 header .header-container nav .main-nav > li a:hover {
   color: #1d4e08;
@@ -453,14 +476,19 @@ header .header-container .socials {
     height: fit-content;
     width: unset;
   }
+  header .header-container nav .main-nav > li:first-of-type span {
+    display: unset;
+    left: 8px;
+    top: -18px;
+    position: relative;
+    width: 0;
+    height: 0;
+  }
   header .header-container nav .main-nav > li:first-of-type {
-    padding: 55.12px 1rem 55.12px 0;
+    padding: 3.445rem 2rem 3.445rem 0;
   }
   header .header-container nav .main-nav > li:first-of-type svg {
-    display: unset;
     width: 0.875rem;
-    position: relative;
-    left: 6px;
   }
   header .header-container nav .main-nav > li:first-of-type a:hover svg {
     fill: #1d4e08;
@@ -493,7 +521,7 @@ header .header-container .socials {
 .dropdown {
   position: absolute;
   background: #e6e6e6;
-  background: linear-gradient(180deg, #e6e6e6 0%, #999999 88%);
+  background: linear-gradient(0deg, #e6e6e6 0%, #adadad 65%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.35);
   width: calc(100vw + 2rem);
   height: -webkit-fit-content;
@@ -501,7 +529,9 @@ header .header-container .socials {
   height: fit-content;
   padding-bottom: 2rem;
   display: none;
+  top: 35vh;
   left: -2rem;
+  height: 65vh;
 }
 .dropdown li {
   margin-left: 3rem;
@@ -516,6 +546,17 @@ header .header-container .socials {
 }
 .dropdown li:hover a {
   color: #1d4e08;
+}
+@media screen and (min-width: 900px) {
+  .dropdown {
+    background: #e6e6e6;
+    background: linear-gradient(180deg, #e6e6e6 0%, #999999 88%);
+    top: unset;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-bottom: 2rem;
+  }
 }
 @media screen and (min-width: 1540px) {
   .dropdown li {
@@ -657,11 +698,14 @@ header .header-container .socials {
   top: 2px;
   margin-left: 0.625rem;
   width: 1.25rem;
-  fill: #e6e6e6;
+  fill: #8a8a8a;
+  transition: all 0.7s ease;
   filter: drop-shadow(3px 4px 1px rgba(0, 0, 0, 0.6));
 }
 .projects .container > a p:last-of-type {
   font-weight: 700;
+  transition: all 0.7s ease;
+  color: #8a8a8a;
 }
 .projects .container > a img {
   border-radius: 6px 6px 0 0;
@@ -709,6 +753,12 @@ header .header-container .socials {
 }
 .projects .container > a:hover p {
   font-style: italic;
+}
+.projects .container > a:hover p:last-of-type {
+  color: #3f7c11;
+}
+.projects .container > a:hover p:last-of-type svg {
+  fill: #3f7c11;
 }
 .projects .container > a:hover svg {
   left: 5px;

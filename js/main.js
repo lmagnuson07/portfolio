@@ -30,3 +30,8 @@ navItem.addEventListener("mouseleave", () => {
         }
     });
 });
+
+document.querySelector("#dropdownToggle").addEventListener("click", () => {
+    dropDown.classList.toggle("display-block");
+});
+

@@ -120,6 +120,7 @@ header {
                 > li {
                     display: flex;
                     align-items: center;
+                    justify-content: center;
                     height: calc(33vh - 82px);
                     padding: 1rem;
                     width: 100%;
@@ -131,8 +132,26 @@ header {
                         color: colors.$offblack;
                     }
                 }
+                > li:first-of-type {
+                    position: relative;
+                }
+                > li:first-of-type span {
+                    display: flex;
+                    right: 0;
+                    position: absolute;
+                    width: 4rem;
+                    height: 4rem;
+                    z-index: 1;
+                    @include mixins.break(sm){
+                        right: 4rem;
+                    }
+                }
+                > li:first-of-type a {
+                    width: fit-content;
+                }
                 > li:first-of-type svg {
-                    display: none;
+                    width: 1.5rem;
+                    margin: auto;
                 }
                 > li a:hover {
                     color: colors.$shamrock-green;
@@ -175,13 +194,18 @@ header {
                         height: fit-content;
                         width: unset;
                     }
+                    > li:first-of-type span {
+                        display: unset;
+                        left: 8px;
+                        top: -18px;
+                        position: relative;
+                        width: 0;
+                        height: 0;
+                    }
                     > li:first-of-type {
-                        padding: 55.12px 1rem 55.12px 0;
+                        padding: 3.445rem 2rem 3.445rem 0;
                         svg {
-                            display: unset;
                             width: .875rem;
-                            position: relative;
-                            left: 6px;
                         }
                     }
                     > li:first-of-type a:hover svg {
@@ -219,14 +243,16 @@ header {
 .dropdown {
     position: absolute;
     background: rgb(230,230,230);
-    background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
+    background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(173,173,173,1) 65%); 
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
     width: calc(100vw + 2rem);
     height: fit-content;
     padding-bottom: 2rem;
     // transition: all 2s ease-in-out;
     display: none;
+    top: 35vh;
     left: -2rem;
+    height: calc(65vh);
     li {
         margin-left: 3rem;
         a {
@@ -240,6 +266,13 @@ header {
     } 
     li:hover a {
         color: #1d4e08;
+    }
+    @include mixins.break(md){
+        background: rgb(230,230,230);
+        background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
+        top: unset;
+        height: fit-content;
+        padding-bottom: 2rem;
     }
     @include mixins.break(xxlg){
         li {
