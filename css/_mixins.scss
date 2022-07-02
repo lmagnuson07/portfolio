@@ -1,7 +1,10 @@
 // @use "sass:math";
 
 @mixin break($point) {
-    @if $point == sm {
+    @if $point == xs {
+        @media screen and (min-width: 340px) {@content; }
+    }
+    @else if $point == sm {
         @media screen and (min-width: 600px) { @content; }
     }
     @else if $point == md {

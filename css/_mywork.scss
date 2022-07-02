@@ -4,22 +4,71 @@
 .introduction {
     background-color: colors.$logo-green;
     padding: 4rem 0.75rem;
+    .container {
+        position: relative;
+        .intro-content {
+            padding-top: 8rem;
+            z-index: 1;
+            position: relative;
+        }
+        .intro-picture {
+            position: absolute;
+            top: -3rem;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 260px;
+            z-index: 0;
+            img {
+                box-shadow: 1px 1px 3px rgb(161, 161, 161), 2px 2px 6px rgb(28 121 138 / 50%);
+                border: solid 1px rgba(107, 107, 107, 0.8);
+                border-radius: 50%;
+            }
+        }
+        @include mixins.break(sm){
+            .intro-picture {
+                top: -2rem;
+                right: 0;
+                left: unset;
+                margin-left: unset;
+                margin-right: unset; 
+            }
+            .intro-content {
+                padding-top: 0;
+            }
+        }
+        @include mixins.break(md){
+            .intro-picture {
+                width: 326px;
+            }
+        }
+        @include mixins.break(lg){
+            .intro-picture {
+                right: 4rem;
+                top: 0;
+            }
+        }
+    }
     h2 {
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         color: colors.$offwhite;
-        font-size: 1.5rem;
-        line-height: 2.25rem;
+        font-size: 1.25rem;
+        line-height: 2rem;
         font-family: 'Kreon', Arial, serif;
         text-align: unset;
+        z-index: 1;
     }
     h3 {
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         color: colors.$emerald-green;
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         line-height: 3.25rem;
         padding: 1.25rem 0 1.875rem 0;
+        max-width: 500px;
         font-family: 'Kreon', Arial, serif;
         text-align: unset;
+        z-index: 1;
     }
     span {
         color: colors.$emerald-green;
@@ -30,12 +79,21 @@
         font-size: 1.125rem;
         max-width: 760px;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        z-index: 1;
+    }
+    @include mixins.break(xs){
+        h2 {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+        h3 {
+            font-size: 2.5rem;
+        }
     }
     @include mixins.break(sm){
         padding: 4rem 2rem;
         h2 {
             font-size: 2rem;
-
         }
         h3 {
             font-size: 3.5rem;
@@ -47,6 +105,11 @@
         }
         p {
             font-size: 1.25rem;
+        }
+    }
+    @include mixins.break(lg){
+        h3 {
+            max-width: unset;
         }
     }
 }
@@ -120,7 +183,7 @@
                 top: 2px;
                 margin-left: .625rem;
                 width: 1.25rem;
-                fill: #8a8a8a;
+                fill: colors.$emerald-green;
                 transition: all 0.7s ease;
                 filter: drop-shadow(3px 4px 1px rgb(0 0 0 / 0.6));
             }
@@ -128,7 +191,7 @@
         p:last-of-type {
             font-weight: 700;
             transition: all 0.7s ease;
-            color: #8a8a8a;
+            color: colors.$emerald-green;
         }
         img {
             border-radius: 6px 6px 0 0;
@@ -146,6 +209,12 @@
             background: linear-gradient(153deg, rgba(61,76,65,1) 5%, rgba(71,85,75,1) 33%, rgba(159,159,159,1) 100%);
             img {
                 border-radius: 0 6px 6px 0;
+            }
+            p:last-of-type {
+                // color: #8a8a8a;
+                svg {
+                    // fill: #8a8a8a;
+                }
             }
         }
         @include mixins.break(lg){

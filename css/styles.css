@@ -365,7 +365,7 @@ input#navToggle ~ label > span::after {
 header {
   position: -webkit-sticky;
   position: sticky;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   padding: 2rem 1rem;
   background: #201313;
@@ -577,22 +577,71 @@ header .header-container .socials {
   background-color: #3d4c41;
   padding: 4rem 0.75rem;
 }
+.introduction .container {
+  position: relative;
+}
+.introduction .container .intro-content {
+  padding-top: 8rem;
+  z-index: 1;
+  position: relative;
+}
+.introduction .container .intro-picture {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  z-index: 0;
+}
+.introduction .container .intro-picture img {
+  box-shadow: 1px 1px 3px #a1a1a1, 2px 2px 6px rgba(28, 121, 138, 0.5);
+  border: solid 1px rgba(107, 107, 107, 0.8);
+  border-radius: 50%;
+}
+@media screen and (min-width: 600px) {
+  .introduction .container .intro-picture {
+    top: -2rem;
+    right: 0;
+    left: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .introduction .container .intro-content {
+    padding-top: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  .introduction .container .intro-picture {
+    width: 326px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .introduction .container .intro-picture {
+    right: 4rem;
+    top: 0;
+  }
+}
 .introduction h2 {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #c2c0c0;
-  font-size: 1.5rem;
-  line-height: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
   font-family: "Kreon", Arial, serif;
   text-align: unset;
+  z-index: 1;
 }
 .introduction h3 {
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
   color: #3f7c11;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   line-height: 3.25rem;
   padding: 1.25rem 0 1.875rem 0;
+  max-width: 500px;
   font-family: "Kreon", Arial, serif;
   text-align: unset;
+  z-index: 1;
 }
 .introduction span {
   color: #3f7c11;
@@ -603,6 +652,16 @@ header .header-container .socials {
   font-size: 1.125rem;
   max-width: 760px;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+@media screen and (min-width: 340px) {
+  .introduction h2 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .introduction h3 {
+    font-size: 2.5rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .introduction {
@@ -621,6 +680,11 @@ header .header-container .socials {
   }
   .introduction p {
     font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .introduction h3 {
+    max-width: unset;
   }
 }
 
@@ -698,14 +762,14 @@ header .header-container .socials {
   top: 2px;
   margin-left: 0.625rem;
   width: 1.25rem;
-  fill: #8a8a8a;
+  fill: #3f7c11;
   transition: all 0.7s ease;
   filter: drop-shadow(3px 4px 1px rgba(0, 0, 0, 0.6));
 }
 .projects .container > a p:last-of-type {
   font-weight: 700;
   transition: all 0.7s ease;
-  color: #8a8a8a;
+  color: #3f7c11;
 }
 .projects .container > a img {
   border-radius: 6px 6px 0 0;
@@ -798,6 +862,8 @@ header .header-container .socials {
 .about-me-section .container img {
   justify-self: center;
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border: solid 1px rgba(151, 151, 151, 0.8);
   width: 300px;
   grid-column: span 2;
 }
