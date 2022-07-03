@@ -1,3 +1,4 @@
+let counter = 0;
 
 document.querySelector(".toggle label").addEventListener("click", () => {
     document.querySelector("ul.main-nav").classList.toggle("show-nav");
@@ -6,6 +7,7 @@ document.querySelector(".toggle label").addEventListener("click", () => {
     document.querySelector("footer").classList.toggle("display-none");
     document.querySelector("header").classList.toggle("body-height-max");
     document.querySelector(".header-container").classList.toggle("grid-template");
+    counter = 0;
 });
 
 let dropDown = document.querySelector(".dropdown");
@@ -31,7 +33,13 @@ navItem.addEventListener("mouseleave", () => {
     });
 });
 
+// The counter and if statement fix a bug where you had to click twice the first time to display the dropdown
 document.querySelector("#dropdownToggle").addEventListener("click", () => {
-    dropDown.classList.toggle("display-block");
+    if (counter > 0) {
+        dropDown.classList.toggle("display-block");
+    } else {
+        dropDown.classList.add("display-block");
+    }
+    counter++;
 });
 

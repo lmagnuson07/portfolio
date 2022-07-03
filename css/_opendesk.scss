@@ -1,4 +1,4 @@
-@use 'colors';
+@use 'variables';
 @use 'mixins';
 
 .opendesk-content {
@@ -11,9 +11,7 @@
         line-height: 5.375rem;
     }
     p {
-        color: colors.$offblack;
         margin: 0 auto 1rem auto;
-        max-width: 1000px;
     }
     p:first-of-type {
         font-size: .875rem;
@@ -82,7 +80,6 @@
             width: 100%;
         }
         a {
-            text-decoration: none;
             font-size: 1rem;
             margin: 0 auto;
         }

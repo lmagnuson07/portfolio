@@ -1,13 +1,13 @@
-@use 'colors';
+@use 'variables';
 @use 'mixins';
 
 .my-work .main-nav li:first-child {
     a {
-        color: colors.$shamrock-green;
+        color: variables.$shamrock-green;
         text-decoration: underline;
     }
     svg {
-        fill: colors.$shamrock-green;
+        fill: variables.$shamrock-green;
     }
 }
 
@@ -16,7 +16,7 @@
 .opendesk .dropdown li:nth-of-type(2) a,
 .good-food .dropdown li:first-child a, 
 .grade-tracker .dropdown li:last-child a {
-    color: colors.$shamrock-green;
+    color: variables.$shamrock-green;
     text-decoration: underline;
 }
 
@@ -24,10 +24,10 @@
 .opendesk .main-nav li:first-child,
 .grade-tracker .main-nav li:first-child {
     a {
-        color: colors.$shamrock-green;
+        color: variables.$shamrock-green;
     }
     svg {
-        fill: colors.$shamrock-green;
+        fill: variables.$shamrock-green;
     }
 }
 
@@ -54,7 +54,7 @@ input#navToggle ~ label > span::after {
     height: 0.125rem;
     width: 1.75rem;
     opacity: 1;
-    background: colors.$offblack;
+    background: variables.$offblack;
     transition: 0.14s ease-in-out;
 }
 
@@ -102,7 +102,7 @@ header {
     background: rgb(32, 19, 19);
     background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-bottom: 2px solid #e6e6e6;
+    border-bottom: 2px solid variables.$logo-offwhite;
     .header-container {
         display: grid;
         grid-template-areas:
@@ -128,8 +128,6 @@ header {
                         width: 100%;
                         display: block;
                         height: fit-content;
-                        text-decoration: none;
-                        color: colors.$offblack;
                     }
                 }
                 > li:first-of-type {
@@ -154,7 +152,7 @@ header {
                     margin: auto;
                 }
                 > li a:hover {
-                    color: colors.$shamrock-green;
+                    color: variables.$shamrock-green;
                 }
             }
         }
@@ -209,13 +207,13 @@ header {
                         }
                     }
                     > li:first-of-type a:hover svg {
-                        fill: colors.$shamrock-green;
+                        fill: variables.$shamrock-green;
                     }
                     .middle-nav-item {
                         padding-top: 0;
                         padding-bottom: 0;
-                        border-left: 1px solid colors.$offblack;
-                        border-right: 1px solid colors.$offblack;
+                        border-left: 1px solid variables.$offblack;
+                        border-right: 1px solid variables.$offblack;
                     }
                 }
             }
@@ -235,7 +233,7 @@ header {
             }
         }
         #firstNavItem {
-            fill: colors.$offblack;
+            fill: variables.$offblack;
         }
     }
 }
@@ -257,15 +255,13 @@ header {
         margin-left: 3rem;
         a {
             display: block;
-            color: colors.$offblack;
-            text-decoration: none;
             font-size: 1.5rem;
             padding: 1rem 0.875rem;
         }
         max-width: 360px;
     } 
     li:hover a {
-        color: #1d4e08;
+        color: variables.$shamrock-green;
     }
     @include mixins.break(md){
         background: rgb(230,230,230);

@@ -1,25 +1,33 @@
-@use 'colors';
+@use 'variables';
 @use 'mixins';
 
 .good-food-content,
-.opendesk-content {
-    background: colors.$logo-offwhite;
+.opendesk-content, 
+.grade-tracker-content {
     .container {
         padding: 2rem 1rem 5rem 1rem;
     }
+    .grade-tracker-code,
     p {
-        font-size: 1rem;
         max-width: 1000px;
-        color: colors.$offblack;
-        margin: 0 auto;
     }
     h3 {
-        font-family: "Battambang",cursive;
-        color: colors.$offblack;
-        text-align: center;
         font-size: 2.25rem;
         padding: 3rem 0;
+    } 
+    @include mixins.break(sm){ 
+        h3 {
+            font-size: 2.5rem;
+            padding: 4rem 0;
+        }
+        .container {
+            padding: 2rem 2rem 5rem 2rem;
+        }
     }
+}
+
+.good-food-content,
+.opendesk-content {
     .img-grid {
         display: grid;
         grid-template-columns: 1.15fr repeat(2, 0.5fr) 1.15fr;
@@ -30,7 +38,6 @@
         width: 100%;
         height: 100%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        // object-fit: cover;
     }
     // small
     img:nth-of-type(1) {
@@ -56,16 +63,6 @@
         margin-bottom: 1.5rem;
     }
     @include mixins.break(sm){
-        p {
-            font-size: 1.25rem;
-        }
-        h3 {
-            font-size: 2.5rem;
-            padding: 4rem 0;
-        }
-        .container {
-            padding: 2rem 2rem 5rem 2rem;
-        }
         .img-grid {
             display: grid;
             grid-template-columns: 1.15fr repeat(2, 0.5fr) 1.15fr;

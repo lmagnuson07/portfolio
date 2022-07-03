@@ -1,11 +1,11 @@
-@use 'colors';
+@use 'variables';
 @use 'mixins';
 
 footer {
     background: rgb(230,230,230);
     background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-top: 1px solid colors.$logo-offwhite;
+    border-top: 1px solid variables.$logo-offwhite;
     text-align: center;
     padding: 4rem 1rem;
     .socials {

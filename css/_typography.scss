@@ -1,13 +1,13 @@
-@use 'colors';
+@use 'variables';
 @use 'mixins';
 
 h2 {
     font-size: 3rem; // 72
     line-height: 3.75rem;
     padding: .375rem 0;
-    font-family: 'Battambang', cursive;
+    font-family: variables.$heading-font-family;
     text-align: center;
-    color: colors.$offblack;
+    color: variables.$offblack;
     @include mixins.break(sm) {
         font-size: 4rem; // 96
         line-height: 5rem;
@@ -17,9 +17,9 @@ h2 {
 
 h3 {
     font-size: 2.5rem;
-    font-family: 'Battambang', cursive;
+    font-family: variables.$heading-font-family;
     text-align: center;
-    color: colors.$offblack;
+    color: variables.$offblack;
     @include mixins.break(sm) {
         font-size: 3rem;
     }
@@ -27,9 +27,9 @@ h3 {
 
 h4 {
     font-size: 1.75rem;
-    font-family: 'Battambang', cursive;
+    font-family: variables.$heading-font-family;
     text-align: center;
-    color: colors.$offblack;
+    color: variables.$offblack;
     padding: 2rem 1rem;
     @include mixins.break(sm) {
         font-size: 2rem;
@@ -40,11 +40,17 @@ h4 {
     }
 }
 
+a {
+    text-decoration: none;
+    color: variables.$offblack;
+}
+
 p {
-    color: colors.$offblack;
-    font-size: 1.25rem;
+    color: variables.$offblack;
+    font-size: 1rem;
+    margin: 0 auto 1rem auto;
     @include mixins.break(sm) {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
 
