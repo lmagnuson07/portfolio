@@ -227,6 +227,9 @@ header {
                 li {
                     padding: .5rem;
                 }
+                li:last-of-type {
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                }
             }
             input#navToggle ~ label {
                 display: none;

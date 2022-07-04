@@ -514,6 +514,9 @@ header .header-container .socials {
   header .header-container .socials li {
     padding: 0.5rem;
   }
+  header .header-container .socials li:last-of-type {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+  }
   header .header-container input#navToggle ~ label {
     display: none;
   }
@@ -1001,12 +1004,12 @@ header .header-container .socials {
   display: block;
   margin-top: 1.125rem;
 }
-.band-section ul {
+.band-section div {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
 }
-.band-section ul div {
+.band-section div ul {
   display: flex;
   flex-flow: wrap;
 }
