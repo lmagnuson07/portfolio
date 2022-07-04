@@ -8,6 +8,9 @@ footer {
     border-top: 1px solid variables.$logo-offwhite;
     text-align: center;
     padding: 4rem 1rem;
+    p {
+        margin: unset;
+    }
     .socials {
         display: flex;
         flex-flow: wrap;

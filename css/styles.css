@@ -1064,6 +1064,7 @@ header .header-container .socials {
   text-align: center;
   font-size: 1.5rem;
   align-self: center;
+  margin: unset;
 }
 .my-dog-section p:first-of-type {
   grid-row: 2/3;
@@ -1473,6 +1474,7 @@ header .header-container .socials {
 }
 .extra-contact .contact-content p {
   font-size: 1.25rem;
+  margin: unset;
 }
 .extra-contact .contact-content section:first-of-type {
   flex: 0 1 450px;
@@ -1502,6 +1504,9 @@ footer {
   border-top: 1px solid #e6e6e6;
   text-align: center;
   padding: 4rem 1rem;
+}
+footer p {
+  margin: unset;
 }
 footer .socials {
   display: flex;
