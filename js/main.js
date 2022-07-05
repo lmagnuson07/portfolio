@@ -1,45 +1,25 @@
-let counter = 0;
+
+let navItems = document.querySelectorAll(".nav-item");
+let socialItems = document.querySelectorAll(".socials-item");
 
 document.querySelector(".toggle label").addEventListener("click", () => {
-    document.querySelector("ul.main-nav").classList.toggle("show-nav");
-    document.querySelector("ul.socials").classList.toggle("show-nav");
-    document.querySelector("main").classList.toggle("display-none");
-    document.querySelector("footer").classList.toggle("display-none");
-    document.querySelector("header").classList.toggle("body-height-max");
-    document.querySelector(".header-container").classList.toggle("grid-template");
-    counter = 0;
-});
-
-let dropDown = document.querySelector(".dropdown");
-let navItem = document.querySelector("#firstNavItem");
-
-navItem.addEventListener("mouseenter", () => {
-    dropDown.classList.add("display-block");
-
-    dropDown.addEventListener("mouseenter", () => {
-        dropDown.classList.add("display-block");
-    });
-});
-
-navItem.addEventListener("mouseleave", () => {
-    if (dropDown.classList.contains("display-block")){
-        dropDown.classList.remove("display-block");
+    document.querySelector("nav.header-nav").classList.toggle("toggle-nav");
+    document.querySelector(".dropdown").classList.toggle("toggle-dropdown-height");
+    for (let item of socialItems) {
+        item.classList.toggle("toggle-dropdown");
     }
-
-    dropDown.addEventListener("mouseleave", () => {
-        if (dropDown.classList.contains("display-block")){
-            dropDown.classList.remove("display-block");
-        }
-    });
+    for (let item of navItems) {
+       item.classList.toggle("toggle-nav-height"); 
+    }
 });
 
-// The counter and if statement fix a bug where you had to click twice the first time to display the dropdown
 document.querySelector("#dropdownToggle").addEventListener("click", () => {
-    if (counter > 0) {
-        dropDown.classList.toggle("display-block");
-    } else {
-        dropDown.classList.add("display-block");
-    }
-    counter++;
+    document.querySelector(".dropdown").classList.toggle("toggle-dropdown");
 });
 
+let dropdown = document.querySelector(".dropdown");
+dropdown.addEventListener("mouseleave", () => {
+    if (dropdown.classList.contains("toggle-dropdown")) {
+        dropdown.classList.remove("toggle-dropdown");
+    }
+});

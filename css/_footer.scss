@@ -11,10 +11,21 @@ footer {
     p {
         margin: unset;
     }
-    .socials {
+    .footer-socials {
         display: flex;
         flex-flow: wrap;
         justify-content: center;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+        svg {
+            width: 1.75rem;
+        }
+        @include mixins.break(md){
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            svg {
+                width: 2rem;
+            }
+        }
     }
 }
-

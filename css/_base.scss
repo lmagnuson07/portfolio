@@ -15,42 +15,6 @@ body {
     width: 100px;
 }
 
-.body-height-max {
-    height: 100vh;
-}
-
-.display-none {
-    display: none;
-    height: 0;
-}
-
-.grid-template {
-    grid-template-rows: 82.23px calc(100vh - 246.23px) 100px;
-}
-
-.socials {
-    display: none;
-    justify-content: center;
-    align-items: flex-end;
-    svg {   
-        width: 1.75rem;
-        color: variables.$offblack;
-        @include mixins.break(sm){
-            width: 2rem;
-        }
-    }
-    li {
-        padding: 1rem;
-        transition: transform 0.7s ease;
-    }
-    li:hover {
-        transform: translate(-1px, -2px);
-    }
-    li:hover svg {
-        fill: variables.$shamrock-green;
-    }
-}
-
 .button {
     background: variables.$button-offwhite;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;

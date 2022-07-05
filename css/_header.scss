@@ -1,8 +1,8 @@
 @use 'variables';
 @use 'mixins';
 
-.my-work .main-nav li:first-child {
-    a {
+.my-work .nav-ul .nav-item-one {
+    > a {
         color: variables.$shamrock-green;
         text-decoration: underline;
     }
@@ -11,8 +11,8 @@
     }
 }
 
-.about .main-nav li:nth-of-type(2) a,
-.contact .main-nav li:last-child a,
+.about .nav-ul > li:nth-of-type(2) a,
+.contact .nav-ul > li:last-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
 .good-food .dropdown li:first-child a, 
 .grade-tracker .dropdown li:last-child a {
@@ -20,10 +20,10 @@
     text-decoration: underline;
 }
 
-.good-food .main-nav li:first-child, 
-.opendesk .main-nav li:first-child,
-.grade-tracker .main-nav li:first-child {
-    a {
+.good-food .nav-ul .nav-item-one, 
+.opendesk .nav-ul .nav-item-one,
+.grade-tracker .nav-ul .nav-item-one {
+    > a {
         color: variables.$shamrock-green;
     }
     svg {
@@ -81,210 +81,264 @@ input#navToggle ~ label > span::after {
     top: 0;
 }
 
-.main-nav {
-    display: none;
-}
-
-@include mixins.break(md) {
-    .main-tag,
-    .footer-tag,
-    .header-tag {
-        display: block;
-        height: fit-content;
-    }
+label.navToggleLabel:hover {
+    cursor: pointer;
 }
 
 header {
     position: sticky;
-    z-index: 5;
     top: 0;
-    padding: 2rem 1rem;
+    z-index: 5;
     background: rgb(32, 19, 19);
     background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-bottom: 2px solid variables.$logo-offwhite;
-    .header-container {
-        display: grid;
-        grid-template-areas:
-        "logo toggle"
-        "siteNav ."
-        "socials .";
-        grid-template-columns: repeat(2, 50%);
-        nav {
-            grid-area: siteNav;
-            grid-column: span 2;
-            .main-nav {
-                flex-flow: column;
-                justify-content: flex-start;
-                font-size: 1.5rem;
-                > li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: calc(33vh - 82px);
-                    padding: 1rem;
-                    width: 100%;
-                    a {
-                        width: 100%;
-                        display: block;
-                        height: fit-content;
-                    }
-                }
-                > li:first-of-type {
-                    position: relative;
-                }
-                > li:first-of-type span {
-                    display: flex;
-                    right: 0;
-                    position: absolute;
-                    width: 4rem;
-                    height: 4rem;
-                    z-index: 1;
-                    @include mixins.break(sm){
-                        right: 4rem;
-                    }
-                }
-                > li:first-of-type a {
-                    width: fit-content;
-                }
-                > li:first-of-type svg {
-                    width: 1.5rem;
-                    margin: auto;
-                }
-                > li a:hover {
-                    color: variables.$shamrock-green;
-                }
-            }
-        }
-        .logo-anchor {
-            grid-area: logo;
-            justify-self: left;
-            align-self: center;
-        }
-        .toggle {
-            grid-area: toggle;
-            justify-self: right;
-            align-self: center;
-        }
-        .socials {
-            grid-area: socials;
-            grid-column: span 2;
-        }
-    }
+    padding: 2rem 1rem;
+    max-height: 148.23px;
     @include mixins.break(sm){
         padding: 2rem;
     }
     @include mixins.break(md){
         padding: 0 2rem 0 2rem;
-        .header-container {
-            grid-template-rows: unset;
-            grid-template-columns: 1fr 100px 1fr;
-            grid-template-areas: "siteNav logo socials";
-            align-items: center;
-            nav {
-                grid-column: 1 / 2;
-                .main-nav {
-                    display: flex; // overrides display none
-                    flex-flow: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    > li {
-                        height: fit-content;
-                        width: unset;
-                    }
-                    > li:first-of-type span {
-                        display: unset;
-                        left: 8px;
-                        top: -18px;
-                        position: relative;
-                        width: 0;
-                        height: 0;
-                    }
-                    > li:first-of-type {
-                        padding: 3.445rem 2rem 3.445rem 0;
-                        svg {
-                            width: .875rem;
-                        }
-                    }
-                    > li:first-of-type a:hover svg {
-                        fill: variables.$shamrock-green;
-                    }
-                    .middle-nav-item {
-                        padding-top: 0;
-                        padding-bottom: 0;
-                        border-left: 1px solid variables.$offblack;
-                        border-right: 1px solid variables.$offblack;
-                    }
-                }
-            }
-            a {
-                justify-self: center;
-            }
-            .socials {
-                grid-area: socials;
-                display: flex; // overrides display none
-                justify-content: flex-end;
-                li {
-                    padding: .5rem;
-                }
-                li:last-of-type {
-                    padding: 0.5rem 0 0.5rem 0.5rem;
-                }
-            }
-            input#navToggle ~ label {
-                display: none;
+    }
+}
+
+.header-container {
+    .logo-toggle-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        max-width: 1480px;
+    }
+    .nav-ul {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.5rem;
+    }
+    .nav-item {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a:hover {
+            color: variables.$shamrock-green;
+        }
+    }
+    .nav-item-one {
+        position: relative;
+        span {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            right: -5rem;
+            width: 4rem;
+            height: 4rem;
+            z-index: 1;
+        }
+        svg {
+            width: 1.5rem;
+            fill: variables.$offblack;
+        }
+    }
+    .nav-item-one:hover > a,
+    .nav-item-one:hover svg {
+        color: variables.$shamrock-green;
+        fill: variables.$shamrock-green;
+    }
+    @include mixins.break(sm){
+        .nav-item-one {
+            span {
+                right: -10rem;
             }
         }
-        #firstNavItem {
-            fill: variables.$offblack;
+    }
+    @include mixins.break(md){ 
+        position: relative;
+        .logo-toggle-container  {
+            justify-content: center;
+            position: absolute;
+            top: 2rem;
+            right: 0;
+            left: 0;
+        }
+        .header-nav {
+            // needs to be here for selector weight
+            height: fit-content;
+            overflow: visible;
+        }
+        .nav-ul {
+            flex-flow: row;
+        }
+        .nav-item {
+            height: unset;
+            z-index: 6;
+        }
+        .nav-item-one {
+            padding: 3.445rem 2rem 3.445rem 0;
+            svg {
+                width: .875rem;
+            }
+            span {
+                right: 0;
+                width: 2rem;
+            }
+        }
+        .nav-item-two {
+            border-left: 1px solid variables.$offblack;
+            border-right: 1px solid variables.$offblack;
+            padding: 0 1rem 0 1rem;
+        }
+        input#navToggle ~ label {
+            display: none;
+        }
+    }
+}
+
+.header-nav {
+    background: rgb(230,230,230);
+    background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
+    display: flex;
+    flex-flow: column;
+    transition: height 0.5s ease-in-out;
+    // doesn't work with max-height
+    height: 0;
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+    right: 1rem;
+    top: 2rem;
+    @include mixins.break(sm) {
+        right: 2rem;
+    }
+    @include mixins.break(md) {
+        background: unset;
+        width: auto;
+        position: unset;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav-item {
+    transition: height 0.8s ease;
+    height: 0;
+}
+
+.socials-item {
+    transition: visibility 2s ease, opacity 2s ease;
+    visibility: hidden;
+    opacity: 0;
+    padding: 1rem;
+    z-index: 6;
+    transition: transform 0.7s ease;
+    &:hover {
+        transform: translate(-1px, -2px);
+    }
+    &:hover svg {
+        fill: variables.$shamrock-green;
+    }
+    
+    @include mixins.break(md){
+        padding: .5rem;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.socials-item:last-of-type {
+    @include mixins.break(md) {
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    svg {
+        width: 1.75rem;
+        @include mixins.break(md){
+            width: 2rem;
         }
     }
 }
 
 .dropdown {
-    position: absolute;
-    background: rgb(230,230,230);
-    background: linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(173,173,173,1) 65%); 
+    z-index: 7;
+    background: rgb(209,209,209);
+    background: linear-gradient(180deg, rgba(209,209,209,1) 0%, rgba(153,153,153,1) 100%); 
     border-bottom: 1px solid rgba(0, 0, 0, 0.35);
-    width: calc(100vw + 2rem);
-    height: fit-content;
-    padding-bottom: 2rem;
-    // transition: all 2s ease-in-out;
-    display: none;
-    top: 35vh;
-    left: -2rem;
-    height: calc(65vh);
+    position: absolute;
+    // height: calc(82vh - 148px);
+    height: 0;
+    top: 18vh;
+    width: 100vw;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease, height 0.8s ease;
+    opacity: 0;
+    padding-left: 1rem;
     li {
-        margin-left: 3rem;
+        max-width: 360px;
         a {
             display: block;
             font-size: 1.5rem;
-            padding: 1rem 0.875rem;
+            padding: 1rem 0;
         }
-        max-width: 360px;
-    } 
-    li:hover a {
-        color: variables.$shamrock-green;
+        a:hover {
+            color: variables.$shamrock-green;
+        }
+    }
+    @include mixins.break(sm) {
+        padding-left: 2rem;
     }
     @include mixins.break(md){
         background: rgb(230,230,230);
         background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
-        top: unset;
         height: fit-content;
+        left: -2rem;
+        top: 146px;
         padding-bottom: 2rem;
     }
     @include mixins.break(xxlg){
-        li {
-            margin-left: unset;
+        position: fixed;
+        left: 0;
+        padding-left: 0;
+    }
+}
+
+.header-container {
+    @include mixins.break(md){ 
+        .nav-item-one:hover .dropdown {
+            visibility: visible;
+            opacity: 1;
         }
     }
 }
 
-.show-nav {
-    display: flex;
-    text-align: center;
+.toggle-nav {
+    height: calc(100vh - 146px);
+    overflow: visible;
 }
 
-.display-block {
-    display: block;
+.toggle-dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toggle-dropdown-height {
+    height: calc(82vh - 148px);
+}
+
+.toggle-nav-height {
+    height: calc(33vh - 4.375rem);
+}
+
+.dropdown {
+    @include mixins.break(md){
+        height: fit-content;
+    }
 }
