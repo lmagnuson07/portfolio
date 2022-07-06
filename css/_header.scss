@@ -229,19 +229,17 @@ header {
 }
 
 .socials-item {
-    transition: visibility 2s ease, opacity 2s ease;
+    transition: visibility 2s ease, opacity 2s ease, transform 0.7s ease;
     visibility: hidden;
     opacity: 0;
     padding: 1rem;
     z-index: 6;
-    transition: transform 0.7s ease;
     &:hover {
         transform: translate(-1px, -2px);
     }
     &:hover svg {
         fill: variables.$shamrock-green;
     }
-    
     @include mixins.break(md){
         padding: .5rem;
         visibility: visible;
