@@ -256,6 +256,10 @@
         svg {
             left: 5px;
         }
+        
+    }
+    .container > a:nth-of-type(even):hover {
+        background: variables.$logo-green;
     }
     @include mixins.break(sm){
         padding: 0 2rem 5rem 2rem;

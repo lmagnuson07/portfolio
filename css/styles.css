@@ -593,6 +593,13 @@ header {
   }
 }
 
+ul.nav-ul li:focus-within ul,
+ul.nav-ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
 .introduction {
   background-color: #3d4c41;
   padding: 4rem 0.75rem;
@@ -853,6 +860,9 @@ header {
 }
 .projects .container > a:hover svg {
   left: 5px;
+}
+.projects .container > a:nth-of-type(even):hover {
+  background: #3d4c41;
 }
 @media screen and (min-width: 600px) {
   .projects {
@@ -1518,11 +1528,17 @@ header {
   }
 }
 
+.hide-bot-field {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
 footer {
   background: rgb(230, 230, 230);
   background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(153, 153, 153) 88%);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-top: 1px solid #e6e6e6;
   text-align: center;
   padding: 4rem 1rem;
 }

@@ -339,3 +339,10 @@ header {
         height: fit-content;
     }
 }
+
+ul.nav-ul li:focus-within ul,
+ul.nav-ul li ul:focus {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
