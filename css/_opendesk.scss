@@ -29,7 +29,10 @@
         flex-flow: wrap;
         gap: 1rem;
         img {
+            width: 100%;
             flex: 1 1 358px;
+            max-width: 400px;
+            margin: 0 auto;
         }
     }
     @include mixins.break(sm){
@@ -40,6 +43,7 @@
             padding: 0 2rem;
             img {
                 min-width: 378px;
+                max-width: 550px;
             }
         }
         .lighthouse-heading {
@@ -52,6 +56,7 @@
             img {
                 flex: 1 1 310px;
                 min-width: 310px;
+                max-width: 605px;
             }
         }
     }
