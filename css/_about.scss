@@ -15,7 +15,7 @@
             border-radius: 50%;
             box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
             border: solid 1px rgba(151, 151, 151, 0.8);
-            width: 300px;
+            width: 240px;
             grid-column: span 2;
         }
         p {
@@ -65,6 +65,9 @@
         }
         @include mixins.break(sm) {
             padding: 2rem 2rem 0 2rem;
+            img {
+                width: 280px;
+            }
             .skills-list {
                 align-self: flex-end;
                 h3 {
@@ -93,6 +96,7 @@
                 }
             }
             img {
+                width: 300px;
                 grid-column: 1 / 2;
             }
             div:first-of-type {
@@ -117,7 +121,7 @@
 }
 
 .band-section {
-    background-image: url("../img/band-picture.jpg");
+    background-image: url("../img/about-me-band-bg-sm.webp");
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,6 +162,7 @@
         fill: variables.$med-gray;
     }
     @include mixins.break(sm){
+        background-image: url("../img/about-me-band-bg-md.webp");
         h2 {
             line-height: 3.75rem;
             font-size: 3rem;
@@ -168,6 +173,7 @@
         }
     }
     @include mixins.break(md){
+        background-image: url("../img/about-me-band-bg-lg.webp");
         h2 {
             line-height: 4.5rem;
             font-size: 4rem;

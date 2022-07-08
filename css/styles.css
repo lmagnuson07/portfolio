@@ -900,7 +900,7 @@ ul.nav-ul li ul:focus {
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   border: solid 1px rgba(151, 151, 151, 0.8);
-  width: 300px;
+  width: 240px;
   grid-column: span 2;
 }
 .about-me-section .container p {
@@ -958,6 +958,9 @@ ul.nav-ul li ul:focus {
   .about-me-section .container {
     padding: 2rem 2rem 0 2rem;
   }
+  .about-me-section .container img {
+    width: 280px;
+  }
   .about-me-section .container .skills-list {
     align-self: flex-end;
   }
@@ -989,6 +992,7 @@ ul.nav-ul li ul:focus {
     margin-bottom: 1rem;
   }
   .about-me-section .container img {
+    width: 300px;
     grid-column: 1/2;
   }
   .about-me-section .container div:first-of-type {
@@ -1013,7 +1017,7 @@ ul.nav-ul li ul:focus {
 }
 
 .band-section {
-  background-image: url("../img/band-picture.jpg");
+  background-image: url("../img/about-me-band-bg-sm.webp");
   background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1055,6 +1059,9 @@ ul.nav-ul li ul:focus {
   fill: #bebebe;
 }
 @media screen and (min-width: 600px) {
+  .band-section {
+    background-image: url("../img/about-me-band-bg-md.webp");
+  }
   .band-section h2 {
     line-height: 3.75rem;
     font-size: 3rem;
@@ -1065,6 +1072,9 @@ ul.nav-ul li ul:focus {
   }
 }
 @media screen and (min-width: 900px) {
+  .band-section {
+    background-image: url("../img/about-me-band-bg-lg.webp");
+  }
   .band-section h2 {
     line-height: 4.5rem;
     font-size: 4rem;
