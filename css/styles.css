@@ -1172,6 +1172,10 @@ ul.nav-ul li ul:focus {
 
 .good-food-content img,
 .opendesk-content img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .good-food-content .img-grid,

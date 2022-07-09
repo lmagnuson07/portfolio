@@ -29,10 +29,10 @@
 .good-food-content,
 .opendesk-content {
     img {
-        // width: 100%;
-        // height: 100%;
-        // // needs to be used with height 100%
-        // object-fit: cover;
+        width: 100%;
+        height: 100%;
+        // needs to be used with height 100%
+        object-fit: cover;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .img-grid {
