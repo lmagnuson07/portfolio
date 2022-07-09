@@ -1421,7 +1421,7 @@ ul.nav-ul li ul:focus {
 }
 .grade-tracker-content .screenshots-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.25rem;
 }
 .grade-tracker-content .screenshots-wrapper figure {
@@ -1438,6 +1438,11 @@ ul.nav-ul li ul:focus {
 }
 .grade-tracker-content .screenshots-wrapper img {
   border-radius: 0 0 5px 5px;
+}
+@media screen and (min-width: 340px) {
+  .grade-tracker-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  }
 }
 @media screen and (min-width: 600px) {
   .grade-tracker-content .grade-tracker-code {

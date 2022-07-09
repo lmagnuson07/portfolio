@@ -37,7 +37,7 @@
     }
     .screenshots-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 1.25rem;
         figure {
             box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
@@ -53,6 +53,11 @@
         }
         img {
             border-radius: 0 0 5px 5px;
+        }
+    }
+    @include mixins.break(xs){
+        .screenshots-wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
         }
     }
     @include mixins.break(sm){
