@@ -23,3 +23,20 @@ dropdown.addEventListener("mouseleave", () => {
         dropdown.classList.remove("toggle-dropdown");
     }
 });
+
+const validate = function () {
+    let result = true;
+    if (document.contact.name.value == "") {
+        alert("Must provide a name");
+        result = false;
+    }
+    if (document.contact.email.value == "") {
+        alert("Must provide an email");
+        result = false;
+    }
+    if (document.contact.message.value == "") {
+        alert("Must provide a message");
+        result = false;
+    }
+    return result;
+}
