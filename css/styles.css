@@ -522,6 +522,7 @@ header {
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease, height 0.8s ease;
   opacity: 0;
+  overflow: scroll;
   padding-left: 1rem;
 }
 .dropdown li {
@@ -1473,11 +1474,17 @@ ul.nav-ul li ul:focus {
 input {
   border: 1px solid #050905;
   padding: 0.0625rem 0.75rem;
+  transition: box-shadow 0.5s ease;
 }
 
 textarea {
   border: 1px solid #050905;
   padding: 0.5rem 0.75rem;
+  transition: box-shadow 0.5s ease;
+}
+
+.valid {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .alert {
@@ -1584,6 +1591,48 @@ textarea {
   visibility: hidden;
   height: 0;
   width: 0;
+}
+
+.success-main {
+  padding: 4rem 1rem;
+}
+.success-main .container {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+.success-main .container h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.success-main .container p {
+  margin-bottom: 2.5rem;
+  max-width: 320px;
+}
+.success-main .container a {
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .success-main {
+    padding: 4rem 2rem;
+  }
+  .success-main .container p {
+    max-width: 420px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .success-main {
+    padding: 6rem 2rem;
+  }
+  .success-main .container h2 {
+    font-size: 3rem;
+    line-height: 3.625rem;
+    margin-bottom: 2rem;
+  }
+  .success-main .container p {
+    max-width: 540px;
+  }
 }
 
 footer {

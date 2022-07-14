@@ -33,8 +33,6 @@ const validate = function () {
     let errorMessages = document.querySelectorAll(".contact-error-message");
     let counter = 0;
     
-    // event.preventDefault();
-
     if (nameLabel.contains(errorMessages[counter])){
         document.querySelector("[for=name-input] span.contact-error-message").remove();
         counter++;

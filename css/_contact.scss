@@ -4,17 +4,18 @@
 input {
     border: 1px solid variables.$offblack;
     padding: .0625rem .75rem;
+    transition: box-shadow 0.5s ease;
 }
 
 textarea {
     border: 1px solid variables.$offblack;
     padding: .5rem .75rem;
+    transition: box-shadow 0.5s ease;
 }
 
-// .valid {
-//     border: 2px solid variables.$logo-green;
-//     padding: 0 .6875rem;
-// }
+.valid {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .alert {
     border: 2px solid red;
