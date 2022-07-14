@@ -1488,12 +1488,12 @@ textarea {
 }
 
 .alert {
-  border: 2px solid red;
+  border: 2px solid #e02828;
   padding: 0 0.6875rem;
 }
 
 .alert-textarea {
-  border: 2px solid red;
+  border: 2px solid #e02828;
   padding: 0.4375rem 0.6875rem;
 }
 

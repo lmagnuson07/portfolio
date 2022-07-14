@@ -116,7 +116,7 @@ document.querySelector("#message-input").addEventListener("blur", function (evt)
     if (evt.target.classList.contains("valid")){
         evt.target.classList.remove("valid");
     }
-    if (evt.target.value.length > 5) {
+    if (evt.target.value.length >= 5) {
         if (evt.target.classList.contains("alert-textarea")){
             evt.target.classList.remove("alert-textarea");
         }
