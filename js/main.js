@@ -24,7 +24,7 @@ dropdown.addEventListener("mouseleave", () => {
     }
 });
 
-const validate = function (event) {
+const validate = function () {
     let result = true;
     let nameLabel = document.querySelector("[for=name-input]");
     let emailLabel = document.querySelector("[for=email-input]");
@@ -33,7 +33,7 @@ const validate = function (event) {
     let errorMessages = document.querySelectorAll(".contact-error-message");
     let counter = 0;
     
-    event.preventDefault();
+    // event.preventDefault();
 
     if (nameLabel.contains(errorMessages[counter])){
         document.querySelector("[for=name-input] span.contact-error-message").remove();
