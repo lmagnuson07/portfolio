@@ -186,18 +186,19 @@
 				<h2>Contact me
 					<span class="heading-span">Lets connect!</span>
 				</h2>
-            </div>
-			<form onsubmit="return(validate());" name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+            </div> 
+			<form onsubmit="return(validate(event));" name="contact" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+			<!-- <form name="contact" data-netlify="true" netlify-honeypot="bot-field"> -->
                 <div>
-                    <label for="name-input">Name *</label>
+                    <label for="name-input"><span class="label-text">Name *</span></label>
                     <input type="text" name="name" id="name-input" placeholder="Your name...">
                 </div>
                 <div>
-                    <label for="email-input">Email Address *</label>
+                    <label for="email-input"><span class="label-text">Address *</span></label>
                     <input type="email" name="email" id="email-input" placeholder="Your email Address...">
                 </div>
                 <div>
-                    <label for="message-input">Message *</label>
+                    <label for="message-input"><span class="label-text">Message *</span></label>
                     <textarea name="message" id="message-input" placeholder="Your Message..." minlength="5" maxlength="2000" spellcheck></textarea>
                 </div>
 				<div class="hide-bot-field">

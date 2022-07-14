@@ -1,6 +1,38 @@
 @use 'variables';
 @use 'mixins';
 
+input {
+    border: 1px solid variables.$offblack;
+    padding: .0625rem .75rem;
+}
+
+textarea {
+    border: 1px solid variables.$offblack;
+    padding: .5rem .75rem;
+}
+
+// .valid {
+//     border: 2px solid variables.$logo-green;
+//     padding: 0 .6875rem;
+// }
+
+.alert {
+    border: 2px solid red;
+    padding: 0 .6875rem;
+}
+
+.alert-textarea {
+    border: 2px solid red;
+    padding: .4375rem .6875rem;
+}
+
+.label-text {
+    margin-right: .3125rem;
+}
+
+.contact-error-message {
+    font-size: 65%;
+}
 
 .form-section {
     .heading-wrapper {
@@ -9,15 +41,13 @@
     form {
         padding: 2rem 1rem 4rem 1rem;
         font-size: 1.25rem;
-        display: grid;
-        grid-template-columns: 1fr minmax(auto, 700px) 1fr;
-        grid-template-rows: 100px 100px 370px 3.25rem;
-        grid-template-areas: 
-        ". n ."
-        ". e ."
-        ". m ."
-        ". b .";
+        display: flex;
+        flex-flow: wrap;
+        max-width: 764px;
+        margin: 0 auto;
         div {
+            flex: 0 1 764px;
+            padding: .375rem 0 .375rem 0;
             label{
                 display: block;
                 width: 100%;
@@ -29,33 +59,20 @@
                 display: block;
                 width: 100%;
                 line-height: 2.375rem;
-                padding: 0 .75rem;
-                border: 1px solid variables.$offblack;
                 border-radius: 5px;
             }
             textarea {
                 resize: none;
                 width: 100%;
                 height: 300px;
-                padding: .5rem .75rem;
-                border: 1px solid variables.$offblack;
                 border-radius: 5px;
             }
         }
-        div:nth-of-type(1) {
-            grid-area: n;
-        }
-        div:nth-of-type(2) {
-            grid-area: e;
-        }
-        div:nth-of-type(3) {
-            grid-area: m;
-        }
         button {
-            grid-area: b;
             display: block;
             width: unset;
-            max-width: 17.5rem;
+            flex: 0 1 17.5rem;
+            color: variables.$offblack;
         }
     }   
     @include mixins.break(sm) {
