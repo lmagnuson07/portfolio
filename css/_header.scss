@@ -299,6 +299,7 @@ header {
         height: fit-content;
         left: -2rem;
         top: 146px;
+        overflow: unset;
         padding-bottom: 2rem;
     }
     @include mixins.break(xxlg){
