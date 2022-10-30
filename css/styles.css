@@ -891,7 +891,7 @@ ul.nav-ul li ul:focus {
   padding-bottom: 4rem;
 }
 .about-me-section .container {
-  max-width: 1200px;
+  max-width: 1300px;
   display: grid;
   gap: 1rem 2rem;
   grid-template-columns: 1fr 1fr;
@@ -926,9 +926,9 @@ ul.nav-ul li ul:focus {
 .about-me-section .container .skills-list,
 .about-me-section .container .interests-list {
   text-align: center;
-  max-width: 380px;
+  max-width: 360px;
   justify-self: center;
-  align-self: flex-end;
+  align-self: flex-start;
   grid-column: span 2;
 }
 .about-me-section .container .skills-list ul,
@@ -963,9 +963,6 @@ ul.nav-ul li ul:focus {
   .about-me-section .container img {
     width: 280px;
   }
-  .about-me-section .container .skills-list {
-    align-self: flex-end;
-  }
   .about-me-section .container .skills-list h3 {
     margin-bottom: 3rem;
   }
@@ -975,7 +972,7 @@ ul.nav-ul li ul:focus {
   }
   .about-me-section .container .skills-list ul,
 .about-me-section .container .interests-list ul {
-    max-width: 350px;
+    max-width: 360px;
   }
   .about-me-section .container .interests-list {
     grid-column: 2/3;
@@ -983,38 +980,51 @@ ul.nav-ul li ul:focus {
 }
 @media screen and (min-width: 900px) {
   .about-me-section .container {
-    grid-template-columns: 350px 1fr;
-    grid-template-rows: 300px 200px 230px 1%;
+    grid-template-columns: 360px 1fr;
+    grid-template-rows: 300px 300px 230px 1%;
   }
   .about-me-section .container .skills-list {
     align-self: unset;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: flex-start;
   }
   .about-me-section .container .skills-list h3 {
     margin-top: 0;
     margin-bottom: 1rem;
   }
-  .about-me-section .container img {
-    width: 300px;
-    grid-column: 1/2;
-  }
-  .about-me-section .container div:first-of-type {
-    grid-column: 2/3;
-    grid-row: 1/-1;
-  }
-  .about-me-section .container .skills-list {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    align-self: flex-start;
+  .about-me-section .container .skills-list li {
+    font-size: 1.125rem;
   }
   .about-me-section .container .interests-list {
     grid-column: 1/2;
     grid-row: 3/4;
     align-self: flex-start;
   }
+  .about-me-section .container .interests-list li {
+    font-size: 1.125rem;
+  }
+  .about-me-section .container img {
+    width: 300px;
+    grid-column: 1/2;
+  }
+  .about-me-section .container a {
+    font-size: 1.25rem;
+  }
+  .about-me-section .container p {
+    font-size: 1.25rem;
+  }
+  .about-me-section .container div:first-of-type {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
 }
 @media screen and (min-width: 1100px) {
   .about-me-section {
     padding-bottom: 6rem;
+  }
+  .about-me-section p:first-of-type {
+    margin-top: 2rem;
   }
 }
 
