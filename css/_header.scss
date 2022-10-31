@@ -14,8 +14,9 @@
 .about .nav-ul > li:nth-of-type(2) a,
 .contact .nav-ul > li:last-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown li:first-child a, 
-.grade-tracker .dropdown li:last-child a {
+.good-food .dropdown .nav-list-one li:first-child a, 
+.grade-tracker .dropdown li:nth-of-type(3) a,
+.side-scroller .dropdown .nav-list-two li:first-child a {
     color: variables.$shamrock-green;
     text-decoration: underline;
 }
@@ -291,9 +292,15 @@ header {
         }
     }
     @include mixins.break(sm) {
-        padding-left: 2rem;
+        padding-left: 0rem;
+        .container {
+            display: flex;
+            gap: 2rem;
+            justify-content: space-around;
+        }
     }
     @include mixins.break(md){
+        padding-left: 2rem;
         background: rgb(230,230,230);
         background: linear-gradient(180deg, rgba(230,230,230,1) 0%, rgba(153,153,153,1) 88%);
         height: fit-content;
@@ -301,10 +308,13 @@ header {
         top: 146px;
         overflow: unset;
         padding-bottom: 2rem;
+        .container {
+            justify-content: unset;
+        }
     }
     @include mixins.break(xxlg){
         position: fixed;
-        left: 0;
+        left: -10px;
         padding-left: 0;
     }
 }

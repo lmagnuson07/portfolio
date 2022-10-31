@@ -1,0 +1,87 @@
+@use 'variables';
+@use 'mixins';
+
+.side-scroller-content {
+    .link {
+        color: #03702a;
+    }
+    .link:hover {
+        text-decoration: underline;
+    }
+    .button-outer-wrapper {
+        display: flex;
+        margin: 0 auto;
+        font-size: 1rem;
+        max-width: 1000px;
+        gap: 1.875rem;
+        .button {
+            margin: 2rem auto 0 auto;
+            svg {
+                width: 1rem;
+                margin-left: 8px;
+            }
+        }
+        .button-wrapper:first-of-type {
+            flex: 1 1 226px;
+        }
+        .button-wrapper:last-of-type {
+            flex: 1 1 367px;
+        }
+    }
+    .video-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        video {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+            height: 100%;
+        }
+    }
+    .screenshots-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.25rem;
+        figure {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+            border-radius: 5px;
+        }
+        figcaption {
+            padding: 1rem;
+            font-size: 1.25rem;
+            background: variables.$logo-green;
+            text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+            color: variables.$logo-offwhite;
+            border-radius: 5px 5px 0 0;
+        }
+        img {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+    @include mixins.break(xs){
+        .screenshots-wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+        }
+    }
+    @include mixins.break(sm){
+        .button-outer-wrapper {
+            font-size: 1.25rem;
+        }
+        .screenshots-wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            figcaption {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @include mixins.break(lg) {
+        .video-wrapper {
+            padding: 0 2rem;
+        }
+        .screenshots-wrapper {
+            grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+        }
+        .screenshots-wrapper {
+            padding: 0 2rem;
+        }
+    }
+}

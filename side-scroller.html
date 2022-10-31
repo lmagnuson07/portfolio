@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="I'm Logan Magnuson, a Software Development student at NAIT, and this is my professional portfolio. You can view samples of my school work and personal projects and get an idea of who I am within. The source code for all my projects is available, as well as the source code for this portfolio. I look forward to hearing from you!">
-    <title>Semester Grade Tracker</title>
+    <title>2d Side-Scroller</title>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -22,8 +22,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&display=swap" rel="stylesheet"> 
 	<script src="js/main.js" defer></script>
 </head>
-<body class="grade-tracker">
-	<header class="header-tag">
+<body class="side-scroller">
+    <header class="header-tag">
 		<div class="container header-container">
 			<h1 class="sr-only">Logan Magnuson's Portfolio</h1>
 			<div class="logo-toggle-container">
@@ -185,27 +185,28 @@
 		</div>
     </header>
 
-    <main class="main-tag grade-tracker-content">
+    <main class="main-tag side-scroller-content">
 		<section>
 			<div class="heading-wrapper">
-				<h2>Semester Grade Tracker</h2>
+				<h2>2d Side-Scroller</h2>
 			</div>
 			<div class="container">
-				<p>I was inspired to code this small application near the end of my Programming Fundamentals course at NAIT. We had just been introduced to Object-Oriented Programming and file I/O and I wanted to practice them in preparation for assessments while still developing something useful. I decided to develop a program that would keep track of my weighted grades throughout a semester using techniques I learned in class. It prints your grades to a text file with a vertical bar delimiter and reads from those same files when the program launches. Once I got the basic features operating I added additional customization like changing class names, swapping grades on the file, deleting a grade and more until I was satisfied.</p>
-				<p>When I coded this program we hadn't been introduced to C# properties yet and we were coding our own custom methods that achieved the same thing.  I incorporated these same methods into Semester Grade Tracker as well for practice, but would normally use C# properties instead. I'm currently in the process of re-coding this program because I've learned so much since my programming fundamentals course and have been inspired to implement more Object-Oriented features into its design for practice.</p>
-				<div class="grade-tracker-code">
+				<p>I wanted to learn some more advanced animation techniques and when I began researching tools that could achieve what I was looking for I stumbled upon the HTMLCanvas API. I was amazed at the power of this built-in JavaScript API and I began coming up with lots of different ways to use this tool. I decided to take a <a href="https://www.youtube.com/watch?v=GFO_txvwK_c&t=5096s" target="_blank" class="link">9-hour JavaScript game development course</a> by <a href="https://www.youtube.com/c/Frankslaboratory" target="_blank" class="link">Frank's Laboratory</a> on Youtube to learn about HTMLCanvas and how you can code a 2d video game with JavaScript alone.</p>
+				<p>Once I finished the course, I wanted to incorporate the various ideas I accumulated along the way into my own 2d game using my newly acquired skills. Although the game is not yet complete, I am happy to share it in its current state, although it is missing a lot of features. In the future, I intend on adding particle and sound effects, multiple levels, sword attacks, more enemy variety, items for health and energy regeneration, more background variety, and more. I will also be adding a description and a game control legend to the main landing page, but for now, it just contains the main canvas element and a fullscreen toggle button.</p>
+				<p>The art assets for this game were purchased from <a href="https://bevouliin.com/category/game-asset/game-characters/" target="_blank" class="link">Bevouliin</a>, a talented 2d game asset artist. I have purchased 12 enemies in total that I intend on adding to the game as you progress through the levels. The character sprites I purchased also contain various animations for different sword attacks, status effects, a faint animation, and an invincibility mode that I intend on incorporating.</p>
+				<div class="button-outer-wrapper">
 					<div class="button-wrapper">
-						<a href="https://github.com/lmagnuson07/grade-tracker/tree/main" target="_blank" class="button">Check out the original code<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.952 44.952" xml:space="preserve"><path d="M44.952,22.108c0-1.25-0.478-2.424-1.362-3.308L30.627,5.831c-0.977-0.977-2.561-0.977-3.536,0 c-0.978,0.977-0.976,2.568,0,3.546l10.574,10.57H2.484C1.102,19.948,0,21.081,0,22.464c0,0.003,0,0.025,0,0.028 c0,1.382,1.102,2.523,2.484,2.523h35.182L27.094,35.579c-0.978,0.978-0.978,2.564,0,3.541c0.977,0.979,2.561,0.978,3.538-0.001 l12.958-12.97c0.885-0.882,1.362-2.059,1.362-3.309C44.952,22.717,44.952,22.231,44.952,22.108z"/></svg></a>
+						<a href="https://2d-side-scroller.netlify.app/" target="_blank" class="button">Give it a try!<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.952 44.952" xml:space="preserve"><path d="M44.952,22.108c0-1.25-0.478-2.424-1.362-3.308L30.627,5.831c-0.977-0.977-2.561-0.977-3.536,0 c-0.978,0.977-0.976,2.568,0,3.546l10.574,10.57H2.484C1.102,19.948,0,21.081,0,22.464c0,0.003,0,0.025,0,0.028 c0,1.382,1.102,2.523,2.484,2.523h35.182L27.094,35.579c-0.978,0.978-0.978,2.564,0,3.541c0.977,0.979,2.561,0.978,3.538-0.001 l12.958-12.97c0.885-0.882,1.362-2.059,1.362-3.309C44.952,22.717,44.952,22.231,44.952,22.108z"/></svg></a>
 					</div>
 					<div class="button-wrapper">
-						<a href="https://github.com/lmagnuson07/grade-tracker/tree/version2.0" target="_blank" class="button">Check out the progress on version 2.0<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.952 44.952" xml:space="preserve"><path d="M44.952,22.108c0-1.25-0.478-2.424-1.362-3.308L30.627,5.831c-0.977-0.977-2.561-0.977-3.536,0 c-0.978,0.977-0.976,2.568,0,3.546l10.574,10.57H2.484C1.102,19.948,0,21.081,0,22.464c0,0.003,0,0.025,0,0.028 c0,1.382,1.102,2.523,2.484,2.523h35.182L27.094,35.579c-0.978,0.978-0.978,2.564,0,3.541c0.977,0.979,2.561,0.978,3.538-0.001 l12.958-12.97c0.885-0.882,1.362-2.059,1.362-3.309C44.952,22.717,44.952,22.231,44.952,22.108z"/></svg></a>
+						<a href="https://github.com/lmagnuson07/2d-side-scroller" target="_blank" class="button">Check out the source code<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 44.952 44.952" xml:space="preserve"><path d="M44.952,22.108c0-1.25-0.478-2.424-1.362-3.308L30.627,5.831c-0.977-0.977-2.561-0.977-3.536,0 c-0.978,0.977-0.976,2.568,0,3.546l10.574,10.57H2.484C1.102,19.948,0,21.081,0,22.464c0,0.003,0,0.025,0,0.028 c0,1.382,1.102,2.523,2.484,2.523h35.182L27.094,35.579c-0.978,0.978-0.978,2.564,0,3.541c0.977,0.979,2.561,0.978,3.538-0.001 l12.958-12.97c0.885-0.882,1.362-2.059,1.362-3.309C44.952,22.717,44.952,22.231,44.952,22.108z"/></svg></a>
 					</div>
 				</div>
 				<section>
 					<h3>Video Demo</h3>
 					<div class="video-wrapper">
 						<video controls="controls">
-							<source src="vid/semester-grade-tracker-demo.mp4" type="video/mp4">
+							<source src="vid/side-scroller-demo.mp4" type="video/mp4">
 						</video>
 					</div>
 				</section>
@@ -214,51 +215,27 @@
 					<h3>Screenshots</h3>
 					<div class="screenshots-wrapper">
 						<figure>
-							<figcaption>Class Menu</figcaption>
+							<figcaption>Victory Screen</figcaption>
 							<img width="567" height="265"
-								srcset="img/grade-tracker-class-menu-sm.webp 567w, 
-									img/grade-tracker-class-menu-md.webp 819w, 
-									img/grade-tracker-class-menu-lg.webp 666w"
+								srcset="img/side-scroller-victory-sm.webp 567w, 
+									img/side-scroller-victory-md.webp 819w, 
+									img/side-scroller-victory-lg.webp 666w"
 								sizes="(max-width: 600px) 567px,
 									(max-width: 900px) 819px, 666px"
-								src="img/grade-tracker-class-menu-sm.webp" 
-								alt="Grade Tracker class list screenshot"
+								src="img/side-scroller-victory-sm.webp" 
+								alt="Side scroller victory screen screenshot"
 							>
 						</figure>
 						<figure>
-							<figcaption>Grades Menu</figcaption>
+							<figcaption>Game Over Screen</figcaption>
 							<img width="567" height="265"
-								srcset="img/grade-tracker-grades-menu-sm.webp 567w, 
-									img/grade-tracker-grades-menu-md.webp 819w, 
-									img/grade-tracker-grades-menu-lg.webp 666w"
+								srcset="img/side-scroller-failure-sm.webp 567w, 
+									img/side-scroller-failure-md.webp 819w, 
+									img/side-scroller-failure-lg.webp 666w"
 								sizes="(max-width: 600px) 567px,
 									(max-width: 900px) 819px, 666px"
-								src="img/grade-tracker-grades-menu-sm.webp" 
-								alt="Grade Tracker grades menu list"
-							>
-						</figure>
-						<figure>
-							<figcaption>Grades List</figcaption>
-							<img width="567" height="265"
-								srcset="img/grade-tracker-grade-list-sm.webp 567w, 
-									img/grade-tracker-grade-list-md.webp 819w, 
-									img/grade-tracker-grade-list-lg.webp 666w"
-								sizes="(max-width: 600px) 567px,
-									(max-width: 900px) 819px, 666px"
-								src="img/grade-tracker-grade-list-sm.webp" 
-								alt="Grade Tracker grade list screenshot"
-							>
-						</figure>
-						<figure>
-							<figcaption>Class Selection Menu</figcaption>
-							<img width="567" height="265"
-								srcset="img/grade-tracker-select-class-menu-sm.webp 567w, 
-									img/grade-tracker-select-class-menu-md.webp 819w, 
-									img/grade-tracker-select-class-menu-lg.webp 666w"
-								sizes="(max-width: 600px) 567px,
-									(max-width: 900px) 819px, 666px"
-								src="img/grade-tracker-select-class-menu-sm.webp" 
-								alt="Grade Tracker select class menu"
+								src="img/side-scroller-failure-sm.webp" 
+								alt="Side scroller game over screen screenshot"
 							>
 						</figure>
 					</div>

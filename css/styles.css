@@ -248,8 +248,9 @@ p {
 .about .nav-ul > li:nth-of-type(2) a,
 .contact .nav-ul > li:last-child a,
 .opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown li:first-child a,
-.grade-tracker .dropdown li:last-child a {
+.good-food .dropdown .nav-list-one li:first-child a,
+.grade-tracker .dropdown li:nth-of-type(3) a,
+.side-scroller .dropdown .nav-list-two li:first-child a {
   color: #1d4e08;
   text-decoration: underline;
 }
@@ -538,11 +539,17 @@ header {
 }
 @media screen and (min-width: 600px) {
   .dropdown {
-    padding-left: 2rem;
+    padding-left: 0rem;
+  }
+  .dropdown .container {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
   }
 }
 @media screen and (min-width: 900px) {
   .dropdown {
+    padding-left: 2rem;
     background: rgb(230, 230, 230);
     background: linear-gradient(180deg, rgb(230, 230, 230) 0%, rgb(153, 153, 153) 88%);
     height: -webkit-fit-content;
@@ -553,11 +560,14 @@ header {
     overflow: unset;
     padding-bottom: 2rem;
   }
+  .dropdown .container {
+    justify-content: unset;
+  }
 }
 @media screen and (min-width: 1540px) {
   .dropdown {
     position: fixed;
-    left: 0;
+    left: -10px;
     padding-left: 0;
   }
 }
@@ -1151,7 +1161,8 @@ ul.nav-ul li ul:focus {
 
 .good-food-content .container,
 .opendesk-content .container,
-.grade-tracker-content .container {
+.grade-tracker-content .container,
+.side-scroller-content .container {
   padding: 2rem 1rem 5rem 1rem;
 }
 .good-food-content .grade-tracker-code,
@@ -1159,25 +1170,30 @@ ul.nav-ul li ul:focus {
 .opendesk-content .grade-tracker-code,
 .opendesk-content p,
 .grade-tracker-content .grade-tracker-code,
-.grade-tracker-content p {
+.grade-tracker-content p,
+.side-scroller-content .grade-tracker-code,
+.side-scroller-content p {
   max-width: 1000px;
 }
 .good-food-content h3,
 .opendesk-content h3,
-.grade-tracker-content h3 {
+.grade-tracker-content h3,
+.side-scroller-content h3 {
   font-size: 2.25rem;
   padding: 3rem 0;
 }
 @media screen and (min-width: 600px) {
   .good-food-content h3,
 .opendesk-content h3,
-.grade-tracker-content h3 {
+.grade-tracker-content h3,
+.side-scroller-content h3 {
     font-size: 2.5rem;
     padding: 4rem 0;
   }
   .good-food-content .container,
 .opendesk-content .container,
-.grade-tracker-content .container {
+.grade-tracker-content .container,
+.side-scroller-content .container {
     padding: 2rem 2rem 5rem 2rem;
   }
 }
@@ -1478,6 +1494,89 @@ ul.nav-ul li ul:focus {
     grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
   }
   .grade-tracker-content .screenshots-wrapper {
+    padding: 0 2rem;
+  }
+}
+
+.side-scroller-content .link {
+  color: #03702a;
+}
+.side-scroller-content .link:hover {
+  text-decoration: underline;
+}
+.side-scroller-content .button-outer-wrapper {
+  display: flex;
+  margin: 0 auto;
+  font-size: 1rem;
+  max-width: 1000px;
+  gap: 1.875rem;
+}
+.side-scroller-content .button-outer-wrapper .button {
+  margin: 2rem auto 0 auto;
+}
+.side-scroller-content .button-outer-wrapper .button svg {
+  width: 1rem;
+  margin-left: 8px;
+}
+.side-scroller-content .button-outer-wrapper .button-wrapper:first-of-type {
+  flex: 1 1 226px;
+}
+.side-scroller-content .button-outer-wrapper .button-wrapper:last-of-type {
+  flex: 1 1 367px;
+}
+.side-scroller-content .video-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.side-scroller-content .video-wrapper video {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  height: 100%;
+}
+.side-scroller-content .screenshots-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.25rem;
+}
+.side-scroller-content .screenshots-wrapper figure {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 5px;
+}
+.side-scroller-content .screenshots-wrapper figcaption {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background: #3d4c41;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  color: #e6e6e6;
+  border-radius: 5px 5px 0 0;
+}
+.side-scroller-content .screenshots-wrapper img {
+  border-radius: 0 0 5px 5px;
+}
+@media screen and (min-width: 340px) {
+  .side-scroller-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  }
+}
+@media screen and (min-width: 600px) {
+  .side-scroller-content .button-outer-wrapper {
+    font-size: 1.25rem;
+  }
+  .side-scroller-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  .side-scroller-content .screenshots-wrapper figcaption {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .side-scroller-content .video-wrapper {
+    padding: 0 2rem;
+  }
+  .side-scroller-content .screenshots-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(470px, 1fr));
+  }
+  .side-scroller-content .screenshots-wrapper {
     padding: 0 2rem;
   }
 }
