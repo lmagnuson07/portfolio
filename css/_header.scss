@@ -314,7 +314,7 @@ header {
     }
     @include mixins.break(xxlg){
         position: fixed;
-        left: -10px;
+        left: 0;
         padding-left: 0;
     }
 }
