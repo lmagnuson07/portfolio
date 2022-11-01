@@ -567,7 +567,7 @@ header {
 @media screen and (min-width: 1540px) {
   .dropdown {
     position: fixed;
-    left: -10px;
+    left: 0;
     padding-left: 0;
   }
 }
@@ -1034,7 +1034,7 @@ ul.nav-ul li ul:focus {
     padding-bottom: 6rem;
   }
   .about-me-section p:first-of-type {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
 }
 
