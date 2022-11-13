@@ -7,7 +7,7 @@
     .container {
         position: relative;
         .intro-content {
-            padding-top: 10rem;
+            padding-top: 14rem;
             z-index: 1;
             position: relative;
         }
@@ -28,6 +28,15 @@
         }
         @include mixins.break(sm){
             .intro-picture {
+                width: 300px;
+            }
+            .intro-content {
+                padding-top: 17rem;
+            }
+        }
+        @include mixins.break(sm-md){
+            .intro-picture {
+                width: 260px;
                 top: -2rem;
                 right: 0;
                 left: unset;
@@ -63,7 +72,7 @@
         display: block;
         text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
         color: variables.$emerald-green;
-        font-size: 2.25rem;
+        font-size: 2rem;
         line-height: 3.25rem;
         padding: 1.25rem 0 1.875rem 0;
         max-width: 500px;
@@ -89,14 +98,14 @@
             line-height: 2.25rem;
         }
         span.tagline {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
         }
     }
     @include mixins.break(sm){
         padding: 4rem 2rem;
         h2 {
             font-size: 2rem;
-            max-width: 460px;
+            max-width: 470px;
         }
         span.tagline {
             font-size: 3.5rem;
@@ -177,13 +186,13 @@
             letter-spacing: .05rem;
             font-size: 2rem;
             line-height: 2.5rem;
-            margin-bottom: .5rem;
+            margin: 1rem 0 2rem 0;
             text-align: unset;
         }
         p {
             color: variables.$logo-offwhite;
             font-size: 1.25rem;
-            margin-bottom: .5rem;
+            margin-bottom: 2rem;
             text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
             svg {
                 position: relative;
@@ -208,8 +217,13 @@
             flex: 1 1 518px;
         }
         div:last-of-type {
-            padding: 1rem 1rem 1rem 2rem;
+            padding: 1rem;
             flex: 1 1 318px;
+        }
+        @include mixins.break(sm) {
+            div:last-of-type {
+                padding: 1rem 2rem 1rem 2rem;
+            }
         }
         @include mixins.break(md) {
             background: rgb(61,76,65);
@@ -221,16 +235,14 @@
         @include mixins.break(lg){
             h3 {
                 font-size: 2.5rem;
-                margin-bottom: 1rem;
             }
             p {
                 font-size: 1.75rem;
-                margin-bottom: 1rem;
             }
         }
         @include mixins.break(xlg){
             div:last-of-type {
-                padding: 1rem 1rem 1rem 4rem;
+                padding: 1rem 4rem 1rem 4rem;
             }
         }
     } // end of .container > a

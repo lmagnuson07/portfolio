@@ -7,6 +7,9 @@
     @else if $point == sm {
         @media screen and (min-width: 600px) { @content; }
     }
+    @else if $point == sm-md {
+        @media screen and (min-width: 790px) { @content; }
+    }
     @else if $point == md {
         @media screen and (min-width: 900px) { @content; } 
     }

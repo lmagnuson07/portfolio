@@ -13,17 +13,18 @@
 
 .about .nav-ul > li:nth-of-type(2) a,
 .contact .nav-ul > li:last-child a,
-.opendesk .dropdown li:nth-of-type(2) a,
-.good-food .dropdown .nav-list-one li:first-child a, 
-.grade-tracker .dropdown li:nth-of-type(3) a,
-.side-scroller .dropdown .nav-list-two li:first-child a {
+.side-scroller .dropdown .nav-list-one li:nth-of-type(1) a, 
+.good-food .dropdown .nav-list-one li:nth-of-type(2) a, 
+.opendesk .dropdown .nav-list-one li:nth-of-type(3) a,
+.grade-tracker .dropdown .nav-list-two li:nth-of-type(1) a {
     color: variables.$shamrock-green;
     text-decoration: underline;
 }
 
 .good-food .nav-ul .nav-item-one, 
 .opendesk .nav-ul .nav-item-one,
-.grade-tracker .nav-ul .nav-item-one {
+.grade-tracker .nav-ul .nav-item-one,
+.side-scroller .nav-ul .nav-item-one {
     > a {
         color: variables.$shamrock-green;
     }
