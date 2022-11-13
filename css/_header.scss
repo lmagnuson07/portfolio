@@ -311,6 +311,8 @@ header {
         padding-bottom: 2rem;
         .container {
             justify-content: unset;
+            position: relative;
+            left: 0;
         }
     }
     @include mixins.break(xxlg){
