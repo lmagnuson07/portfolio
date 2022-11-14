@@ -325,6 +325,7 @@ header {
     @include mixins.break(xxlg){
         position: fixed;
         left: 0;
+        max-width: 100%;
         padding-left: 0;
     }
 }
