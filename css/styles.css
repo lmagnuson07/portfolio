@@ -468,12 +468,21 @@ header {
 }
 
 .nav-item {
-  transition: height 0.8s ease;
+  transition: height 0.8s ease, visibility 0.8s ease, opacity 0.8s ease;
   height: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (min-width: 900px) {
+  .nav-item {
+    padding: 0.5rem;
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .socials-item {
-  transition: visibility 2s ease, opacity 2s ease, transform 0.7s ease;
+  transition: visibility 0.8s ease, opacity 0.8s ease, transform 0.7s ease;
   visibility: hidden;
   opacity: 0;
   padding: 1rem;
@@ -588,7 +597,7 @@ header {
   overflow: visible;
 }
 
-.toggle-dropdown {
+.toggle-visibility {
   visibility: visible;
   opacity: 1;
 }
